@@ -1,4 +1,5 @@
 _design/
+build/
 node_modules/
 .sass-cache/
 _src/
