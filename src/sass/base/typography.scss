@@ -1,0 +1,12 @@
+/*=====================
+  Базовая типография
+=====================*/
+
+@font-face {
+  font-family: "FS Elliot Pro";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../font/fselliotpro.woff2") format("woff2"),
+       url("../font/fselliotpro.woff") format("woff"),
+       url("../font/fselliotpro.ttf") format("truetype");
+}

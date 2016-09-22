@@ -1,0 +1,6 @@
+_design/
+node_modules/
+.sass-cache/
+build/
+*.log
+package.json
