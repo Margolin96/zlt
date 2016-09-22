@@ -1,6 +1,6 @@
 _design/
 node_modules/
 .sass-cache/
-build/
+_src/
 *.log
 package.json
