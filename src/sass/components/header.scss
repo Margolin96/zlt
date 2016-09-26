@@ -1,5 +1,7 @@
 .header {
-
+  background: $white;
+  
+  // TOP HEADER
   &__top {
     background: $darker;
     padding: 20px 0;
@@ -52,4 +54,52 @@
       }
     }
   }
+
+  // MIDDLE HEADER
+  &__base {
+    padding-top: 30px;
+    @include clearfix;
+  }
+
+  &__logo-link {
+    width: 50%;
+    float: left;
+  }
+
+  img,
+  &__logo-text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  img {
+    font-size: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__logo-text {
+    padding-left: 10px;
+    color: #b8b8b8;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__base-right {
+    width: 50%;
+    float: right;
+    text-align: right;
+  }
+
+  &__menu {
+    margin-top: 30px;
+    width: 100%;
+    float: left;
+    border-top: 1px solid $border-light;
+  }
+
+  &__search {
+    display: none;
+  }
+
 }
