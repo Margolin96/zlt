@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: $time all;
+
+  &--more {
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 165px;
+    border: 1px solid #c0c0c0;
+    color: $black;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    &:hover {
+      border-color: $black;
+    }
+  }
+}

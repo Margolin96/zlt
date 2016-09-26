@@ -26,8 +26,8 @@
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -10px;
+  margin-left: -10px;
 
   @media (max-width: $tablet) {
     margin-right: -20px;
@@ -91,8 +91,8 @@
   position: relative;
   box-sizing: border-box;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .col-xs-1,
 .col-xs-2,

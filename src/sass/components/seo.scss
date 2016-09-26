@@ -1,0 +1,14 @@
+.seo {
+  margin-top: $step;
+
+  &__item {
+    margin-bottom: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+  }
+
+  &__item-text {
+    color: $gray;
+    line-height: 1.4;
+  }
+}

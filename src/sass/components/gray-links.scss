@@ -1,0 +1,12 @@
+.gray-links {
+
+  a {
+    color: $gray-text;
+    border-bottom: 1px solid $gray-text-border;
+
+    &:hover {
+      color: $white;
+      border-bottom: none;
+    }
+  }
+}
