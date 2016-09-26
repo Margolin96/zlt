@@ -1,0 +1,31 @@
+body {
+  background: $light-gray;
+  color: $black;
+  font-family: $proxima;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: $time all;
+
+  @include active;
+}
+
+h1,
+.h1 {
+  
+}
+
+h2,
+.h2 {
+
+}
