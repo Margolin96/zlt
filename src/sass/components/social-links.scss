@@ -1,0 +1,26 @@
+.social-links {
+  margin-top: 40px;
+
+  li {
+    margin-right: 17px;
+    display: inline-block;
+    font-size: 0;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 22px;
+
+      path {
+        fill: #474747;
+      }
+
+      &:hover {
+
+        path {
+          fill: #858585;
+        }
+      }
+    }
+  }
+}
