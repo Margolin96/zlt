@@ -31,6 +31,10 @@
     }
   }
 
+  &__wrap {
+    background: $white;
+  }
+
   &__top {
     color: $black;
     font-size: 18px;

@@ -305,10 +305,42 @@
     cursor: pointer;
   }
 
-  &--fixed .info-box__top,
-  &--fixed .info-box__link {
+  &--fixed .info-box__wrap {
     display: none;
   }
+
+  &--fixed .info-box--phone {
+
+    .info-box__wrap--open {
+      display: block;
+      min-width: 200px;
+      padding: 22px;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 1.1;
+      position: absolute;
+      top: 80px;
+      left: -85px;
+    }
+
+    .info-box__top {
+      line-height: 24px;
+      position: relative;
+
+      &::before {
+        border: 15px solid transparent;
+        border-bottom: 15px solid $white;
+        z-index: 99999999;
+        position: absolute;
+        top: -52px;
+        left: 50%;
+        margin-right: -15px;
+        margin-left: -15px;
+        content: '';
+      }
+    }
+  }
+
 
   &--fixed .info-box__counter {
     display: block;
