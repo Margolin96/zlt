@@ -1,5 +1,6 @@
 .header {
   background: $white;
+  box-shadow: 0 1px 20px rgba(0,0,0,.05);
   
   // TOP HEADER
   &__top {
@@ -96,10 +97,137 @@
     width: 100%;
     float: left;
     border-top: 1px solid $border-light;
+    font-size: 0;
+
+    .container {
+      position: relative;
+    }
+    
+  }
+
+  .menu-list {
+    width: 95%;
+    display: inline-block;
   }
 
   &__search {
+    width: 5%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    font-size: 0;
+    text-align: right;
+
+    form {
+      display: inline-block;
+      width: 98%;
+      box-sizing: border-box;
+      padding-right: 0;
+    }
+
+    &--open {
+      width: 100%;
+      padding: 9px 0px;
+      background: $white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      z-index: 99999;
+
+      form {
+        padding-right: 30px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__search-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+
+    svg {
+      // padding-right: 13px;
+      padding-right: 3px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 40px;
+      cursor: pointer;
+
+      path {
+        fill: #bfbfbf;
+        transition: $time all;
+      }
+
+      &:hover {
+        path {
+          fill: $black;
+        }
+      }
+    }
+
+    input[type="search"] {
+      display: none;
+      width: 90%;
+      padding: 0;
+      // display: inline-block;
+      vertical-align: middle;
+      border: none;
+      outline: none;
+      color: #8d8d8d;
+      font-size: 16px;
+      line-height: 40px;
+    }
+  }
+
+  &__search--open &__search-box {
+
+    svg {
+      padding-right: 13px;
+    }
+
+    input[type="search"] {
+      display: inline-block;
+    }
+  }
+
+  &__search-btn {
     display: none;
+    // display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    text-align: right;
+  }
+
+  &__search--open &__search-btn {
+    display: inline-block;
+  }
+
+  &__search-close {
+    display: none;
+    // display: inline-block;
+    vertical-align: middle;
+    width: 2%;
+    min-width: 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: right;
+    cursor: pointer;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__search--open &__search-close {
+    display: inline-block;
   }
 
 }
