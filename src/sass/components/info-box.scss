@@ -1,0 +1,45 @@
+.info-box {
+  margin-left: 45px;
+  padding-left: 30px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  position: relative;
+
+  &::before {
+    width: 25px;
+    height: 25px;
+    background:transparent url('../img/sprite.png') 0 0 no-repeat;
+    background-size: 50px 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+  }
+
+  &--phone {
+    &::before {}
+  }
+
+  &--doc {
+
+    &::before {
+      background-position: -33px 0;
+      left: 5px;
+    }
+  }
+
+  &__top {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+
+  &__link {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $blue-light-border;
+    outline: none;
+  }
+}
