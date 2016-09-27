@@ -1,20 +1,68 @@
 .menu-list {
+  
 
-  li {
+  & > li {
     display: inline-block;
+    padding: 0px 30px;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 0px 30px;
+    position: relative;
 
     &:first-child {
       padding-left: 20px;
     }
 
-    a {
+    & > a {
       display: inline-block;
       padding: 20px 0;
       color: $black;
+
+      &:hover {
+        color: $blue;
+      }
     }
+  }
+
+  &__sublist {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 20px;
+    background: $white;
+    box-shadow: 0 3px 5px rgba(0,0,0,.15);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    content: '';
+    z-index: 999;
+
+    & > li {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & > a {
+        color: $black;
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: none;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+    }
+  }
+
+  & > li:hover &__sublist {
+    display: block;
+  }
+
+  &__item--sublist:hover{
+    box-shadow: 0 3px 5px rgba(0,0,0,.15);
   }
 }
