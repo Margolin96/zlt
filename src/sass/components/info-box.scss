@@ -3,6 +3,7 @@
   padding-left: 30px;
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
   text-align: left;
   position: relative;
 
@@ -18,10 +19,11 @@
   }
 
   &--phone {
-    &::before {}
+    margin-left: 0;
   }
 
   &--doc {
+    cursor: default;
 
     &::before {
       background-position: -33px 0;
@@ -30,6 +32,7 @@
   }
 
   &__top {
+    color: $black;
     font-size: 18px;
     font-weight: 500;
     padding-bottom: 5px;
@@ -41,5 +44,10 @@
     border: none;
     border-bottom: 1px solid $blue-light-border;
     outline: none;
+    transition: $time all linear;
+
+    &:hover {
+      border-color: transparent;
+    }
   }
 }

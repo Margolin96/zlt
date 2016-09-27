@@ -27,7 +27,7 @@
 
         &:hover {
           color: $white;
-          border-bottom: none;
+          border-bottom: transparent;
         }
       }
     }
@@ -65,25 +65,39 @@
   &__logo-link {
     width: 50%;
     float: left;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0;
+      max-width: 100%;
+      height: auto;
+    }
   }
 
-  img,
   &__logo-text {
     display: inline-block;
     vertical-align: middle;
-  }
-
-  img {
-    font-size: 0;
-    max-width: 100%;
-    height: auto;
-  }
-
-  &__logo-text {
     padding-left: 10px;
     color: #b8b8b8;
     font-size: 12px;
     text-transform: uppercase;
+  }
+
+  &__base-menu.menu-list {
+    display: none;
+    box-sizing: border-box;
+    float: left;
+    width: 74%;
+
+    & > li {
+      font-size: 12px;
+      padding: 0px 12px;
+
+      & > a {
+        padding: 13px 0;
+      }
+    }
   }
 
   &__base-right {
@@ -102,14 +116,15 @@
     .container {
       position: relative;
     }
-    
+
+    .menu-list {
+      width: 95%;
+      display: inline-block;
+    }
   }
 
-  .menu-list {
-    width: 95%;
-    display: inline-block;
-  }
 
+  // SEARCH
   &__search {
     width: 5%;
     display: inline-block;
@@ -225,11 +240,82 @@
       vertical-align: middle;
       padding-top: 10px;
       padding-bottom: 10px;
+
+      path {
+        transition: $time all linear;
+      }
+      
+      &:hover {
+        path {
+          fill: $black;
+        }
+      }
     }
   }
 
   &__search--open &__search-close {
     display: inline-block;
+  }
+
+
+  // SCROLL
+  &--fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+  }
+
+  &--fixed &__top {
+    display: none;
+  }
+
+  &--fixed &__base {
+    padding: 20px 0;
+  }
+
+  &--fixed &__logo-link {
+    width: 16%;
+    line-height: 40px;
+
+    img {
+      max-width: 107px;
+    }
+  }
+
+  &--fixed &__base-right {
+    width: 10%;
+    line-height: 40px;
+  }
+
+  &--fixed &__logo-text {
+    display: none;
+  }
+
+  &--fixed &__base-menu {
+    display: block;
+  }
+
+
+  &--fixed .info-box {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  &--fixed .info-box__top,
+  &--fixed .info-box__link {
+    display: none;
+  }
+
+  &--fixed &__menu {
+    display: none;
+  }
+
+  &--fixed &__search {
+    display: none;
   }
 
 }

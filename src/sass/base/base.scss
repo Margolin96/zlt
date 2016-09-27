@@ -16,7 +16,7 @@ ul {
 a {
   cursor: pointer;
   text-decoration: none;
-  transition: $time all;
+  transition: $time all linear;
 
   @include active;
 }
@@ -30,7 +30,7 @@ a {
   cursor: pointer;
 
   &:hover {
-    border-bottom: none;
+    border-color: transparent;
   }
 }
 

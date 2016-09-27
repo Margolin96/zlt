@@ -33,7 +33,7 @@
 
     &:hover {
       color: $white;
-      border-bottom: none;
+      border-bottom: transparent;
     }
   }
 
@@ -54,7 +54,7 @@
 
         &:hover {
           color: $white;
-          border-bottom: none;
+          border-bottom: transparent;
         }
       }
     }

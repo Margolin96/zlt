@@ -1,5 +1,4 @@
 .menu-list {
-  
 
   & > li {
     display: inline-block;
@@ -36,6 +35,7 @@
     top: 100%;
     content: '';
     z-index: 999;
+    transition: $time all linear;
 
     & > li {
       margin-bottom: 13px;
