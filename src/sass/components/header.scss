@@ -310,6 +310,10 @@
     display: none;
   }
 
+  &--fixed .info-box__counter {
+    display: block;
+  }
+
   &--fixed &__menu {
     display: none;
   }

@@ -50,4 +50,21 @@
       border-color: transparent;
     }
   }
+
+  &__counter {
+    display: none;
+    width: 17px;
+    height: 17px;
+    box-sizing: border-box;
+    background: $yellow;
+    border: 2px solid $white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 8px;
+    line-height: 15px;
+    font-weight: normal;
+    position: absolute;
+    top: -7px;
+    right: -1px;
+  }
 }
