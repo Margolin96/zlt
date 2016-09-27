@@ -1,0 +1,46 @@
+.main-slider {
+  margin-top: 20px;
+  width: 100%;
+
+  &__slide {
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 0 15px;
+    width: 70%;
+    color: $white;
+    font-size: 40px;
+    line-height: 1.6;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    span {
+      padding: 0px 8px;
+      background: $blue;
+    }
+  }
+
+  &__text {
+    padding-bottom: 30px;
+    width: 50%;
+    color: $white;
+    line-height: 1.4;
+  }
+}

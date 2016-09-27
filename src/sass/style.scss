@@ -17,12 +17,15 @@
 @import "base/grid";
 @import "base/buttons";
 @import "base/form";
+@import "base/__slick";
+@import "base/__slick-theme";
 
 
 /*=== компоненты ===*/
 @import "components/header";
 @import "components/menu-list";
 @import "components/head";
+@import "components/main-slider";
 @import "components/divisions";
 @import "components/news";
 @import "components/clients";

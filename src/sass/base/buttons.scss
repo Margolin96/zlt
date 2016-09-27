@@ -22,4 +22,19 @@
       border-color: $black;
     }
   }
+
+  &--slider {
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border: 1px solid $white;
+    color: $white;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $blue;
+      border-color: $blue;
+    }
+  }
 }

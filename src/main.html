@@ -5,6 +5,7 @@
   <title>ЦЛТ</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -64,9 +65,20 @@
 
     <div class="main-slider">
       <div class="main-slider__slide">
-        <h1 class="main-slider__slide-title">Мы создаем  новые технологии для реальной жизни</h1>
-        <p class="main-slider__text">Более 25 лет мы занимаемся производством многопрофильного лазерного оборудования по индивидуальным требованиям заказчиков</p>
-        <a href="#" class="main-slider__link">Каталог оборудования</a>
+        <img src="img/main-banner-slide-1.jpg" alt="">
+        <div class="main-slider__content">
+          <h1 class="main-slider__title">Мы создаем <span>новые технологии</span> для <span>реальной жизни</span></h1>
+          <p class="main-slider__text">Более 25 лет мы занимаемся производством многопрофильного лазерного оборудования по индивидуальным требованиям заказчиков</p>
+          <a href="#" class="btn btn--slider">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="main-slider__slide">
+        <img src="img/main-banner-slide-1.jpg" alt="">
+        <div class="main-slider__content">
+          <h1 class="main-slider__title">Мы создаем материалы</h1>
+          <p class="main-slider__text">Более 25 лет мы занимаемся производством многопрофильного лазерного оборудования по индивидуальным требованиям заказчиков</p>
+          <a href="#" class="btn btn--slider">Каталог материалов</a>
+        </div>
       </div>
     </div>
 
@@ -325,5 +337,13 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
+  <script>
+    $( document ).ready(function() {
+      $('.main-slider').slick({
+        infinite: true
+      });
+    });
+  </script>
 </body>
 </html>
