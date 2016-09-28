@@ -28,18 +28,40 @@
     <div class="header__base">
       <div class="container">
         <a href="#" class="header__logo-link">
-          <img src="img/main-logo.png" alt="">
+          <img src="img/main-logo.png" alt="логотип ЦЛТ">
           <span class="header__logo-text">Центр лазерных технологий</span>
         </a>
+        <ul class="header__base-menu menu-list">
+          <li class="menu-list__item menu-list__item--sublist">
+            <a href="#">О компании</a>
+            <ul class="menu-list__sublist">
+              <li><a href="#">Клиенты</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Статьи</a></li>
+            </ul>
+          </li>
+          <li class="menu-list__item"><a href="#">Оборудование</a></li>
+          <li class="menu-list__item"><a href="#">Наука</a></li>
+          <li class="menu-list__item"><a href="#">Услуги</a></li>
+          <li class="menu-list__item"><a href="#">Материалы</a></li>
+          <li class="menu-list__item"><a href="#">Сувениры и продукция</a></li>
+          <li class="menu-list__item"><a href="#">Контакты</a></li>
+        </ul>
         <div class="header__base-right">
           <div class="info-box info-box--phone">
-            <div class="info-box__top">+7 (812) 309-89-99</div>
-            <button class="info-box__link link">Обратный звонок</button>
+            <div class="info-box__wrap">
+              <div class="info-box__top">+7 (812) 309-89-99</div>
+              <button class="info-box__link link js-get-modal" data-target=".modal-call-order">Обратный звонок</button>
+            </div>
           </div>
-          <div class="info-box info-box--doc">
-            <div class="info-box__top">Мой заказ</div>
-            <a href="#" class="info-box__link link">0 товаров</a>
-          </div>
+          <a href="#" class="info-box info-box--doc">
+            <div class="info-box__wrap">
+              <div class="info-box__top">Мой заказ</div>
+              <span href="#" class="info-box__link link">12 товаров</span>
+            </div>
+            <span class="info-box__counter">2</span>
+          </a>
         </div>
       </div>
       <div class="header__menu">
@@ -64,11 +86,11 @@
           <div class="header__search">
             <form action="/echo">
               <div class="header__search-box">
-                <svg class="header__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path d="M495 466.2L377.2 348.4c29.2-35.6 46.8-81.2 46.8-130.9C424 103.5 331.5 11 217.5 11 103.4 11 11 103.5 11 217.5S103.4 424 217.5 424c49.7 0 95.2-17.5 130.8-46.7L466.1 495c8 8 20.9 8 28.9 0 8-7.9 8-20.9 0-28.8zm-277.5-83.3C126.2 382.9 52 308.7 52 217.5S126.2 52 217.5 52C308.7 52 383 126.3 383 217.5s-74.3 165.4-165.5 165.4z"/></svg>
+                <svg class="header__search-icon header__search-icon--open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path d="M495 466.2L377.2 348.4c29.2-35.6 46.8-81.2 46.8-130.9C424 103.5 331.5 11 217.5 11 103.4 11 11 103.5 11 217.5S103.4 424 217.5 424c49.7 0 95.2-17.5 130.8-46.7L466.1 495c8 8 20.9 8 28.9 0 8-7.9 8-20.9 0-28.8zm-277.5-83.3C126.2 382.9 52 308.7 52 217.5S126.2 52 217.5 52C308.7 52 383 126.3 383 217.5s-74.3 165.4-165.5 165.4z"/></svg>
                 <input type="search" name="q" placeholder="Введите сюда свой поисковый запрос">
               </div>
               <div class="header__search-btn">
-                <button type="submit" class="btn btn--search">Искать</button>
+                <button type="submit" class="btn btn--submit">Искать</button>
               </div>
             </form>
             <button class="header__search-close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64"><path fill="#bfbfbf" d="M28.941 31.786L.613 60.114a2.014 2.014 0 1 0 2.848 2.849l28.541-28.541 28.541 28.541c.394.394.909.59 1.424.59a2.014 2.014 0 0 0 1.424-3.439L35.064 31.786 63.41 3.438A2.014 2.014 0 1 0 60.562.589L32.003 29.15 3.441.59A2.015 2.015 0 0 0 .593 3.439l28.348 28.347z"/></svg></button>
@@ -353,6 +375,21 @@
       </div>
     </div>
   </footer>
+  <!-- Модальное окно "Обратный звонок" -->
+  <div class="modal modal-call-order">
+    <div class="modal-content">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64"><path fill="#bfbfbf" d="M28.941 31.786L.613 60.114a2.014 2.014 0 1 0 2.848 2.849l28.541-28.541 28.541 28.541c.394.394.909.59 1.424.59a2.014 2.014 0 0 0 1.424-3.439L35.064 31.786 63.41 3.438A2.014 2.014 0 1 0 60.562.589L32.003 29.15 3.441.59A2.015 2.015 0 0 0 .593 3.439l28.348 28.347z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="call-order">
+        <form action="/echo">
+          <b>Обратный звонок</b>
+          <p>Введите номер и мы перезвоним вам в течение часа</p>
+          <input type="tel">
+          <button type="submit" class="btn btn--submit">Перезвоните мне</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="js/script.min.js"></script>
   <script>
     $( document ).ready(function() {
