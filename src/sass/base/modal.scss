@@ -1,0 +1,81 @@
+html,
+body {
+  position: relative;
+}
+
+.modal {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99999999;
+
+  &-content {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 480px;
+    margin-left: -240px;
+    margin-right: -240px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  &-open {
+    display: block;
+  }
+
+  .call-order {
+    padding: 35px 40px 40px;
+    text-align: center;
+
+    b {
+      padding-bottom: 10px;
+      color: $dark;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 0;
+      padding-bottom: 25px;
+      color: #a9a9a9;
+
+    }
+
+    input[type="tel"] {
+      margin-bottom: 25px;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px 20px;
+      background: #eeeeee;
+      border: none;
+      outline: none;
+      color: $dark;
+      font-size: 30px;
+      font-weight: normal;
+    }
+  }
+}
+
+.btn-modal-close {
+  position: absolute;
+  top: 0px;
+  right: -30px;
+  content: '';
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+}
