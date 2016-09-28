@@ -9,6 +9,14 @@
       display: block;
       width: 100%;
       height: auto;
+
+      @media (max-width: $tablet) {
+        min-height: 320px;
+      }
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        min-height: 355px;
+      }
     }
   }
 
@@ -31,6 +39,11 @@
     font-weight: bold;
     text-transform: uppercase;
 
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 100%;
+      font-size: 30px;
+    }
+
     span {
       padding: 0px 8px;
       background: $blue;
@@ -38,9 +51,20 @@
   }
 
   &__text {
-    padding-bottom: 30px;
     width: 50%;
     color: $white;
     line-height: 1.4;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 80%;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    content: '';
+    z-index: 99;
   }
 }

@@ -3,32 +3,86 @@
   padding-top: 60px;
   background: $darkest;
 
+  @media (max-width: $tablet) {
+    margin-top: 70px;
+    padding-top: 50px;
+  }
+
+  .col-xs-12 {
+    @media (min-width: $tablet + 1) {
+      display: none;
+    }
+  }
+
+  .col-sm-3 {
+    float: right;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
   &__contacts {
     max-width: 215px;
+    box-sizing: border-box;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      padding-top: 40px;
+      max-width: 100%;
+      font-size: 0;
+    }
   }
 
   &__logo {
     display: inline-block;
+    vertical-align: top;
     margin-bottom: 25px;
+    box-sizing: border-box;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 25%;
+      padding-right: 10px;
+    }
 
     img {
       display: block;
       max-width: 100%;
       height: auto;
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        max-width: 155px;
+      }
+    }
+  }
+
+  &__contacts-list {
+    box-sizing: border-box;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0px 10px;
     }
   }
 
   &__phone {
     margin-bottom: 20px;
     display: inline-block;
+    vertical-align: top;
     color: $white;
     font-size: 24px;
     font-weight: 500;
+
+    @media (max-width: $desktop) {
+      margin-bottom: 15px;
+    }
   }
 
   &__address {
     border-bottom: 1px solid #3b3b3b;
     color: #dfdfdf;
+    font-size: 14px;
     line-height: 1.6;
 
     &:hover {
@@ -37,13 +91,51 @@
     }
   }
 
+  .social-links {
+    margin-top: 40px;
+
+    @media (max-width: $tablet) {
+      margin-top: 35px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      margin-top: 0;
+      width: 25%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0px 10px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__list-divs {
+    margin-bottom: 40px;
+
+    & > li {
+      margin-bottom: 15px;
+      
+      & > a {
+        color: $white;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+    
+    
+  }
+
   &__list {
     color: $white;
-    
   }
 
   &__list-links {
     padding-top: 5px;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
 
     li {
       margin-bottom: 10px;
@@ -66,17 +158,39 @@
     border-top: 1px solid $dark-gray;
     color: #616161;
     @include clearfix;
+
+    @media (max-width: $tablet) {
+      margin-top: 20px;
+    }
   }
 
   &__bottom-left {
     width: 50%;
     float: left;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 65%;
+    }
   }
 
   &__bottom-right {
     width: 50%;
     float: right;
     text-align: right;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-top: 20px;
+      text-align: left;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 35%;
+    }
 
     img {
       font-size: 0;

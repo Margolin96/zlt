@@ -10,6 +10,17 @@
 
     &:first-child {
       padding-left: 20px;
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        padding-left: 0;
+      }
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      
+      &:nth-child(n+5) {
+        display: none;
+      }
     }
 
     & > a {

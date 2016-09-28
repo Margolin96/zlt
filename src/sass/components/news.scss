@@ -1,6 +1,18 @@
 .news {
   margin-top: $step;
 
+  @media (max-width: $tablet) {
+    .col-md-4:nth-child(n+2) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet + 1) and (max-width: $desktop) {
+    .col-md-4:nth-child(n+3) {
+      display: none;
+    }
+  }
+
   &__item {
     background: $white;
   }
@@ -32,6 +44,10 @@
     font-size: 18px;
     font-weight: normal;
     line-height: 1.5;
+
+    @media (max-width: $tablet) {
+      line-height: 1.3;
+    }
 
     a {
       color: $dark;

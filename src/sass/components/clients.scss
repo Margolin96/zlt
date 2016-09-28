@@ -13,6 +13,27 @@
       display: inline-block;
       vertical-align: middle;
 
+      @media (max-width: $tablet) {
+        width: 50%;
+        padding-bottom: 30px;
+
+        &:nth-child(n+3) {
+          padding-bottom: 0;
+        }
+
+        &:nth-child(n+5) {
+          display: none;
+        }
+      }
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        width: 25%;
+
+        &:nth-child(n+5) {
+          display: none;
+        }
+      }
+
       img {
         margin: 0 auto;
         display: block;
