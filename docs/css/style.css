@@ -976,9 +976,12 @@ h3,
 }
 
 .btn--more {
+  display: inline-block !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: auto !important;
   min-width: 165px;
+  margin-top: 30px;
   padding: 0;
   border: 1px solid #c0c0c0;
   color: #000000;
