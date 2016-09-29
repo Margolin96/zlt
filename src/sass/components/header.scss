@@ -400,6 +400,12 @@
       position: absolute;
       top: 80px;
       left: -85px;
+
+      @media (max-width: $tablet) {
+        top: 70px;
+        right: -25px;
+        left: auto;
+      }
     }
 
     .info-box__top {
@@ -416,6 +422,14 @@
         margin-right: -15px;
         margin-left: -15px;
         content: '';
+
+        @media (max-width: $tablet) {
+          left: auto;
+          top: -52px;
+          right: 20px;
+          margin-right: -15px;
+          margin-left: -15px;
+        }
       }
     }
   }
