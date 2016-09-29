@@ -1687,6 +1687,140 @@ body {
   background: #30a4dc;
 }
 
+.menu-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  display: none;
+  width: 100%;
+  background: #333333;
+}
+
+.menu-mobile__close {
+  width: 100%;
+  padding: 18px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #464646;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.menu-mobile__close svg,
+.menu-mobile__close span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.menu-mobile__close span {
+  padding-left: 18px;
+}
+
+.menu-mobile__list {
+  padding-top: 13px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 60px;
+}
+
+.menu-mobile__list-item--arrow {
+  position: relative;
+}
+
+.menu-mobile__list-item--arrow::after {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../img/arrow-gray.svg") 0 0 no-repeat;
+  -webkit-background-size: 15px 15px;
+          background-size: 15px 15px;
+  content: "";
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu-mobile__list-item > a {
+  display: inline-block;
+  padding: 12px 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.menu-mobile__list-item > a:hover {
+  color: #30a4dc;
+}
+
+.menu-mobile--submenu .menu-mobile__list-item {
+  display: none;
+}
+
+.menu-mobile--submenu .menu-mobile__list-item--arrow {
+  display: block;
+}
+
+.menu-mobile--submenu .menu-mobile__list-item--arrow::after {
+  display: none;
+}
+
+.menu-mobile--submenu .menu-mobile__list-item--arrow > a {
+  position: absolute;
+  top: -62px;
+  left: 0;
+  width: 100%;
+  background: #333333;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.menu-mobile__sub-list {
+  display: none;
+  width: 100%;
+  background: #333333;
+}
+
+.menu-mobile__sub-list > li:first-child a {
+  position: absolute;
+  top: -10px;
+  left: -60px;
+  width: 50px;
+  height: 110%;
+  background: transparent url("../img/arrow-gray.svg") 50% 24px no-repeat;
+  -webkit-background-size: 15px 15px;
+          background-size: 15px 15px;
+  content: "";
+  cursor: pointer;
+  font-size: 0;
+}
+
+.menu-mobile__sub-list > li > a {
+  display: inline-block;
+  padding: 12px 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.menu-mobile__sub-list > li > a:hover {
+  color: #30a4dc;
+}
+
+.menu-mobile__sub-list--open {
+  display: block;
+}
+
 .menu-list > li {
   position: relative;
   display: inline-block;
@@ -3060,6 +3194,28 @@ body {
     padding-left: 20px;
   }
 
+  .modal-content {
+    width: 250px;
+    margin: -135px;
+  }
+
+  .modal .call-order {
+    padding: 15px;
+  }
+
+  .modal .call-order b {
+    padding-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .modal .call-order p {
+    padding-bottom: 15px;
+  }
+
+  .modal .call-order input[type="tel"] {
+    margin-bottom: 15px;
+  }
+
   .header__top {
     display: none;
   }
@@ -3106,7 +3262,25 @@ body {
     margin: 0;
   }
 
+  .header--fixed .info-box--phone .info-box__wrap--open {
+    top: 70px;
+    right: -25px;
+    left: auto;
+  }
+
+  .header--fixed .info-box--phone .info-box__top::before {
+    top: -52px;
+    right: 20px;
+    left: auto;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
   .menu-toggle {
+    display: block;
+  }
+
+  .menu-mobile--open {
     display: block;
   }
 
@@ -3116,12 +3290,49 @@ body {
     cursor: pointer;
   }
 
+  .info-box__wrap--open {
+    position: absolute;
+    top: 70px;
+    right: -25px;
+    left: auto;
+    z-index: 8888;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-width: 200px;
+    padding: 22px;
+    text-align: center;
+    line-height: 1.1;
+  }
+
   .info-box__top {
     display: none;
   }
 
+  .info-box__wrap--open .info-box__top {
+    position: relative;
+    display: block;
+    line-height: 24px;
+  }
+
+  .info-box__wrap--open .info-box__top::before {
+    position: absolute;
+    top: -52px;
+    right: 20px;
+    z-index: 99999999;
+    margin-right: -15px;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #ffffff;
+    content: "";
+  }
+
   .info-box__link {
     display: none;
+  }
+
+  .info-box__wrap--open .info-box__link {
+    display: inline-block;
   }
 
   .info-box__counter {
