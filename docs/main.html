@@ -27,6 +27,7 @@
     </div>
     <div class="header__base">
       <div class="container">
+        <button class="menu-toggle"><span>Меню</span></button>
         <a href="#" class="header__logo-link">
           <img src="img/main-logo.png" alt="логотип ЦЛТ">
           <span class="header__logo-text">Центр лазерных технологий</span>
@@ -102,16 +103,17 @@
   <main class="container">
 
     <div class="main-slider">
-      <div class="main-slider__slide">
-        <img src="img/main-banner-slide-1.jpg" alt="">
+      <div class="main-slider__slide" style="background-image: url('../img/main-banner-slide-1.jpg');">
         <div class="main-slider__content">
-          <h1 class="main-slider__title">Мы создаем <span>новые технологии</span> для <span>реальной жизни</span></h1>
+          <h1 class="main-slider__title">
+            Мы создаем <nobr><span>новые технологии</span></nobr><br>
+            для <span>реальной жизни</span>
+          </h1>
           <p class="main-slider__text">Более 25 лет мы занимаемся производством многопрофильного лазерного оборудования по индивидуальным требованиям заказчиков</p>
           <a href="#" class="btn btn--slider">Каталог оборудования</a>
         </div>
       </div>
-      <div class="main-slider__slide">
-        <img src="img/main-banner-slide-1.jpg" alt="">
+      <div class="main-slider__slide" style="background-image: url('../img/main-banner-slide-1.jpg');">
         <div class="main-slider__content">
           <h1 class="main-slider__title">Мы создаем материалы</h1>
           <p class="main-slider__text">Более 25 лет мы занимаемся производством многопрофильного лазерного оборудования по индивидуальным требованиям заказчиков</p>
@@ -122,7 +124,7 @@
 
     <div class="divisions">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
           <div class="divisions__item divisions__item--main">
             <h2 class="divisions__item-title">Оборудование</h2>
             <ul class="divisions__links">
@@ -134,11 +136,13 @@
             </ul>
             <a href="#" class="link">Все оборудование</a>
             <div class="divisions__imgs">
-              <img src="img/equipment.jpg" alt="" width="353" height="339" class="divisions__img">
+              <img src="img/equipment.jpg" alt="" width="353" height="339" class="divisions__img divisions__img--desktop">
+              <img src="img/equipment-tablet.jpg" alt="" width="494" height="360" class="divisions__img divisions__img--tablet">
+              <img src="img/equipment-mobile.jpg" alt="" width="258" height="221" class="divisions__img divisions__img--mobile">
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6">
           <div class="divisions__item">
             <h2 class="divisions__item-title">Наука</h2>
             <ul class="divisions__links">
@@ -148,7 +152,8 @@
             </ul>
             <a href="#" class="link">Все проекты</a>
             <div class="divisions__imgs">
-              <img src="img/sience.jpg" alt="" width="123" height="151" class="divisions__img">
+              <img src="img/sience.jpg" alt="" width="123" height="151" class="divisions__img divisions__img--desktop">
+              <img src="img/sience-tablet.jpg" alt="" width="152" height="149" class="divisions__img divisions__img--tablet">
             </div>
           </div>
           <div class="divisions__item">
@@ -159,11 +164,12 @@
             </ul>
             <a href="#" class="link">Все материалы</a>
             <div class="divisions__imgs">
-              <img src="img/materials.jpg" alt="" width="125" height="128" class="divisions__img">
+              <img src="img/materials.jpg" alt="" width="125" height="128" class="divisions__img divisions__img--desktop">
+              <img src="img/materials-tablet.jpg" alt="" width="130" height="131" class="divisions__img divisions__img--tablet">
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6">
           <div class="divisions__item">
             <h2 class="divisions__item-title">Услуги</h2>
             <ul class="divisions__links">
@@ -173,8 +179,9 @@
               <li><a href="#">Печать</a></li>
             </ul>
             <a href="#" class="link">Все услуги</a>
-            <div class="divisions__imgs">
-              <img src="img/services.jpg" alt="" width="134" height="106" class="divisions__img">
+            <div class="divisions__imgs"> 
+              <img src="img/services.jpg" alt="" width="134" height="106" class="divisions__img divisions__img--desktop">
+              <img src="img/services-tablet.jpg" alt="" width="171" height="105" class="divisions__img divisions__img--tablet">
             </div>
           </div>
           <div class="divisions__item">
@@ -187,7 +194,8 @@
             </ul>
             <a href="#" class="link">Все сувениры</a>
             <div class="divisions__imgs">
-              <img src="img/souvenirs.jpg" alt="" width="143" height="104" class="divisions__img">
+              <img src="img/souvenirs.jpg" alt="" width="143" height="104" class="divisions__img divisions__img--desktop">
+              <img src="img/souvenirs-tablet.jpg" alt="" width="148" height="92" class="divisions__img divisions__img--tablet">
             </div>
           </div>
         </div>
@@ -200,7 +208,7 @@
         <a href="#" class="link">Все новости</a>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6">
           <article class="news__item">
             <a href="#" class="news__item-img">
               <img src="img/post-thumb-1.jpg" alt="" width="379" height="200">
@@ -212,7 +220,7 @@
             </div>
           </article>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6">
           <article class="news__item">
             <a href="#" class="news__item-img">
               <img src="img/post-thumb-2.jpg" alt="" width="379" height="200">
@@ -298,60 +306,19 @@
     <div class="container">
       <div class="footer__top">
         <div class="row">
-          <div class="col-md-4">
-            <div class="footer__contacts">
-              <a href="#" class="footer__logo"><img src="img/main-logo-gray.png" alt=""></a><br>
-              <a href="tel:+78123098999" class="footer__phone">+7 (812) 309-89-99</a><br>
-              <a href="#" class="footer__address">194064, Санкт-Петербург, Тихорецкий пр. д. 21</a>
-              <ul class="social-links">
-                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="22" height="22"><path d="M38.52.012h222.978C282.682.012 300 17.336 300 38.52v222.978c0 21.178-17.318 38.49-38.502 38.49H38.52c-21.184 0-38.52-17.313-38.52-38.49V38.52C0 17.336 17.336.012 38.52.012zm180.026 33.317c-7.438 0-13.505 6.091-13.505 13.525v32.314c0 7.437 6.067 13.514 13.505 13.514h33.903c7.426 0 13.506-6.077 13.506-13.514V46.854c0-7.434-6.08-13.525-13.506-13.525h-33.903zm47.538 93.539h-26.396a87.715 87.715 0 0 1 3.86 25.759c0 49.882-41.766 90.34-93.266 90.34-51.487 0-93.254-40.458-93.254-90.34 0-8.963 1.37-17.584 3.861-25.759H33.35V253.6c0 6.563 5.359 11.902 11.916 11.902h208.907c6.563 0 11.911-5.339 11.911-11.902V126.868zm-115.801-35.89c-33.26 0-60.24 26.128-60.24 58.388 0 32.227 26.98 58.375 60.24 58.375 33.278 0 60.259-26.148 60.259-58.375 0-32.261-26.981-58.388-60.259-58.388z"/></svg></a></li>
-                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-153 310.8 304.4 172.2" width="26" height="15"><path d="M109 420.2c10.1 9.9 20.8 19.1 29.8 30 4 4.8 7.8 9.8 10.7 15.4 4.1 8 .4 16.7-6.7 17.2H98.5c-11.4.9-20.6-3.7-28.2-11.5-6.1-6.3-11.8-12.9-17.7-19.4-2.4-2.6-5-5.1-8-7.1-6.1-3.9-11.3-2.7-14.8 3.6-3.5 6.4-4.3 13.5-4.7 20.7-.5 10.4-3.6 13.2-14.1 13.7-22.4 1.1-43.7-2.3-63.4-13.6-17.4-10-30.9-24-42.7-40-22.9-31-40.4-65.1-56.2-100.1-3.5-7.9-1-12.1 7.8-12.3 14.5-.3 28.9-.3 43.4 0 5.9.1 9.8 3.5 12 9 7.8 19.2 17.4 37.6 29.4 54.5 3.2 4.5 6.5 9 11.1 12.2 5.1 3.5 9.1 2.4 11.5-3.4 1.5-3.6 2.2-7.5 2.6-11.4 1.1-13.4 1.3-26.7-.7-40.1-1.2-8.3-5.9-13.7-14.2-15.3-4.2-.8-3.6-2.4-1.6-4.8 3.6-4.2 6.9-6.8 13.6-6.8h50.1c7.9 1.6 9.6 5.1 10.7 13v55.7c-.1 3.1 1.5 12.2 7.1 14.2 4.4 1.4 7.4-2.1 10-4.9 12-12.7 20.6-27.8 28.2-43.4 3.4-6.9 6.3-14 9.1-21.1 2.1-5.3 5.4-7.9 11.3-7.8h48.2c1.4 0 2.9 0 4.3.3 8.1 1.4 10.4 4.9 7.8 12.8-4 12.5-11.6 22.8-19.2 33.3-8 11.1-16.6 21.9-24.6 33.1-7.2 10.3-6.7 15.4 2.4 24.3z"/></svg></a></li>
-                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 287.8 310 218.2" width="25" height="17"><path d="M148 307.5c-11.2-13.3-31.9-18.7-71.3-18.7H-66.5c-40.4 0-61.4 5.8-72.5 19.9-10.9 13.9-10.9 34.2-10.9 62.4v53.7c0 54.6 12.9 82.2 83.4 82.2H76.7c34.2 0 53.2-4.8 65.4-16.5 12.6-12 17.9-31.7 17.9-65.7v-53.7c.1-29.7-.7-50.2-12-63.6zm-98.9 97.8l-65 34c-4.9 2.6-10.9.7-13.5-4.2-.7-1.4-1.1-3-1.1-4.6v-67.8c0-5.5 4.5-10 10-10 1.6 0 3.2.4 4.6 1.1l65 33.8c4.9 2.5 6.8 8.6 4.3 13.5-1 1.8-2.5 3.3-4.3 4.2z"/></svg></a></li>
+          <div class="col-xs-12">
+            <div class="footer__list">
+              <ul class="footer__list-divs">
+                <li><a href="#">Оборудование</a></li>
+                <li><a href="#">Наука</a></li>
+                <li><a href="#">Услуги и материалы</a></li>
+                <li><a href="#">Сувениры и продукция</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-lg-2 col-md-3 col-sm-3">
             <div class="footer__list">
-              <p>Оборудование</p>
-              <ul class="footer__list-links">
-                <li><a href="#">Станки</a></li>
-                <li><a href="#">Станки Б/У</a></li>
-                <li><a href="#">Реализованные проекты</a></li>
-                <li><a href="#">Применение оборудования</a></li>
-                <li><a href="#">Отрасли</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="footer__list">
-              <p>Наука</p>
-              <ul class="footer__list-links">
-                <li><a href="#">Проекты</a></li>
-                <li><a href="#">Партнеры</a></li>
-                <li><a href="#">Патенты</a></li>
-                <li><a href="#">Выставки и конференции</a></li>
-                <li><a href="#">Научные статьи</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="footer__list">
-              <p>Услуги и материалы</p>
-              <ul class="footer__list-links">
-                <li><a href="#">Лазерная гравировка</a></li>
-                <li><a href="#">Полноцветная печать</a></li>
-                <li><a href="#">Лазерная резка</a></li>
-                <li><a href="#">Тиснение</a></li>
-                <li><a href="#">Rowmark</a></li>
-                <li><a href="#">Металлы</a></li>
-                <li><a href="#">Стекло для 3D</a></li>
-                <li><a href="#">Пленка TESA</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="footer__list">
-              <p>Сувениры и продукция</p>
+              <p class="footer__list-title">Сувениры и продукция</p>
               <ul class="footer__list-links">
                 <li><a href="#">Одежда</a></li>
                 <li><a href="#">Визитки</a></li>
@@ -364,10 +331,69 @@
               </ul>
             </div>
           </div>
+          <div class="col-lg-2 col-md-3 col-sm-3">
+            <div class="footer__list">
+              <p class="footer__list-title">Услуги и материалы</p>
+              <ul class="footer__list-links">
+                <li><a href="#">Лазерная гравировка</a></li>
+                <li><a href="#">Полноцветная печать</a></li>
+                <li><a href="#">Лазерная резка</a></li>
+                <li><a href="#">Тиснение</a></li>
+                <li><a href="#">Rowmark</a></li>
+                <li><a href="#">Металлы</a></li>
+                <li><a href="#">Стекло для 3D</a></li>
+                <li><a href="#">Пленка TESA</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3">
+            <div class="footer__list">
+              <p class="footer__list-title">Наука</p>
+              <ul class="footer__list-links">
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Патенты</a></li>
+                <li><a href="#">Выставки и конференции</a></li>
+                <li><a href="#">Научные статьи</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3">
+            <div class="footer__list">
+              <p class="footer__list-title">Оборудование</p>
+              <ul class="footer__list-links">
+                <li><a href="#">Станки</a></li>
+                <li><a href="#">Станки Б/У</a></li>
+                <li><a href="#">Реализованные проекты</a></li>
+                <li><a href="#">Применение оборудования</a></li>
+                <li><a href="#">Отрасли</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="footer__contacts">
+              <a href="#" class="footer__logo"><img src="img/main-logo-gray.png" alt=""></a>
+              <div class="footer__contacts-list">
+                <a href="tel:+78123098999" class="footer__phone">+7 (812) 309-89-99</a><br>
+                <a href="#" class="footer__address">194064, Санкт-Петербург,<br>Тихорецкий пр. д. 21</a>
+              </div>
+              <ul class="social-links">
+                <li>
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 169.063 169.063"><g fill="#FFF"><path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752z"/><path d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zm45.39-84.842c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z"/></g></svg></a>
+                </li>
+                <li>
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-153 310.8 304.4 172.2" width="26" height="15"><path d="M109 420.2c10.1 9.9 20.8 19.1 29.8 30 4 4.8 7.8 9.8 10.7 15.4 4.1 8 .4 16.7-6.7 17.2H98.5c-11.4.9-20.6-3.7-28.2-11.5-6.1-6.3-11.8-12.9-17.7-19.4-2.4-2.6-5-5.1-8-7.1-6.1-3.9-11.3-2.7-14.8 3.6-3.5 6.4-4.3 13.5-4.7 20.7-.5 10.4-3.6 13.2-14.1 13.7-22.4 1.1-43.7-2.3-63.4-13.6-17.4-10-30.9-24-42.7-40-22.9-31-40.4-65.1-56.2-100.1-3.5-7.9-1-12.1 7.8-12.3 14.5-.3 28.9-.3 43.4 0 5.9.1 9.8 3.5 12 9 7.8 19.2 17.4 37.6 29.4 54.5 3.2 4.5 6.5 9 11.1 12.2 5.1 3.5 9.1 2.4 11.5-3.4 1.5-3.6 2.2-7.5 2.6-11.4 1.1-13.4 1.3-26.7-.7-40.1-1.2-8.3-5.9-13.7-14.2-15.3-4.2-.8-3.6-2.4-1.6-4.8 3.6-4.2 6.9-6.8 13.6-6.8h50.1c7.9 1.6 9.6 5.1 10.7 13v55.7c-.1 3.1 1.5 12.2 7.1 14.2 4.4 1.4 7.4-2.1 10-4.9 12-12.7 20.6-27.8 28.2-43.4 3.4-6.9 6.3-14 9.1-21.1 2.1-5.3 5.4-7.9 11.3-7.8h48.2c1.4 0 2.9 0 4.3.3 8.1 1.4 10.4 4.9 7.8 12.8-4 12.5-11.6 22.8-19.2 33.3-8 11.1-16.6 21.9-24.6 33.1-7.2 10.3-6.7 15.4 2.4 24.3z"/></svg></a>
+                </li>
+                <li>
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 287.8 310 218.2" width="25" height="17"><path d="M148 307.5c-11.2-13.3-31.9-18.7-71.3-18.7H-66.5c-40.4 0-61.4 5.8-72.5 19.9-10.9 13.9-10.9 34.2-10.9 62.4v53.7c0 54.6 12.9 82.2 83.4 82.2H76.7c34.2 0 53.2-4.8 65.4-16.5 12.6-12 17.9-31.7 17.9-65.7v-53.7c.1-29.7-.7-50.2-12-63.6zm-98.9 97.8l-65 34c-4.9 2.6-10.9.7-13.5-4.2-.7-1.4-1.1-3-1.1-4.6v-67.8c0-5.5 4.5-10 10-10 1.6 0 3.2.4 4.6 1.1l65 33.8c4.9 2.5 6.8 8.6 4.3 13.5-1 1.8-2.5 3.3-4.3 4.2z"/></svg></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
-        <div class="footer__bottom-left">© 1991–2016 «Центр Лазерных Технологий». Все прова защищены.</div>
+        <div class="footer__bottom-left">© 1991–2016 «Центр Лазерных Технологий». Все права защищены.</div>
         <div class="footer__bottom-right">
           Дизайн и разработка <a href="#"><img src="img/logo-nordart.png" alt="Nordart logo" width="69" height="11"></a>
         </div>
@@ -390,10 +416,5 @@
     </div>
   </div>
   <script src="js/script.min.js" async></script>
-  <script>
-    jQuery(document).ready(function($) {
-
-    });
-  </script>
 </body>
 </html>
