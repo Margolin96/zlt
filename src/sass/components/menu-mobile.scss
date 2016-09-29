@@ -41,14 +41,94 @@
   }
 
   &__list {
+    padding-top: 13px;
     padding-left: 60px;
     padding-right: 20px;
     padding-bottom: 25px;
+  }
 
-    & > li {
-      padding-top: 25px;
+  &--submenu &__list {
+
+  }
+
+  &__list-item {
+
+    &--arrow {
+      position: relative;
+
+      &::after {
+        width: 20px;
+        height: 20px;
+        background: transparent url('../img/arrow-gray.svg') 0 0 no-repeat;
+        background-size: 15px 15px;
+        transform: rotate(180deg);
+        position: absolute;
+        right: 0;
+        top: 10px;
+        content: '';
+      }
+    }
+
+    & > a {
+      display: inline-block;
+      padding: 12px 0;
+      color: $white;
+      font-size: 16px;
+      font-weight: normal;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  &--submenu &__list-item {
+    display: none;
+
+    &--arrow {
+      display: block;
+
+      &::after {
+        display: none;
+      }
 
       & > a {
+        width: 100%;
+        background: #333333;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: absolute;
+        top: -62px;
+        left: 0px;
+      }
+    }
+
+  }
+
+  &__sub-list {
+    display: none;
+    width: 100%;
+    background: #333333;
+
+    & > li {
+
+      &:first-child a {
+        width: 50px;
+        height: 110%;
+        background: transparent url('../img/arrow-gray.svg') 50% 24px no-repeat;
+        background-size: 15px 15px;
+        font-size: 0;
+        position: absolute;
+        left: -60px;
+        top: -10px;
+        content: '';
+        cursor: pointer;
+      }
+
+      & > a {
+        display: inline-block;
+        padding: 12px 0;
         color: $white;
         font-size: 16px;
         font-weight: normal;
@@ -57,6 +137,11 @@
           color: $blue;
         }
       }
+    }
+
+    &--open {
+      display: block;
+      
     }
   }
 }
