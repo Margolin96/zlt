@@ -1,0 +1,62 @@
+.menu-mobile {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  background: #333333;
+
+  &--open {
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &__close {
+    width: 100%;
+    padding: 18px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #464646;
+    text-align: left;
+    color: $white;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 20px;
+    cursor: pointer;
+
+    svg,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 20px;
+    }
+
+    span {
+      padding-left: 18px;
+    }
+  }
+
+  &__list {
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+
+    & > li {
+      padding-top: 25px;
+
+      & > a {
+        color: $white;
+        font-size: 16px;
+        font-weight: normal;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}

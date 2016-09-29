@@ -2,6 +2,14 @@
 
 $(function(){
 
+  $('.menu-toggle' ).click(function(){
+    $('.menu-mobile').addClass('menu-mobile--open');
+  });
+
+  $('.menu-mobile__close' ).click(function(){
+    $('.menu-mobile').removeClass('menu-mobile--open');
+  });
+
   $('.main-slider').slick({
     infinite: true
   });
