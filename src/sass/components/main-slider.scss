@@ -2,22 +2,25 @@
   margin-top: 20px;
   width: 100%;
 
+  .slick-arrow {
+    @media (max-width: $tablet) {
+      display: none!important;
+    }
+  }
+
   &__slide {
+    min-height: 355px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
 
-      @media (max-width: $tablet) {
-        min-height: 320px;
-      }
-
-      @media (min-width: $tablet + 1) and (max-width: $desktop) {
-        min-height: 355px;
-      }
+    @media (max-width: $tablet) {
+      min-height: 320px;
+      background-position: 50% 0;
     }
+
   }
 
   &__content {
@@ -27,6 +30,10 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    @media (max-width: $tablet) {
+      padding: 30px 15px 20px;
+    }
   }
 
   &__title {
@@ -39,6 +46,11 @@
     font-weight: bold;
     text-transform: uppercase;
 
+    @media (max-width: $tablet) {
+      width: 100%;
+      font-size: 20px;
+    }
+
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
       width: 100%;
       font-size: 30px;
@@ -47,6 +59,10 @@
     span {
       padding: 0px 8px;
       background: $blue;
+
+      @media (max-width: $tablet) {
+        padding: 0px 3px;
+      }
     }
   }
 
@@ -54,6 +70,10 @@
     width: 50%;
     color: $white;
     line-height: 1.4;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
 
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
       width: 80%;
@@ -66,5 +86,13 @@
     left: 50px;
     content: '';
     z-index: 99;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      position: relative;
+      left: 0;
+      bottom: auto;
+
+    }
   }
 }

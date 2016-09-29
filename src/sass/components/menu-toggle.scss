@@ -1,0 +1,44 @@
+.menu-toggle {
+  display: none;
+  width: 15%;
+  height: 16px;
+  float: left;
+  margin-top: 7px;
+  padding: 6px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 0;
+  position: relative;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    width: 21px;
+    height: 2px;
+    background: $blue;
+    position: absolute;
+    left: 0;
+    content: '';
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+  
+  @media (max-width: $tablet) {
+    display: block;
+  }
+
+  span {
+    width: 15px;
+    height: 2px;
+    display: inline-block;
+    background: $blue;
+  }
+}
