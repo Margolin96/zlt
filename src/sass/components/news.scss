@@ -2,13 +2,13 @@
   margin-top: $step;
 
   @media (max-width: $tablet) {
-    .col-md-4:nth-child(n+2) {
+    .col-md-6:nth-child(n+2) {
       display: none;
     }
   }
 
   @media (min-width: $tablet + 1) and (max-width: $desktop) {
-    .col-md-4:nth-child(n+3) {
+    .col-md-6:nth-child(n+3) {
       display: none;
     }
   }
