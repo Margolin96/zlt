@@ -1,0 +1,38 @@
+.popular {
+  margin-top: $step;
+
+  .h2 {
+    padding-bottom: 20px;
+  }
+
+  &__item {
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 400px;
+    background: $white;
+  }
+
+  &__item-img {
+    display: block;
+    margin-bottom: 25px;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &__item-name {
+    @include gray-border-link(18px);
+    line-height: 1.3;
+  }
+
+  &__item-price {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
