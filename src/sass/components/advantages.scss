@@ -1,0 +1,44 @@
+.advantages {
+  margin-top: $step;
+
+  &__wrap {
+    margin-top: 10px;
+    padding-top: 50px;
+    padding-left: 55px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    background: $white;
+  }
+
+  &__item {
+    margin-bottom: 45px;
+    font-size: 0;
+  }
+
+  &__item-icon,
+  &__item-descr {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__item-icon {
+    width: 26%;
+  }
+
+  &__item-descr {
+    width: 74%;
+  }
+
+  &__item-title {
+    width: 60%;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  &__item-text {
+    color: $gray-text;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+}
