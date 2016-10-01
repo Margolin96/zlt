@@ -2412,6 +2412,39 @@ body {
     padding-top: 10px;
   }
 
+  .header__search form {
+    width: 95%;
+  }
+
+  .header__search--open {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    max-width: 708px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .header__search--open form {
+    padding-right: 0;
+  }
+
+  .header__search-box {
+    width: 80%;
+  }
+
+  .header__search-btn {
+    width: 20%;
+  }
+
+  .header__search-close {
+    width: 5%;
+  }
+
   .header--fixed .header__logo-link {
     width: 20%;
   }
@@ -3370,6 +3403,10 @@ body {
     bottom: auto;
     left: 0;
     width: 100%;
+  }
+
+  .divisions__links {
+    max-width: 130px;
   }
 
   .divisions__item--main .divisions__img--tablet {

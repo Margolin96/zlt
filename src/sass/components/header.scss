@@ -183,6 +183,10 @@
       width: 98%;
       box-sizing: border-box;
       padding-right: 0;
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        width: 95%;
+      }
     }
 
     &--open {
@@ -195,9 +199,25 @@
       content: '';
       z-index: 99999;
 
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        box-sizing: border-box;
+        max-width: 708px;
+        margin: 0 auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
       form {
         padding-right: 30px;
         text-align: left;
+
+        @media (min-width: $tablet + 1) and (max-width: $desktop) {
+          padding-right: 0;
+        }
       }
     }
   }
@@ -206,6 +226,10 @@
     display: inline-block;
     vertical-align: middle;
     width: 90%;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        width: 80%;
+    }
 
     svg {
       padding-right: 3px;
@@ -230,7 +254,6 @@
       display: none;
       width: 90%;
       padding: 0;
-      // display: inline-block;
       vertical-align: middle;
       border: none;
       outline: none;
@@ -261,6 +284,11 @@
     vertical-align: middle;
     width: 10%;
     text-align: right;
+
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        width: 20%;
+    }
   }
 
   &__search--open &__search-btn {
@@ -278,6 +306,10 @@
     outline: none;
     text-align: right;
     cursor: pointer;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 5%;
+    }
 
     svg {
       display: inline-block;
