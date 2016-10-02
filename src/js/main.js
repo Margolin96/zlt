@@ -26,6 +26,7 @@ $(function(){
     infinite: true
   });
 
+
   $('.seo').readmore({
     collapsedHeight: 160,
     moreLink: '<button class="btn btn--more">Подробнее</button>',

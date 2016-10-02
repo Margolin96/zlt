@@ -56,4 +56,12 @@
     }
   }
 
+  &--link {
+    display: inline!important;
+    width: auto!important;
+    padding: 0;
+    border: none;
+    @include blue-border-link;
+  }
+
 }

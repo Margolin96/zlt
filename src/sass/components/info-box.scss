@@ -97,13 +97,8 @@
     padding: 0;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $blue-light-border;
     outline: none;
-    transition: $time all linear;
-
-    &:hover {
-      border-color: transparent;
-    }
+    @include blue-border-link();
 
     @media (max-width: $tablet) {
       display: none;

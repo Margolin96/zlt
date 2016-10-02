@@ -22,7 +22,17 @@
   font-weight: normal;
   text-decoration: none;
   line-height: 1;
-  transition: .2s all ease;
+  transition: $time all ease;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+@mixin blue-border-link() {
+  color: $blue;
+  border-bottom: 1px solid $blue-light-border;
+  transition: $time all ease;
 
   &:hover {
     border-color: transparent;

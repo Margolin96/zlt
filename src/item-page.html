@@ -179,7 +179,7 @@
       </ul>
       <div class="tabs__container js-tab-container">
         <div class="tab-descr product-descr js-tab js-tab--active">
-          <p>Общее описание</p>
+          <p class="tabs__tab-title">Общее описание</p>
           <table>
             <tr>
               <td>Размеры</td>
@@ -216,7 +216,7 @@
           </table>
         </div>
         <div class="tab-descr product-price js-tab">
-          <p>Цены</p>
+          <p class="tabs__tab-title">Цены</p>
           <table>
             <tr>
               <td>20-50 шт.</td>
@@ -241,11 +241,11 @@
           </table>
         </div>
         <div class="tab-order js-tab">
-          <p>Как заказать</p>
+          <p class="tabs__tab-title">Как заказать</p>
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="tab-order__step">
-                <div class="tab-order__step-count">1</div>
+                <div class="tab-order__step-count"><span>1</span></div>
                 <div class="tab-order__step-desrc">
                   <p class="tab-order__step-title">Добавьте товар</p>
                   <p class="tab-order__step-text">Добавьте необходимую услугу в корзину, укажите тираж.</p>
@@ -254,7 +254,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="tab-order__step">
-                <div class="tab-order__step-count">2</div>
+                <div class="tab-order__step-count"><span>2</span></div>
                 <div class="tab-order__step-desrc">
                   <p class="tab-order__step-title">Укажите тип</p>
                   <p class="tab-order__step-text">В корзине при необходимости укажите тип изделий и материал.</p>
@@ -263,7 +263,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="tab-order__step">
-                <div class="tab-order__step-count">3</div>
+                <div class="tab-order__step-count"><span>3</span></div>
                 <div class="tab-order__step-desrc">
                   <p class="tab-order__step-title">Опишите пожелания</p>
                   <p class="tab-order__step-text">В комментариях к заказу укажите все ваши пожелания</p>
@@ -272,7 +272,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="tab-order__step">
-                <div class="tab-order__step-count">4</div>
+                <div class="tab-order__step-count"><span>4</span></div>
                 <div class="tab-order__step-desrc">
                   <p class="tab-order__step-title">Прикрепите файл</p>
                   <p class="tab-order__step-text">В корзине вы можете прикрепить файлы (эскизы, макет, реквизиты и прочее).</p>
@@ -281,7 +281,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="tab-order__step">
-                <div class="tab-order__step-count">5</div>
+                <div class="tab-order__step-count"><span>5</span></div>
                 <div class="tab-order__step-desrc">
                   <p class="tab-order__step-title">Заполните контакты</p>
                   <p class="tab-order__step-text">Заполните контактные данные для обратной связи.</p>
@@ -290,7 +290,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="tab-order__step">
-                <div class="tab-order__step-count">6</div>
+                <div class="tab-order__step-count"><span>6</span></div>
                 <div class="tab-order__step-desrc">
                   <p class="tab-order__step-title">Сделайте заказ</p>
                   <p class="tab-order__step-text">Нажмите кнопку «Отправить на расчет».</p>
@@ -306,7 +306,7 @@
         <div class="tab-delivery js-tab">
           <div class="row">
             <div class="col-lg-6 col-md-12">
-              <p class="tab-delivery__title">Санкт-Петербург</p>
+              <p class="tabs__tab-title">Санкт-Петербург</p>
               <div class="tab-delivery__list-wrap">
                 <p class="tab-delivery__list-title">Самовывоз из офисов продаж:</p>
                 <ul>
@@ -324,7 +324,7 @@
               </div>
             </div>
             <div class="col-lg-6 col-md-12">
-              <p class="tab-delivery__title">Москва и другие регионы России</p>
+              <p class="tabs__tab-title">Москва и другие регионы России</p>
               <div class="tab-delivery__list-wrap">
                 <ul>
                   <li>Доставка осуществляется транспортными компаниями «Деловые линии» и «Байкал Сервис»</li>
@@ -353,7 +353,7 @@
                 <blockquote class="tab-reviews__item-text">Получили сегодня готовый заказ. Хотели бы выразить Вам свою благодарность - работа выполнена на совесть, результат превзошел даже наши ожидания. Спасибо большое, очень приятно с Вами сотрудничать.</blockquote>
               </div>
               <div class="col-lg-3 col-md-12">
-                <a href="№" class="tab-reviews__doc">
+                <a href="#" class="tab-reviews__doc">
                   <span class="tab-reviews__doc-link">Балтик Шиппинг.pdf</span>
                   <span class="tab-reviews__doc-size">5,1 МБ</span>
                 </a>
@@ -370,7 +370,7 @@
                 <blockquote class="tab-reviews__item-text">Нам очень импонирует компания ЦЛТ, их качество всегда соответствует нашим ожиданиям, помимо этого в компании привлекательные цены.</blockquote>
               </div>
               <div class="col-lg-3 col-md-12">
-                <a href="№" class="tab-reviews__doc">
+                <a href="#" class="tab-reviews__doc">
                   <span class="tab-reviews__doc-link">Пластикам.pdf</span>
                   <span class="tab-reviews__doc-size">3,6 МБ</span>
                 </a>
@@ -384,10 +384,10 @@
                   <h2 class="tab-reviews__item-title">Московский Завод Информационных Автоматов</h2>
                   <div class="tab-reviews__item-date">25 декабря, 12:53</div>
                 </div>
-                <blockquote class="tab-reviews__item-text">Хочу поблагодарить Центр Лазерных Технологий и вашего менеджера Олега Курлыкова за четкое и качественное исполнение наших заказов. Работаю с ЦЛТ с 2004 года, мы вместе с Вами проходили...</blockquote>
+                <div class="tab-reviews__item-text">Хочу поблагодарить Центр Лазерных Технологий и вашего менеджера Олега Курлыкова за четкое и качественное исполнение наших заказов. Работаю с ЦЛТ с 2004 года, мы вместе с Вами проходили. Хочу поблагодарить Центр Лазерных Технологий и вашего менеджера Олега Курлыкова за четкое и качественное исполнение наших заказов. Работаю с ЦЛТ с 2004 года, мы вместе с Вами проходили. Хочу поблагодарить Центр Лазерных Технологий и вашего менеджера Олега Курлыкова за четкое и качественное исполнение наших заказов. Работаю с ЦЛТ с 2004 года, мы вместе с Вами проходили</div>
               </div>
               <div class="col-lg-3 col-md-12">
-                <a href="№" class="tab-reviews__doc">
+                <a href="#" class="tab-reviews__doc">
                   <span class="tab-reviews__doc-link">Завод Инфо. Автоматов.pdf</span>
                   <span class="tab-reviews__doc-size">1,5 МБ</span>
                 </a>

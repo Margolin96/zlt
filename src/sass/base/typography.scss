@@ -22,6 +22,15 @@
 
 @font-face {
   font-family: "Proxima Nova";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../font/proximanova-lightit.woff2") format("woff2"),
+       url("../font/proximanova-lightit.woff") format("woff"),
+       url("../font/proximanova-lightit.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
   font-weight: 500;
   font-style: normal;
   src: url("../font/proximanova-semibold.woff2") format("woff2"),

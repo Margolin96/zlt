@@ -1,0 +1,36 @@
+.warning {
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-right: 130px;
+  padding-bottom: 10px;
+  background: $sand;
+  color: $cinnamon;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 300;
+  font-style: italic;
+
+  p {
+    padding: 0 0 15px;
+  }
+
+  ul {
+
+    li {
+      padding-left: 10px;
+      margin-bottom: 15px;
+      position: relative;
+
+      &::before {
+        width: 4px;
+        height: 4px;
+        background: $cinnamon;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 9px;
+        content: '';
+      }
+    }
+  }
+}

@@ -1,1 +1,42 @@
-.tab-delivery {}
+.tab-delivery {
+
+  &__list-wrap {
+    margin-bottom: 25px;
+    font-size: 15px;
+
+    ul {
+
+      li {
+        margin-bottom: 5px;
+        padding-left: 10px;
+        line-height: 1.6;
+        position: relative;
+
+        &::before {
+          width: 4px;
+          height: 4px;
+          background: $black;
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: 10px;
+          content: '';
+        }
+      }
+    }
+  }
+
+  &__list-title {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &__list-descr {
+    margin: 0;
+    padding: 0 0 10px;
+  }
+
+  .warning {
+    margin-top: 20px;
+  }
+}
