@@ -1,0 +1,35 @@
+.product {
+
+  &__code {
+    color: #848484;
+    font-size: 16px;
+  }
+
+  &__body {
+    margin-top: $step;
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    @include clearfix;
+  }
+
+  &__left,
+  &__right {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  &__left {
+    padding: 35px 50px;
+    background: $white;
+    border-right: 1px solid #d8d8d8;
+    font-size: 0;
+  }
+
+  &__right {
+    padding-top: 45px;
+    padding-left: 45px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+  }
+}

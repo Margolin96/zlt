@@ -137,17 +137,101 @@
     </ul>
 
     <section class="product">
-      <h1 class="h1 product__name">Футболка T-bolka 140, белая</h1>
+      <h1 class="h1">Футболка T-bolka 140, белая</h1>
       <div class="product__code">Артикул 52</div>
       <div class="product__body">
-        <div class="product__left"></div>
+        <div class="product__left product-slider">
+          <div class="product-slider__for">
+            <div class="product-slider__for-slide">
+              <img src="img/product-img-1.jpg" alt="">
+            </div>
+            <div class="product-slider__for-slide">
+              <img src="img/popular-item-1.jpg" alt="">
+            </div>
+            <div class="product-slider__for-slide">
+              <img src="img/popular-item-2.jpg" alt="">
+            </div>
+            <div class="product-slider__for-slide">
+              <img src="img/popular-item-3.jpg" alt="">
+            </div>
+          </div>
+          <div class="product-slider__nav">
+            <div class="product-slider__nav-slide">
+              <img src="img/product-thumb-1.jpg" alt="">
+            </div>
+            <div class="product-slider__nav-slide">
+              <img src="img/product-thumb-2.jpg" alt="">
+            </div>
+            <div class="product-slider__nav-slide">
+              <img src="img/product-thumb-3.jpg" alt="">
+            </div>
+            <div class="product-slider__nav-slide">
+              <img src="img/product-thumb-4.jpg" alt="">
+            </div>
+          </div>
+        </div>
         <div class="product__right product-about">
           <form action="/echo">
             <div class="product-about__row">
-              <p class="product-about__row-title">Цена</p>
+              <p class="product-about__row-title">Цвет</p>
+              <div class="product-about__color-item">
+                <input type="radio" id="white-color" name="colors">
+                <label for="white-color" style="background: white;"></label>
+              </div>
+              <div class="product-about__color-item">
+                <input type="radio" id="red-color" name="colors" checked>
+                <label for="red-color" style="background: #ce221f;"></label>
+              </div>
+              <div class="product-about__color-item">
+                <input type="radio" id="orange-color" name="colors">
+                <label for="orange-color" style="background: #f55701;"></label>
+              </div>
+              <div class="product-about__color-item">
+                <input type="radio" id="lemon-color" name="colors">
+                <label for="lemon-color" style="background: #faef3f;"></label>
+              </div>
+              <div class="product-about__color-item">
+                <input type="radio" id="yellow-color" name="colors">
+                <label for="yellow-color" style="background: #f9e545;"></label>
+              </div>
+              <div class="product-about__color-item">
+                <input type="radio" id="green-color" name="colors">
+                <label for="green-color" style="background: #519049;"></label>
+              </div>
+              <div class="product-about__color-item">
+                <input type="radio" id="blue-color" name="colors">
+                <label for="blue-color" style="background: #3e4ea0;"></label>
+              </div>
+              <div class="product-about__color-item">
+                <input type="radio" id="gray-color" name="colors">
+                <label for="gray-color" style="background: #bbbcc1;"></label>
+              </div>
+              
             </div>
             <div class="product-about__row">
               <p class="product-about__row-title">Размер и количество</p>
+              <div class="select">
+                <div class="select__item">
+                  <input type="radio" name="size" id="no-size" checked>
+                  <label for="no-size">Размер</label>
+                </div>
+                <div class="select__item">
+                  <input type="radio" name="size" id="xs-size">
+                  <label for="xs-size">XS</label>
+                </div>
+                <div class="select__item">
+                  <input type="radio" name="size" id="s-size">
+                  <label for="s-size">S</label>
+                </div>
+                <div class="select__item">
+                  <input type="radio" name="size" id="m-size">
+                  <label for="m-size">M</label>
+                </div>
+                <div class="select__item">
+                  <input type="radio" name="size" id="l-size">
+                  <label for="l-size">L</label>
+                </div>
+              </div>
             </div>
             <div class="product-about__row">
               <p class="product-about__row-title">Вид нанесения</p>

@@ -26,6 +26,21 @@ $(function(){
     infinite: true
   });
 
+  $('.product-slider__for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.product-slider__nav'
+  });
+
+  $('.product-slider__nav').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    asNavFor: '.product-slider__for',
+    dots: false,
+    focusOnSelect: true
+  });
 
   $('.seo').readmore({
     collapsedHeight: 160,

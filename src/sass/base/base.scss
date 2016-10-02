@@ -33,7 +33,11 @@ p {
 
 h1,
 .h1 {
-  
+  margin: 0;
+  padding: 0 0 15px;
+  color: $dark;
+  font-size: 48px;
+  font-weight: normal;
 }
 
 h2,

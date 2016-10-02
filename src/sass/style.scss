@@ -21,7 +21,6 @@
 @import "base/__slick";
 @import "base/__slick-theme";
 
-
 /*=== компоненты ===*/
 @import "components/header";
 @import "components/menu-toggle";
@@ -33,6 +32,10 @@
 @import "components/main-slider";
 @import "components/divisions";
 @import "components/news";
+@import "components/product";
+@import "components/product-about";
+@import "components/product-slider";
+@import "components/select";
 
 @import "components/tabs";
 @import "components/tab-descr";

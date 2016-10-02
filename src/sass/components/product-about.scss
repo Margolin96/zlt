@@ -1,0 +1,47 @@
+.product-about {
+
+  &__row {
+    padding-top: 35px;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+  }
+
+  &__row-title {
+    margin: 0;
+    padding: 0 0 15px;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  &__color-item {
+    display: inline-block;
+    margin-right: 3px;
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"] + label {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $light-gray;
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked + label{
+      box-shadow: 0 0 0 2px $blue;
+    }
+
+  }
+
+  &__price {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
