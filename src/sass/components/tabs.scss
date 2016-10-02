@@ -1,0 +1,32 @@
+.tabs {
+  margin-top: 40px;
+
+  &__nav {
+    font-size: 0;
+  }
+
+  &__nav-item {
+    display: inline-block;
+  }
+
+  &__nav-link {
+    padding: 15px 40px;
+    display: inline-block;
+    color: $black;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background: $white;
+    }
+  }
+
+  &__nav-item--active &__nav-link {
+    background: $white;
+  }
+
+  &__container {}
+
+}
