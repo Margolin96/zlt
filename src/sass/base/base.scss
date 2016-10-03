@@ -38,6 +38,11 @@ h1,
   color: $dark;
   font-size: 48px;
   font-weight: normal;
+
+  @media (max-width: $tablet) {
+    font-size: 30px;
+  }
+
 }
 
 h2,

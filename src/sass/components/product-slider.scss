@@ -1,5 +1,10 @@
 .product-slider {
 
+  @media (max-width: $tablet) {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
   &__for {
     margin-bottom: 45px;
 
@@ -42,6 +47,12 @@
 
     &:last-of-type {
       margin-right: 0;
+    }
+
+    @media (max-width: $tablet) {
+      width: 56px!important;
+      height: 56px;
+      margin-right: 13px;
     }
 
     img {

@@ -5,6 +5,19 @@
     padding-bottom: 15px;
   }
 
+  @media (max-width: $tablet) {
+
+    .h2 {
+      font-weight: normal;
+      font-size: 30px;
+      display: block;
+    }
+
+    .link {
+      margin-left: 0;
+    }
+  }
+
   &__item {
     margin-bottom: 15px;
     padding-bottom: 15px;

@@ -1,6 +1,14 @@
 .advantages {
   margin-top: $step;
 
+  @media (max-width: $tablet) {
+
+    .h2 {
+      font-weight: normal;
+      font-size: 30px;
+    }
+  }
+
   &__wrap {
     margin-top: 10px;
     padding-top: 50px;
@@ -8,11 +16,20 @@
     padding-right: 40px;
     padding-bottom: 5px;
     background: $white;
+
+    @media (max-width: $tablet) {
+      padding: 40px 30px;
+      padding-bottom: 0;
+    }
   }
 
   &__item {
     margin-bottom: 45px;
     font-size: 0;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 35px;
+    }
   }
 
   &__item-icon,
@@ -23,16 +40,33 @@
 
   &__item-icon {
     width: 26%;
+
+    @media (max-width: $tablet) {
+
+      svg {
+        max-width: 45px;
+        height: auto;
+      }
+    }
   }
 
   &__item-descr {
     width: 74%;
+    box-sizing: border-box;
+
+     @media (max-width: $tablet) {
+      padding-left: 10px;
+     }
   }
 
   &__item-title {
     width: 60%;
     font-size: 18px;
     font-weight: normal;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   &__item-text {

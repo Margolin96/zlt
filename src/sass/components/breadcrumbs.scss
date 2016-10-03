@@ -9,6 +9,11 @@
     font-weight: 300;
     position: relative;
 
+    @media (max-width: $tablet) {
+      line-height: 1.7;
+    }
+
+
     &::after {
       color: #a6a6a6;
       position: absolute;

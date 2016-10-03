@@ -10,6 +10,16 @@
     width: 100%;
     border: 1px solid #d8d8d8;
     @include clearfix;
+
+    @media (max-width: $tablet) {
+      border: none;
+
+      .container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 
   &__left,
@@ -17,6 +27,11 @@
     float: left;
     width: 50%;
     box-sizing: border-box;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
   }
 
   &__left {
@@ -24,6 +39,14 @@
     background: $white;
     border-right: 1px solid #d8d8d8;
     font-size: 0;
+    
+    @media (max-width: $tablet) {
+      padding-left: 0;
+      padding-right: 0;
+      border-right: none;
+      border-top: 1px solid #d8d8d8;
+      border-bottom: 1px solid #d8d8d8;
+    }
   }
 
   &__right {
@@ -31,5 +54,11 @@
     padding-left: 45px;
     padding-right: 50px;
     padding-bottom: 50px;
+
+    @media (max-width: $tablet) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
   }
 }
