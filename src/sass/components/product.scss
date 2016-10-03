@@ -7,11 +7,9 @@
 
   &__body {
     margin-top: $step;
-    width: 100%;
-    border: 1px solid #d8d8d8;
-    @include clearfix;
 
     @media (max-width: $tablet) {
+      width: 100%;
       border: none;
 
       .container {
@@ -22,13 +20,18 @@
     }
   }
 
+  &__body-wrap {
+    border: 1px solid #d8d8d8;
+    @include clearfix;
+  }
+
   &__left,
   &__right {
     float: left;
     width: 50%;
     box-sizing: border-box;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $desktop) {
       width: 100%;
     }
 

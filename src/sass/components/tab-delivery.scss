@@ -1,8 +1,16 @@
 .tab-delivery {
+  
+  @media (max-width: $desktop) {
+    padding: 35px 0 0;
+  }
 
   &__list-wrap {
     margin-bottom: 25px;
     font-size: 15px;
+
+    @media (max-width: $desktop) {
+      padding: 0 30px;
+    }
 
     ul {
 

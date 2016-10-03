@@ -1,5 +1,13 @@
 .tab-reviews {
 
+  @media (max-width: $tablet) {
+    padding: 25px 20px;
+  }
+
+  @media (min-width: $tablet + 1) and (max-width: $desktop) {
+    padding: 35px 30px;
+  }
+
   &__item {
     margin-bottom: 40px;
     padding-bottom: 30px;
@@ -12,16 +20,17 @@
     }
   }
 
-  &__item-head {
-    
-  }
-
   &__item-title {
     margin: 0;
     padding-bottom: 20px;
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
+
+    @media (max-width: $tablet) {
+      display: block;
+      padding-bottom: 5px;
+    }
   }
 
   &__item-date {
@@ -29,6 +38,11 @@
     padding-left: 45px;
     color: #5a5a5a;
     font-size: 14px;
+
+    @media (max-width: $tablet) {
+      padding-left: 0;
+      padding-bottom: 15px;
+    }
   }
 
   &__item-text {
@@ -39,6 +53,10 @@
     font-size: 14px;
     font-weight: 300;
     font-style: normal;
+
+    @media (max-width: $tablet) {
+      padding-right: 0;
+    }
   }
 
   &__doc {
@@ -47,6 +65,9 @@
     min-height: 50px;
     background: transparent url('../img/svg/pdf.svg') 0 0 no-repeat;
     background-size: 35px 45px;
+
+    @media (max-width: $desktop) {
+      margin-top: 20px;    }
   }
 
   &__doc-link {

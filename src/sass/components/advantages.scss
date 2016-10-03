@@ -9,6 +9,15 @@
     }
   }
 
+  .col-md-6 {
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      &:nth-child(2n+3) {
+        clear: left;
+      }
+    }
+  }
+
   &__wrap {
     margin-top: 10px;
     padding-top: 50px;
