@@ -171,7 +171,7 @@
           </div>
         </div>
         <div class="product__right product-about">
-          <form action="/echo">
+          <form action="/echo" class="form">
             <div class="product-about__row">
               <p class="product-about__row-title">Цвет</p>
               <div class="product-about__color-item">
@@ -210,34 +210,65 @@
             </div>
             <div class="product-about__row">
               <p class="product-about__row-title">Размер и количество</p>
-              <div class="select">
-                <div class="select__item">
-                  <input type="radio" name="size" id="no-size" checked>
-                  <label for="no-size">Размер</label>
+              <div class="form__row">
+                <div class="form__col form__col--1">
+                  <select name="product-size">
+                    <option>Размер</option>
+                    <option value="product-xs">XS</option>
+                    <option value="product-x">X</option>
+                    <option value="product-m">M</option>
+                    <option value="product-l">L</option>
+                  </select>
                 </div>
-                <div class="select__item">
-                  <input type="radio" name="size" id="xs-size">
-                  <label for="xs-size">XS</label>
+                <div class="form__col form__col--1">
+                  <select name="product-count">
+                    <option> Количество</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
                 </div>
-                <div class="select__item">
-                  <input type="radio" name="size" id="s-size">
-                  <label for="s-size">S</label>
+                <div class="form__col form__col--2">
+                  <button type="button" class="btn btn--add">Добавить размер</button>
                 </div>
-                <div class="select__item">
-                  <input type="radio" name="size" id="m-size">
-                  <label for="m-size">M</label>
-                </div>
-                <div class="select__item">
-                  <input type="radio" name="size" id="l-size">
-                  <label for="l-size">L</label>
-                </div>
+              </div>
+              <div class="form__group">
+                <a href="#" class="link">Таблица размеров</a>
+              </div>
+              <div class="form__group form__group--no-margin">
+                <input type="checkbox" id="with-drawing" checked>
+                <label for="with-drawing">С нанесением</label>
               </div>
             </div>
             <div class="product-about__row">
               <p class="product-about__row-title">Вид нанесения</p>
+              <div class="form__row">
+                <div class="form__col form__col--1">
+                  <select name="product-area">
+                    <option>Место</option>
+                    <option value="product-xs">XS</option>
+                    <option value="product-x">X</option>
+                    <option value="product-m">M</option>
+                    <option value="product-l">L</option>
+                  </select>
+                </div>
+                <div class="form__col form__col--2">
+                  <select name="product-type">
+                    <option>Вид нанесения</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+                <div class="form__col form__col--1">
+                  <select name="product-square">
+                    <option>Площадь</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div class="product-about__price">228, 00 руб.</div>
-            <button class="btn btn--submit">Добавить заказ</button>
+            <button class="btn btn--order">Добавить в заказ</button>
           </form>
         </div>
       </div>
@@ -807,6 +838,21 @@
       </div>
     </div>
   </footer>
+  <!-- Модальное окно "Обратный звонок" -->
+  <div class="modal modal-call-order">
+    <div class="modal-content">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64"><path fill="#bfbfbf" d="M28.941 31.786L.613 60.114a2.014 2.014 0 1 0 2.848 2.849l28.541-28.541 28.541 28.541c.394.394.909.59 1.424.59a2.014 2.014 0 0 0 1.424-3.439L35.064 31.786 63.41 3.438A2.014 2.014 0 1 0 60.562.589L32.003 29.15 3.441.59A2.015 2.015 0 0 0 .593 3.439l28.348 28.347z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="call-order">
+        <form action="/echo">
+          <b>Обратный звонок</b>
+          <p>Введите номер и мы перезвоним вам в течение часа</p>
+          <input type="tel">
+          <button type="submit" class="btn btn--submit">Перезвоните мне</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="js/script.min.js" async></script>
 </body>
 </html>
