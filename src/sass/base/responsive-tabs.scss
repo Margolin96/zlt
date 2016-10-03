@@ -64,7 +64,10 @@
 
 .r-tabs .r-tabs-panel.r-tabs-state-active {
   display: block;
-  border-bottom: 1px solid #d8d8d8;
+
+  @media only screen and (max-width: $desktop) {
+    border-bottom: 1px solid #d8d8d8;
+  }
 }
 
 /* Accordion responsive breakpoint */

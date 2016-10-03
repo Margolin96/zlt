@@ -1510,7 +1510,6 @@ body {
 
 .r-tabs .r-tabs-panel.r-tabs-state-active {
   display: block;
-  border-bottom: 1px solid #d8d8d8;
 }
 
 /* Accordion responsive breakpoint */
@@ -4056,6 +4055,10 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+  .r-tabs .r-tabs-panel.r-tabs-state-active {
+    border-bottom: 1px solid #d8d8d8;
+  }
+
   .r-tabs .r-tabs-nav {
     display: none;
   }
