@@ -64,6 +64,7 @@
 
 .r-tabs .r-tabs-panel.r-tabs-state-active {
   display: block;
+  min-height: 1px!important;
 
   @media only screen and (max-width: $desktop) {
     border-bottom: 1px solid #d8d8d8;

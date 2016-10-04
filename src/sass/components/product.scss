@@ -23,6 +23,10 @@
   &__body-wrap {
     border: 1px solid #d8d8d8;
     @include clearfix;
+
+    @media (max-width: $tablet) {
+      border: none;
+    }
   }
 
   &__body--idea &__body-wrap {
@@ -52,6 +56,11 @@
       padding-right: 0;
       border-right: none;
       border-top: 1px solid #d8d8d8;
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      border-right: none;
       border-bottom: 1px solid #d8d8d8;
     }
   }
