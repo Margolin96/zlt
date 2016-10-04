@@ -1072,6 +1072,57 @@ table {
   width: 42%;
 }
 
+.form__col--3 {
+  width: 58%;
+}
+
+.form__col--4 {
+  width: 37%;
+}
+
+.form__upload {
+  position: relative;
+  margin-top: 8px;
+}
+
+.form__upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 150px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.form__upload-icon {
+  padding-right: 5px;
+}
+
+.form__upload-icon svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form__upload-text {
+  display: inline-block;
+  border-bottom: 1px solid #d9d9d9;
+  color: #000000;
+  -webkit-transition: 0.3s all ease;
+          transition: 0.3s all ease;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 20px;
+  line-height: 1;
+}
+
+.form__upload-text:hover {
+  border-color: transparent;
+}
+
 input[type="checkbox"] {
   display: none;
 }
@@ -1099,6 +1150,18 @@ input[type="checkbox"]:checked + label::before {
   background: #ffffff url("../img/checked.svg") center center no-repeat;
   -webkit-background-size: 14px 13px;
           background-size: 14px 13px;
+}
+
+textarea {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  border: none;
+  background: #ffffff;
+  resize: vertical;
 }
 
 select {
@@ -2472,6 +2535,10 @@ body {
   clear: both;
 }
 
+.product__body--idea .product__body-wrap {
+  background: #ffffff;
+}
+
 .product__left,
 .product__right {
   float: left;
@@ -2487,11 +2554,20 @@ body {
   font-size: 0;
 }
 
+.product__body--idea .product__left {
+  border-right: none;
+}
+
 .product__right {
   padding-top: 45px;
   padding-right: 50px;
   padding-bottom: 50px;
   padding-left: 45px;
+}
+
+.product__body--idea .product__right {
+  border-left: 1px solid #d8d8d8;
+  background: #f0f0f0;
 }
 
 .product-about__row {
@@ -2536,6 +2612,13 @@ body {
   padding-bottom: 30px;
   font-size: 24px;
   font-weight: bold;
+}
+
+.product-about__text {
+  padding-bottom: 35px;
+  color: #a5a5a5;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .product-slider__for {
@@ -2987,7 +3070,10 @@ body {
 }
 
 .advantages__item-icon {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 26%;
+  padding-right: 50px;
 }
 
 .advantages__item-descr {
@@ -3336,6 +3422,10 @@ body {
 
   .advantages .col-md-6:nth-child(2n+3) {
     clear: left;
+  }
+
+  .advantages__item-icon {
+    padding-right: 30px;
   }
 
   .clients__items li {
@@ -4145,6 +4235,14 @@ body {
     width: 100%;
   }
 
+  .form__col--3 {
+    width: 100%;
+  }
+
+  .form__col--4 {
+    width: 100%;
+  }
+
   .form__col--mob-2 {
     width: 100%;
     margin-bottom: 10px;
@@ -4477,6 +4575,10 @@ body {
 
   .advantages__item {
     margin-bottom: 35px;
+  }
+
+  .advantages__item-icon {
+    padding-right: 10px;
   }
 
   .advantages__item-icon svg {

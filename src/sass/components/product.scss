@@ -25,6 +25,10 @@
     @include clearfix;
   }
 
+  &__body--idea &__body-wrap {
+    background: $white;
+  }
+
   &__left,
   &__right {
     float: left;
@@ -52,6 +56,10 @@
     }
   }
 
+  &__body--idea &__left {
+    border-right: none;
+  }
+
   &__right {
     padding-top: 45px;
     padding-left: 45px;
@@ -63,5 +71,10 @@
       padding-right: 0;
       padding-bottom: 20px;
     }
+  }
+
+  &__body--idea &__right {
+    background: $light-gray;
+    border-left: 1px solid #d8d8d8;
   }
 }

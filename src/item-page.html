@@ -181,6 +181,7 @@
             <div class="product__right">
               <div class="product-about">
                 <form action="/echo" class="form">
+                  <!-- Цвет -->
                   <div class="product-about__row">
                     <p class="product-about__row-title">Цвет</p>
                     <div class="product-about__color-item">
@@ -215,8 +216,9 @@
                       <input type="radio" id="gray-color" name="colors">
                       <label for="gray-color" style="background: #bbbcc1;"></label>
                     </div>
-                    
                   </div>
+                  <!-- END Цвет -->
+                  <!-- Размер и количество -->
                   <div class="product-about__row">
                     <p class="product-about__row-title">Размер и количество</p>
                     <div class="form__row">
@@ -248,6 +250,8 @@
                       <label for="with-drawing">С нанесением</label>
                     </div>
                   </div>
+                  <!-- END Размер и количество -->
+                  <!-- Вид нанесения -->
                   <div class="product-about__row">
                     <p class="product-about__row-title">Вид нанесения</p>
                     <div class="form__row">
@@ -276,6 +280,7 @@
                       </div>
                     </div>
                   </div>
+                  <!-- END Вид нанесения -->
                   <div class="product-about__price">228, 00 руб.</div>
                   <button class="btn btn--order">Добавить в заказ</button>
                 </form>
@@ -291,23 +296,23 @@
         <div class="tabs__wrap" id="horizontalTab">
           <ul class="tabs__nav">
             <li class="tabs__nav-item">
-              <a href="#tab-1" class="tabs__nav-link">Описание</a>
+              <a href="#tab-descr" class="tabs__nav-link">Описание</a>
             </li>
             <li class="tabs__nav-item">
-              <a href="#tab-2" class="tabs__nav-link">Цены</a>
+              <a href="#tab-price" class="tabs__nav-link">Цены</a>
             </li>
             <li class="tabs__nav-item">
-              <a href="#tab-3" class="tabs__nav-link">Как заказать</a>
+              <a href="#tab-order" class="tabs__nav-link">Как заказать</a>
             </li>
             <li class="tabs__nav-item">
-              <a href="#tab-4" class="tabs__nav-link">Доставка</a>
+              <a href="#tab-delivery" class="tabs__nav-link">Доставка</a>
             </li>
             <li class="tabs__nav-item">
-              <a href="#tab-5" class="tabs__nav-link">Отзывы</a>
+              <a href="#tab-reviews" class="tabs__nav-link">Отзывы</a>
             </li>
           </ul>
           <div class="tabs__container">
-            <div class="tab-descr product-descr" id="tab-1">
+            <div class="tab-descr product-descr" id="tab-descr">
               <p class="tabs__tab-title">Общее описание</p>
               <table>
                 <tr>
@@ -344,7 +349,7 @@
                 </tr>
               </table>
             </div>
-            <div class="tab-descr product-price" id="tab-2">
+            <div class="tab-descr product-price" id="tab-price">
               <p class="tabs__tab-title">Цены</p>
               <table>
                 <tr>
@@ -369,7 +374,7 @@
                 </tr>
               </table>
             </div>
-            <div class="tab-order" id="tab-3">
+            <div class="tab-order" id="tab-order">
               <p class="tabs__tab-title">Как заказать</p>
               <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -432,7 +437,7 @@
                   После согласования всех деталей будущего заказа Вам на e-mail будет отправлен счёт на оплату.</p>
               </div>
             </div>
-            <div class="tab-delivery" id="tab-4">
+            <div class="tab-delivery" id="tab-delivery">
               <div class="row">
                 <div class="col-lg-6 col-md-12">
                   <p class="tabs__tab-title">Санкт-Петербург</p>
@@ -471,7 +476,7 @@
                 </ul>
               </div>
             </div>
-            <div class="tab-reviews" id="tab-5">
+            <div class="tab-reviews" id="tab-reviews">
               <article class="tab-reviews__item">
                 <div class="row">
                   <div class="col-lg-9 col-md-12">
