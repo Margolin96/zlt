@@ -60,26 +60,10 @@
   }
 
   &__doc {
-    padding-left: 50px;
-    display: inline-block;
-    min-height: 50px;
-    background: transparent url('../img/svg/pdf.svg') 0 0 no-repeat;
-    background-size: 35px 45px;
 
     @media (max-width: $desktop) {
-      margin-top: 20px;    }
-  }
-
-  &__doc-link {
-    @include blue-border-link();
-  }
-
-  &__doc-size {
-    padding-top: 5px;
-    display: block;
-    color: #adadad;
-    font-size: 13px;
-    text-transform: uppercase;
+      margin-top: 20px;
+    }
   }
 
 }

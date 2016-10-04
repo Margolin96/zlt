@@ -133,24 +133,26 @@
     <div class="container">
       <ul class="breadcrumbs">
         <li><a href="#">Главная</a></li>
-        <li><a href="#">Сувениры и продукция</a></li>
-        <li>Идея для подарка коллеге</li>
+        <li>Лазерный гравёр FMARK NS</li>
       </ul>
     </div>
 
     <section class="product">
       <div class="container">
-        <h1 class="h1">Идея для подарка коллеге</h1>
-        <div class="product__code">Идея 8430.60</div>
+        <h1 class="h1">Лазерный гравёр FMARK NS </h1>
+        <div class="product__head">
+          <p class="product__head-text">Лазерный комплекс FMARK NS предназначен для нанесения текстовых и графических изображений на поверхность различных материалов  с высокой производительностью.</p>
+          <button class="btn btn--more">Получить консультацию</button>
+        </div>
       </div>
-      <div class="product__body product__body--idea">
+      <div class="product__body">
         <div class="container">
           <div class="product__body-wrap">
             <div class="product__left">
               <div class="product-slider">
                 <div class="product-slider__for">
                   <div class="product-slider__for-slide">
-                    <img src="img/idea-img-1.jpg" alt="">
+                    <img src="img/machine-img-1.jpg" alt="">
                   </div>
                   <div class="product-slider__for-slide">
                     <img src="img/popular-item-1.jpg" alt="">
@@ -164,16 +166,16 @@
                 </div>
                 <div class="product-slider__nav">
                   <div class="product-slider__nav-slide">
-                    <img src="img/idea-thumb-1.jpg" alt="">
+                    <img src="img/machine-thumb-1.jpg" alt="">
                   </div>
                   <div class="product-slider__nav-slide">
-                    <img src="img/idea-thumb-2.jpg" alt="">
+                    <img src="img/machine-thumb-2.jpg" alt="">
                   </div>
                   <div class="product-slider__nav-slide">
-                    <img src="img/idea-thumb-3.jpg" alt="">
+                    <img src="img/machine-thumb-3.jpg" alt="">
                   </div>
                   <div class="product-slider__nav-slide">
-                    <img src="img/idea-thumb-4.jpg" alt="">
+                    <img src="img/machine-thumb-4.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -181,127 +183,25 @@
             <div class="product__right">
               <div class="product-about">
                 <form action="/echo" class="form">
-                  <!-- Цвет -->
+                  <!-- Назначение -->
                   <div class="product-about__row">
-                    <p class="product-about__row-title">Цвет</p>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="white-color" name="colors">
-                      <label for="white-color" style="background: white;"></label>
-                    </div>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="red-color" name="colors" checked>
-                      <label for="red-color" style="background: #ce221f;"></label>
-                    </div>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="orange-color" name="colors">
-                      <label for="orange-color" style="background: #f55701;"></label>
-                    </div>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="lemon-color" name="colors">
-                      <label for="lemon-color" style="background: #faef3f;"></label>
-                    </div>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="yellow-color" name="colors">
-                      <label for="yellow-color" style="background: #f9e545;"></label>
-                    </div>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="green-color" name="colors">
-                      <label for="green-color" style="background: #519049;"></label>
-                    </div>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="blue-color" name="colors">
-                      <label for="blue-color" style="background: #3e4ea0;"></label>
-                    </div>
-                    <div class="product-about__color-item">
-                      <input type="radio" id="gray-color" name="colors">
-                      <label for="gray-color" style="background: #bbbcc1;"></label>
+                    <p class="product-about__row-title">Назначение</p>
+                    <div class="product-about__text">
+                      <p>Промышленная гравировка, нанесение штрих-кодов, серийных номеров, дат выработки, изготовление брендирование сувенирной продукции, создание эксклюзивных серий ювелирных изделий и&nbsp;многое другое.</p>
                     </div>
                   </div>
-                  <!-- END Цвет -->
-                  <!-- Размер и количество -->
+                  <!-- END Назначение -->
+                  <!-- Орабатываемые материалы -->
                   <div class="product-about__row">
-                    <p class="product-about__row-title">Размер и количество</p>
-                    <div class="form__row">
-                      <div class="form__col form__col--1">
-                        <select name="product-size">
-                          <option>Размер</option>
-                          <option value="product-xs">XS</option>
-                          <option value="product-x">X</option>
-                          <option value="product-m">M</option>
-                          <option value="product-l">L</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--1">
-                        <select name="product-count">
-                          <option> Количество</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--2">
-                        <button type="button" class="btn btn--add">Добавить размер</button>
-                      </div>
+                    <p class="product-about__row-title">Орабатываемые материалы</p>
+                    <div class="product-about__text">
+                      <p>Сталь, алюминий, никель, титан, латунь, чугун*, пластики, полупроводники, золото**</p>
                     </div>
-                    <div class="form__group">
-                      <a href="#" class="link">Таблица размеров</a>
-                    </div>
-                    <div class="form__group form__group--no-margin">
-                      <input type="checkbox" id="with-drawing" checked>
-                      <label for="with-drawing">С нанесением</label>
-                    </div>
+                    <a href="#" class="link">Таблица размеров</a>
+                  </div>Орабатываемые материалы -->
+                  <div class="product-about__doc-file">
+                    
                   </div>
-                  <!-- END Размер и количество -->
-                  <!-- Материал -->
-                  <div class="product-about__row">
-                    <p class="product-about__row-title">Материал</p>
-                    <div class="form__row">
-                      <div class="form__col form__col--3 form__col--mob-2">
-                        <select name="product-type">
-                          <option>Вид материал</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--2 form__col--mob-2">
-                         <button type="button" class="btn btn--add">Добавить материал</button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END Материал -->
-                  <!-- Желаемый срок получения -->
-                  <div class="product-about__row">
-                    <p class="product-about__row-title">Желаемый срок получения</p>
-                    <div class="form__row">
-                      <div class="form__col form__col--1 form__col--mob-2">
-                        <select name="product-type">
-                          <option>День</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--4 form__col--mob-2">
-                        <select name="idea-month">
-                          <option>Месяц</option>
-                          <option value="1">Январь</option>
-                          <option value="2">Февраль</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END Желаемый срок получения -->
-                  <!-- Комментарий -->
-                  <div class="product-about__row">
-                    <p class="product-about__row-title">Комментарий</p>
-                    <div class="form__group">
-                      <textarea rows="5"></textarea>
-                    </div>
-                    <div class="form__upload">
-                      <input type="file">
-                      <span class="form__upload-icon"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64"><path fill="#a1a1a1" d="M14.754 60.041c3.269 2.399 6.476 3.607 9.567 3.607.77 0 1.532-.075 2.287-.226 5.39-1.072 8.216-5.645 8.233-5.69l15.922-21.676a2.017 2.017 0 1 0-3.253-2.388L31.489 55.493c-.019.031-2.06 3.254-5.669 3.972-2.628.527-5.548-.378-8.678-2.677-9.174-6.737-4.389-13.862-3.811-14.656L39.678 6.233c.012-.016 1.131-1.557 3.168-1.91 1.865-.325 4.009.392 6.427 2.167.942.652 3.476 2.885 3.886 5.34.2 1.194-.116 2.337-.967 3.495L28.654 47.373c-.01.014-1.062 1.432-2.613 1.689-.98.158-1.99-.161-3.105-.979-3.312-2.434-1.593-5.382-1.255-5.89l13.118-17.861a2.018 2.018 0 1 0-3.254-2.388L18.396 39.847c-1.832 2.638-2.77 7.874 2.148 11.488 2.011 1.476 4.078 2.047 6.156 1.708 3.204-.53 5.061-3.072 5.233-3.321l23.511-32.008c1.512-2.059 2.082-4.271 1.689-6.573-.791-4.654-5.383-7.844-5.523-7.94C48.324.789 45.145-.169 42.153.346c-3.715.646-5.617 3.328-5.775 3.565l-26.29 35.821c-.131.175-3.201 4.368-2.381 9.863.586 3.927 2.957 7.442 7.047 10.446z"/></svg></span>
-                      <span class="form__upload-text">Прикрепить файл</span>
-                    </div>
-                  </div>
-                  <!-- END Комментарий -->
                   <div class="product-about__price">от 228, 00 руб.</div>
                   <p class="product-about__text">Фотографии образцов, логотипов и&nbsp;торговых марок представлены исключительно для ознакомления с&nbsp;методами и&nbsp;возможностями брендирования.</p>
                   <button class="btn btn--order">Добавить в заказ</button>
@@ -481,9 +381,9 @@
                     <blockquote class="tab-reviews__item-text">Получили сегодня готовый заказ. Хотели бы выразить Вам свою благодарность - работа выполнена на совесть, результат превзошел даже наши ожидания. Спасибо большое, очень приятно с Вами сотрудничать.</blockquote>
                   </div>
                   <div class="col-lg-3 col-md-12">
-                    <a href="#" class="tab-reviews__doc">
-                      <span class="tab-reviews__doc-link">Балтик Шиппинг.pdf</span>
-                      <span class="tab-reviews__doc-size">5,1 МБ</span>
+                    <a href="#" class="tab-reviews__doc doc-file">
+                      <span class="doc-file__link">Балтик Шиппинг.pdf</span>
+                      <span class="doc-file__size">5,1 МБ</span>
                     </a>
                   </div>
                 </div>
@@ -498,9 +398,9 @@
                     <blockquote class="tab-reviews__item-text">Нам очень импонирует компания ЦЛТ, их качество всегда соответствует нашим ожиданиям, помимо этого в компании привлекательные цены.</blockquote>
                   </div>
                   <div class="col-lg-3 col-md-12">
-                    <a href="#" class="tab-reviews__doc">
-                      <span class="tab-reviews__doc-link">Пластикам.pdf</span>
-                      <span class="tab-reviews__doc-size">3,6 МБ</span>
+                    <a href="#" class="tab-reviews__doc doc-file">
+                      <span class="doc-file__link">Пластикам.pdf</span>
+                      <span class="doc-file__size">3,6 МБ</span>
                     </a>
                   </div>
                 </div>
@@ -515,9 +415,9 @@
                     <div class="tab-reviews__item-text">Хочу поблагодарить Центр Лазерных Технологий и вашего менеджера Олега Курлыкова за четкое и качественное исполнение наших заказов. Работаю с ЦЛТ с 2004 года, мы вместе с Вами проходили. Хочу поблагодарить Центр Лазерных Технологий и вашего менеджера Олега Курлыкова за четкое и качественное исполнение наших заказов. Работаю с ЦЛТ с 2004 года, мы вместе с Вами проходили. Хочу поблагодарить Центр Лазерных Технологий и вашего менеджера Олега Курлыкова за четкое и качественное исполнение наших заказов. Работаю с ЦЛТ с 2004 года, мы вместе с Вами проходили</div>
                   </div>
                   <div class="col-lg-3 col-md-12">
-                    <a href="#" class="tab-reviews__doc">
-                      <span class="tab-reviews__doc-link">Завод Инфо. Автоматов.pdf</span>
-                      <span class="tab-reviews__doc-size">1,5 МБ</span>
+                    <a href="#" class="tab-reviews__doc doc-file">
+                      <span class="doc-file__link">Завод Инфо. Автоматов.pdf</span>
+                      <span class="doc-file__size">1,5 МБ</span>
                     </a>
                   </div>
                 </div>
