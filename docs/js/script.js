@@ -346,3 +346,9 @@ $(function () {
 		}
 	}
 })(jQuery);
+
+// Repeater fields init
+$(function () {
+	$('#size').repeater({max: 4});
+	$('#material').repeater({max: 2});
+});
