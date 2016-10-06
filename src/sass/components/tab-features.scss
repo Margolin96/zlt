@@ -1,0 +1,33 @@
+.tab-features {
+
+  .row {
+    margin: 0px -20px;
+  }
+
+  .col-lg-4,
+  .col-lg-6 {
+    padding: 0px 20px;
+  }
+
+  &__item {
+
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 20px;
+    outline: none;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    color: $dark;
+    font-size: 18px;
+  }
+}

@@ -20,7 +20,7 @@
   padding: 15px 30px;
   background: #f0f0f0 url('../img/arrow-down.svg') 97% center no-repeat;
   background-size: 12px 8px;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid $border;
   color: $black;
   font-size: 14px;
   font-weight: 500;
@@ -67,7 +67,7 @@
   min-height: 1px!important;
 
   @media only screen and (max-width: $desktop) {
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid $border;
   }
 }
 

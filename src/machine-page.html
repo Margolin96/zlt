@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Старница станка | ЦЛТ</title>
+  <title>Страница станка | ЦЛТ</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -128,6 +128,7 @@
       </div>
     </div>
   </header>
+
   <main>
     
     <div class="container">
@@ -141,8 +142,8 @@
       <div class="container">
         <h1 class="h1">Лазерный гравёр FMARK NS </h1>
         <div class="product__head">
-          <p class="product__head-text">Лазерный комплекс FMARK NS предназначен для нанесения текстовых и графических изображений на поверхность различных материалов  с высокой производительностью.</p>
-          <button class="btn btn--more">Получить консультацию</button>
+          <p class="product__head-text">Лазерный комплекс FMARK NS&nbsp;предназначен для нанесения текстовых и&nbsp;графических изображений на&nbsp;поверхность различных материалов с&nbsp;высокой производительностью.</p>
+          <button class="btn btn--clear">Получить консультацию</button>
         </div>
       </div>
       <div class="product__body">
@@ -197,14 +198,19 @@
                     <div class="product-about__text">
                       <p>Сталь, алюминий, никель, титан, латунь, чугун*, пластики, полупроводники, золото**</p>
                     </div>
-                    <a href="#" class="link">Таблица размеров</a>
-                  </div>Орабатываемые материалы -->
-                  <div class="product-about__doc-file">
-                    
+                    <a href="#more-info" class="link">Подробные характеристики</a>
                   </div>
-                  <div class="product-about__price">от 228, 00 руб.</div>
-                  <p class="product-about__text">Фотографии образцов, логотипов и&nbsp;торговых марок представлены исключительно для ознакомления с&nbsp;методами и&nbsp;возможностями брендирования.</p>
-                  <button class="btn btn--order">Добавить в заказ</button>
+                  <!-- END Орабатываемые материалы -->
+                  <div class="product-about__doc-file">
+                    <a href="#" class="doc-file">
+                      <span class="doc-file__link">Брошюра.pdf</span>
+                      <span class="doc-file__size">5,1 МБ</span>
+                    </a>
+                  </div>
+                  <div class="product-about__btns">
+                    <a href="#" class="btn btn--blue">Узнать цену</a>
+                    <a href="#" class="btn btn--clear">Купить в лизинг</a>
+                  </div>
                 </form>
               </div>
             </div>
@@ -213,162 +219,231 @@
       </div>
     </section>
 
-    <div class="tabs">
+    <div class="tabs" id="more-info">
       <div class="container">
         <div class="tabs__wrap" id="horizontalTab">
           <ul class="tabs__nav">
             <li class="tabs__nav-item">
-              <a href="#tab-descr" class="tabs__nav-link">Описание</a>
+              <a href="#tab-examples" class="tabs__nav-link">Примеры применения</a>
             </li>
             <li class="tabs__nav-item">
-              <a href="#tab-order" class="tabs__nav-link">Как заказать</a>
+              <a href="#tab-benefits" class="tabs__nav-link">Преимущества</a>
             </li>
             <li class="tabs__nav-item">
-              <a href="#tab-delivery" class="tabs__nav-link">Доставка</a>
+              <a href="#tab-features" class="tabs__nav-link">Уникальные возможности</a>
+            </li>
+            <li class="tabs__nav-item">
+              <a href="#tab-characteristics" class="tabs__nav-link">Общие характеристики</a>
             </li>
             <li class="tabs__nav-item">
               <a href="#tab-reviews" class="tabs__nav-link">Отзывы</a>
             </li>
           </ul>
           <div class="tabs__container">
-            <div class="tab-descr product-descr" id="tab-descr">
-              <p class="tabs__tab-title">Общее описание</p>
+            <div class="tab-examples" id="tab-examples">
+              <p class="tabs__tab-title">Видео</p>
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                  <a href="#" class="tab-examples__link">
+                    <iframe src="https://www.youtube.com/embed/KPaMvncTGtI" frameborder="0" allowfullscreen></iframe>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <a href="#" class="tab-examples__link">
+                    <iframe src="https://www.youtube.com/embed/KPaMvncTGtI" frameborder="0" allowfullscreen></iframe>
+                  </a>
+                </div>
+              </div>
+              <p class="tabs__tab-title tabs__tab-title--margin">Фотографии</p>
+              <div class="popup-gallery">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-1.jpg" class="tab-examples__link" title="Picture 1">
+                      <img src="img/tab-photo-1.jpg">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-2.jpg" class="tab-examples__link" title="Picture 2">
+                      <img src="img/tab-photo-2.jpg">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-3.jpg" class="tab-examples__link" title="Picture 3">
+                      <img src="img/tab-photo-3.jpg">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-4.jpg" class="tab-examples__link" title="Picture 4">
+                      <img src="img/tab-photo-4.jpg">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-5.jpg" class="tab-examples__link" title="Picture 5">
+                      <img src="img/tab-photo-5.jpg">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-6.jpg" class="tab-examples__link" title="Picture 6">
+                    <img src="img/tab-photo-6.jpg">
+                  </a>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-7.jpg" class="tab-examples__link" title="Picture 7">
+                      <img src="img/tab-photo-7.jpg">
+                    </a>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="img/tab-photo-8.jpg" class="tab-examples__link" title="Picture 8">
+                      <img src="img/tab-photo-8.jpg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-descr" id="tab-benefits">
+              <p class="tabs__tab-title">Технические особенности</p>
               <table>
                 <tr>
-                  <td>Размеры</td>
-                  <td>S - 4XL</td>
+                  <td>Гравировка изображений</td>
+                  <td>разрешение 2 000 dpi</td>
                 </tr>
                 <tr>
-                  <td>Материал</td>
-                  <td>Хлопок 100%, плотность 140 г/м2: джерси </td>
+                  <td>Гравировка с высокой скоростью</td>
+                  <td>более 10 м/с</td>
                 </tr>
                 <tr>
-                  <td>Вес (1 шт.)</td>
-                  <td>208 г</td>
+                  <td>Глубокая гравировка металлов</td>
+                  <td>до 5 мм</td>
                 </tr>
                 <tr>
-                  <td>Вид нанесения</td>
-                  <td><a href="#">F2 - Флекс</a>, <a href="#">IS2-Шеврон с пришиванием</a>, <a href="#">IS1-Шеврон с припариванием</a>, <a href="#">E-Цифровой трансфер</a>, <a href="#">B-Шелкография</a>, <a href="#">DTG1-Полноцвет по белому текстилю</a>, <a href="#">F1-Флекс</a>, <a href="#">I-Вышивка</a></td>
+                  <td>Высокое разрешение, объектив 60 x 60 мм</td>
+                  <td>1,0 мкм</td>
                 </tr>
                 <tr>
-                  <td>Размеры коробки</td>
-                  <td>1,06..1,07 мкм</td>
+                  <td>Энергопотребление</td>
+                  <td>Низкое</td>
                 </tr>
                 <tr>
-                  <td>Вес коробки</td>
-                  <td>более 50 000 часов</td>
+                  <td>Расходные материалы</td>
+                  <td>Отсутствуют</td>
                 </tr>
                 <tr>
-                  <td>Объем коробки</td>
-                  <td>10, 20, 30 или 50 Вт</td>
+                  <td>Программное обеспечение</td>
+                  <td>A-SCRIPT, интуитивно понятно для пользователя</td>
                 </tr>
                 <tr>
-                  <td>Количество в коробке</td>
-                  <td>от 0,2 до 10мм</td>
+                  <td>Надежность</td>
+                  <td>Европейская надежность</td>
+                </tr>
+                <tr>
+                  <td>Гарантия</td>
+                  <td>2 года полной гарантии на гравер</td>
+                </tr>
+                <tr>
+                  <td>Ширина линии нанесения</td>
+                  <td>от 25 мкм</td>
                 </tr>
               </table>
             </div>
-            <div class="tab-order" id="tab-order">
-              <p class="tabs__tab-title">Как заказать</p>
+            <div class="tab-features" id="tab-features">
               <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <div class="tab-order__step">
-                    <div class="tab-order__step-count"><span>1</span></div>
-                    <div class="tab-order__step-desrc">
-                      <p class="tab-order__step-title">Добавьте товар</p>
-                      <p class="tab-order__step-text">Добавьте необходимую услугу в корзину, укажите тираж.</p>
-                    </div>
+                  <div class="tab-features__item">
+                    <a href="#" class="tab-features__img">
+                      <img src="img/feature-1.jpg" alt="">
+                    </a>
+                    <div class="tab-features__text"><b>Высокая детализация</b> при 3D&nbsp;гравировке металлов</div>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <div class="tab-order__step">
-                    <div class="tab-order__step-count"><span>2</span></div>
-                    <div class="tab-order__step-desrc">
-                      <p class="tab-order__step-title">Укажите тип</p>
-                      <p class="tab-order__step-text">В корзине при необходимости укажите тип изделий и материал.</p>
-                    </div>
+                  <div class="tab-features__item">
+                    <a href="#" class="tab-features__img">
+                      <img src="img/feature-2.jpg" alt="">
+                    </a>
+                    <div class="tab-features__text"><b>Повышенная эффективность гравировки цилиндрических поверхностей.</b> Скорость гравировки на&nbsp;цилиндре в&nbsp;6&nbsp;раз быстрее!</div>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <div class="tab-order__step">
-                    <div class="tab-order__step-count"><span>3</span></div>
-                    <div class="tab-order__step-desrc">
-                      <p class="tab-order__step-title">Опишите пожелания</p>
-                      <p class="tab-order__step-text">В комментариях к заказу укажите все ваши пожелания</p>
-                    </div>
+                  <div class="tab-features__item">
+                    <a href="#" class="tab-features__img">
+                      <img src="img/feature-3.jpg" alt="">
+                    </a>
+                    <div class="tab-features__text"><b>Инновационный способ получения цвета</b> без использования красителей при&nbsp;гравировке металлов!</div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <div class="tab-order__step">
-                    <div class="tab-order__step-count"><span>4</span></div>
-                    <div class="tab-order__step-desrc">
-                      <p class="tab-order__step-title">Прикрепите файл</p>
-                      <p class="tab-order__step-text">В корзине вы можете прикрепить файлы (эскизы, макет, реквизиты и прочее).</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <div class="tab-order__step">
-                    <div class="tab-order__step-count"><span>5</span></div>
-                    <div class="tab-order__step-desrc">
-                      <p class="tab-order__step-title">Заполните контакты</p>
-                      <p class="tab-order__step-text">Заполните контактные данные для обратной связи.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <div class="tab-order__step">
-                    <div class="tab-order__step-count"><span>6</span></div>
-                    <div class="tab-order__step-desrc">
-                      <p class="tab-order__step-title">Сделайте заказ</p>
-                      <p class="tab-order__step-text">Нажмите кнопку «Отправить на расчет».</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="warning">
-                <p>Наш менеджер свяжется с Вами в течении 15 минут.<br>
-                  После согласования всех деталей будущего заказа Вам на e-mail будет отправлен счёт на оплату.</p>
               </div>
             </div>
-            <div class="tab-delivery" id="tab-delivery">
-              <div class="row">
-                <div class="col-lg-6 col-md-12">
-                  <p class="tabs__tab-title">Санкт-Петербург</p>
-                  <div class="tab-delivery__list-wrap">
-                    <p class="tab-delivery__list-title">Самовывоз из офисов продаж:</p>
-                    <ul>
-                      <li>Тихорецкий пр., д. 21 с 10:00 до 18:00, склад готовой продукции</li>
-                      <li>Боровая ул., д. 32 (офис 218) с 10:00 до 18:00, на следующий день после готовности заказа к отгрузке.</li>
-                    </ul>
-                  </div>
-                  <div class="tab-delivery__list-wrap">
-                    <p class="tab-delivery__list-title">Доставка:</p>
-                    <p class="tab-delivery__list-descr">Доставка осуществляется в течении 2-х дней с момента готовности заказа к отгрузке.</p>
-                    <ul>
-                      <li>Стоимость доставки в пределах КАД составляет 500 руб.</li>
-                      <li>Заказы от 50 000 руб. в пределах КАД мы доставляем бесплатно.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                  <p class="tabs__tab-title">Москва и другие регионы России</p>
-                  <div class="tab-delivery__list-wrap">
-                    <ul>
-                      <li>Доставка осуществляется транспортными компаниями «Деловые линии» и «Байкал Сервис»</li>
-                      <li>Стоимость доставки до терминала выбранной ТК в Санкт-Петербурге 500 руб.</li>
-                      <li>Заказы от 50 000 руб. до терминала ТК для в Санкт-Петербурге мы доставляем бесплатно. Доставка до терминала в Спб — 500 руб плюс тариф ТК на перевозку.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="warning">
-                <ul>
-                  <li>Приемку и разгрузку товара организовывает заказчик.</li>
-                  <li>Отгрузка продукции производится только при условии подписания заказчиком акта приема выполненных работ и товарной накладной. Для подписания данных документов заказчик (представитель заказчика) должен располагать печатью своей организации или доверенностью по форме М-2, заверенной руководителем и бухгалтером своей организации.</li>
-                  <li>Отсутствие правильно оформленных документов может послужить основанием для отказа в выдаче заказчику готовой продукции.</li>
-                </ul>
-              </div>
+            <div class="tab-descr" id="tab-characteristics">
+              <p class="tabs__tab-title">Общие характеристики</p>
+              <table>
+                <tr>
+                  <td>Размеры зоны обработки</td>
+                  <td>Cменные объективы: 60 х 60, 110 х 110, 180 х 180, 240 х 240 мм</td>
+                </tr>
+                <tr>
+                  <td>Мax высота обрабатываемого объекта (базовая конфигурация):</td>
+                  <td>410 мм</td>
+                </tr>
+                <tr>
+                  <td>Скорость обработки</td>
+                  <td>до 10 м/с</td>
+                </tr>
+                <tr>
+                  <td>Тип лазера</td>
+                  <td>Иттербиевый волоконный</td>
+                </tr>
+                <tr>
+                  <td>Рабочая длина волны излучения</td>
+                  <td>1,06..1,07 мкм</td>
+                </tr>
+                <tr>
+                  <td>Ресурс лазера</td>
+                  <td>более 50 000 часов</td>
+                </tr>
+                <tr>
+                  <td>Средняя выходная мощность лазера</td>
+                  <td>10, 20, 30 или 50 Вт</td>
+                </tr>
+                <tr>
+                  <td>Ширина линии с автоматическим заполнением</td>
+                  <td>от 0,2 до 10мм</td>
+                </tr>
+                <tr>
+                  <td>Тип выводимых изображений</td>
+                  <td>Контурные, растровые, текстовые, графические, штрих-коды, 2D-коды</td>
+                </tr>
+                <tr>
+                  <td>Охлаждение</td>
+                  <td>Автономное, воздушное</td>
+                </tr>
+                <tr>
+                  <td>Масса</td>
+                  <td>45 кг</td>
+                </tr>
+                <tr>
+                  <td>Энергопотребление</td>
+                  <td>1 х 220 В; 50 Гц; 0,4 кВт</td>
+                </tr>
+              </table>
+              <p class="tabs__tab-title">Сканаторная система</p>
+              <table>
+                <tr>
+                  <td>Тип</td>
+                  <td>Двухосевой сканатор MS II-10, RAYLASE (Германия)</td>
+                </tr>
+                <tr>
+                  <td>Программно-аппаратное разрешение</td>
+                  <td>1,8 мкм (110 x 110 мм)</td>
+                </tr>
+                <tr>
+                  <td>Глубина фокусировки</td>
+                  <td>до 3 мм (110 x 110 мм)</td>
+                </tr>
+                <tr>
+                  <td>Скорость</td>
+                  <td>10 м/c</td>
+                </tr>
+              </table>
             </div>
             <div class="tab-reviews" id="tab-reviews">
               <article class="tab-reviews__item">
@@ -430,43 +505,50 @@
     </div>
       
     <div class="container">
-      <section class="popular">
-        <h2 class="h2">Популярные товары</h2>
+
+      <section class="technology">
+        <div class="head">
+          <h2 class="h2">Сферы применения</h2>
+        </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <div class="popular__item">
-              <a href="#" class="popular__item-img">
-                <img src="img/popular-item-1.jpg" alt="">
+            <div class="technology__item">
+              <a href="#" class="technology__img">
+                <img src="img/scope-1.jpg" alt="">
               </a>
-              <a href="#" class="popular__item-name">Водозащитный чехол Waterpro, синий</a>
-              <div class="popular__item-price">79,90 Р</div>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Цветная маркировка металлов</a>
+              </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <div class="popular__item">
-              <a href="#" class="popular__item-img">
-                <img src="img/popular-item-2.jpg" alt="">
+            <div class="technology__item">
+              <a href="#" class="technology__img">
+                <img src="img/scope-2.jpg" alt="">
               </a>
-              <a href="#" class="popular__item-name">USB-разветвитель Cloud, белыйMADISON 170</a>
-              <div class="popular__item-price">509,00 Р</div>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Глубокая гравировка, 3D гравировка</a>
+              </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <div class="popular__item">
-              <a href="#" class="popular__item-img">
-                <img src="img/popular-item-3.jpg" alt="">
+            <div class="technology__item">
+              <a href="#" class="technology__img">
+                <img src="img/scope-3.jpg" alt="">
               </a>
-              <a href="#" class="popular__item-name">Внешний аккумулятор Gold 2600 мАч</a>
-              <div class="popular__item-price">749,00 Р</div>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Маркировка штрих-кодов, 2D кодов, Data Matrix</a>
+              </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <div class="popular__item">
-              <a href="#" class="popular__item-img">
-                <img src="img/popular-item-4.jpg" alt="">
+            <div class="technology__item">
+              <a href="#" class="technology__img">
+                <img src="img/scope-4.jpg" alt="">
               </a>
-              <a href="#" class="popular__item-name">Беспроводная Bluetooth колонка Uniscend Grinder</a>
-              <div class="popular__item-price">520,00 Р</div>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Маркировка фотографий</a>
+              </div>
             </div>
           </div>
         </div>
@@ -474,61 +556,55 @@
 
       <section class="technology">
         <div class="head">
-          <h2 class="h2">Наши технологии</h2>
-          <a href="#" class="link">Все технологии</a>
+          <h2 class="h2">Дополнительное оборудование</h2>
         </div>
         <div class="row">
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div class="technology__item">
               <a href="#" class="technology__img">
-                <img src="img/technology-1.jpg" alt="">
+                <img src="img/optional-equipment-1.jpg" alt="">
               </a>
-              <a href="#" class="technology__name">Лазерная гравировка</a>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Ротационное устройство RZD-30L</a>
+                <p>Дополнительно имеет возможность позиционирования детали при помощи двух прижимных конусов.</p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div class="technology__item">
               <a href="#" class="technology__img">
-                <img src="img/technology-2.jpg" alt="">
+                <img src="img/optional-equipment-2.jpg" alt="">
               </a>
-              <a href="#" class="technology__name">Лазерная резка</a>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Ротационное устройство RZD-30 - аналог RZ-30</a>
+                <p>Дополнительно имеет возможность наклона оси вращения (0-95&deg;).</p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div class="technology__item">
               <a href="#" class="technology__img">
-                <img src="img/technology-3.jpg" alt="">
+                <img src="img/optional-equipment-3.jpg" alt="">
               </a>
-              <a href="#" class="technology__name">УФ-печать</a>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Сменные фокусирующие объективы</a>
+                <p>Позволяют изменять&nbsp;S пятна обработки: 60&times;60, 180&times;180, 240&times;240&nbsp;мм.</p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div class="technology__item">
               <a href="#" class="technology__img">
-                <img src="img/technology-4.jpg" alt="">
+                <img src="img/optional-equipment-4.jpg" alt="">
               </a>
-              <a href="#" class="technology__name">Сублимация</a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-            <div class="technology__item">
-              <a href="#" class="technology__img">
-                <img src="img/technology-5.jpg" alt="">
-              </a>
-              <a href="#" class="technology__name">Тиснение</a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-            <div class="technology__item">
-              <a href="#" class="technology__img">
-                <img src="img/technology-6.jpg" alt="">
-              </a>
-              <a href="#" class="technology__name">Металлографика</a>
+              <div class="technology__text-wrap">
+                <a href="#" class="technology__name">Автономная системавытяжки и фильтрации</a>
+                <p>Предназначена для удаления из&nbsp;зоны обработки продуктов термического разложения керамики, меметаллов, полимеров, бумаги, картона, стекла и&nbsp;резины.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      
       <section class="advantages">
         <h2 class="h2">Преимущества работы с&nbsp;нами</h2>
         <div class="advantages__wrap">
@@ -655,7 +731,15 @@
           </div>
         </div>
       </div>
+
     </div>
+
+  <div class="article-banner" style="background-image: url('img/article-banner.jpg');">
+    <div class="container">
+      <div class="article-banner__cat">Статья</div>
+      <p class="article-banner__title">Гравировка-лазерная или механическая, что&nbsp;выбрать?</p>
+    </div>
+  </div>
 
   </main>
 
@@ -772,6 +856,6 @@
       </div>
     </div>
   </div>
-  <script src="js/script.min.js" async></script>
+  <script src="js/script.min.js" async defer></script>
 </body>
 </html>

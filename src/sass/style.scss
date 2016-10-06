@@ -20,7 +20,8 @@
 @import "base/modal";
 @import "base/__slick";
 @import "base/__slick-theme";
-@import "base/responsive-tabs";
+@import "base/__responsive-tabs";
+@import "base/__magnific-popup";
 
 /*=== компоненты ===*/
 @import "components/header";
@@ -44,7 +45,10 @@
 @import "components/tab-order";
 @import "components/tab-reviews";
 @import "components/tab-delivery";
+@import "components/tab-features";
+@import "components/tab-examples";
 
+@import "components/article-banner";
 @import "components/warning";
 @import "components/popular";
 @import "components/technology";
@@ -57,4 +61,4 @@
 @import "components/js-tab";
 
 /*=== страницы ===*/
-// @import "pages/layout";
+@import "pages/layout";

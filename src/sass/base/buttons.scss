@@ -8,22 +8,44 @@
   cursor: pointer;
   transition: .2s all ease;
 
-  &--more {
+  &--clear {
     display: inline-block!important;
     width: auto!important;
-    margin-top: 30px;
     padding: 0;
+    padding: 0 20px;
     box-sizing: border-box;
     min-width: 165px;
     border: 1px solid #c0c0c0;
     color: $black;
     font-size: 14px;
-    line-height: 50px;
-    font-weight: normal;
+    line-height: 48px;
+    font-weight: 500;
     text-transform: uppercase;
 
     &:hover {
       border-color: $black;
+    }
+  }
+
+  &--more {
+    margin-top: 30px;
+  }
+
+  &--blue {
+    padding: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: $blue;
+    border: 1px solid $blue;
+    color: $white;
+    font-size: 14px;
+    line-height: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover {
+      background: darken($blue, 5%);
+      border-color: darken($blue, 5%);
     }
   }
 
@@ -44,20 +66,6 @@
 
   &--submit {
     padding: 10px 30px;
-    background: $blue;
-    border: 1px solid $blue;
-    color: $white;
-    font-weight: 500;
-    text-transform: uppercase;
-
-    &:hover {
-      background: darken($blue, 5%);
-      border-color: darken($blue, 5%);
-    }
-  }
-
-  &--order {
-    padding: 14px 25px;
     background: $blue;
     border: 1px solid $blue;
     color: $white;

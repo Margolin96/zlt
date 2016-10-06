@@ -44,8 +44,8 @@ $(function(){
 
   $('.seo').readmore({
     collapsedHeight: 160,
-    moreLink: '<button class="btn btn--more">Подробнее</button>',
-    lessLink: '<button class="btn btn--more">Скрыть</button>'
+    moreLink: '<button class="btn btn--clear btn--more">Подробнее</button>',
+    lessLink: '<button class="btn btn--clear btn--more">Скрыть</button>'
   });
 
 });
