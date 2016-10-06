@@ -11,7 +11,16 @@
 
   .col-md-6 {
 
+    &:nth-child(3n+4) {
+      clear: left;
+    }
+
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
+
+      &:nth-child(3n+4) {
+        clear: none;
+      }
+      
       &:nth-child(2n+3) {
         clear: left;
       }

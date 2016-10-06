@@ -31,9 +31,9 @@
     background: $white;
   }
 
-  &--other &__item {
+  &--text &__item {
     box-sizing: border-box;
-    min-height: 370px;
+    min-height: 345px;
 
     @media (max-width: $tablet) {
       min-height: 1px;
@@ -55,7 +55,7 @@
     }
   }
 
-  &--other &__img {
+  &--text &__img {
 
     &--mobile {
       display: none;
@@ -79,7 +79,7 @@
   }
 
   &__text-wrap {
-    padding: 15px 20px;
+    padding: 10px 15px;
     box-sizing: border-box;
     min-height: 70px;
 
@@ -92,7 +92,11 @@
     }
   }
 
-  &--other &__text-wrap {
+  &--other &__text-wrap{
+    min-height: auto;
+  }
+
+  &--text &__text-wrap {
 
     @media (max-width: $tablet) {
       display: inline-block;
@@ -113,7 +117,7 @@
     @include gray-border-link;
   }
 
-  &--other &__name {
+  &--text &__name {
     @media (max-width: $tablet) {
       line-height: 1.5;
     }
