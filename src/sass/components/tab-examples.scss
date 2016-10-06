@@ -6,8 +6,24 @@
     &:nth-child(4n+5) {
       clear: left;
 
-      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      @media (max-width: $desktop) {
         clear: none;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 20px;
+
+    .tabs__tab-title {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .col-lg-3 {
+      
+      &:nth-child(2n+3) {
+        clear: left;
       }
     }
   }
@@ -19,16 +35,20 @@
       padding-left: 0;
       padding-right: 0;
     }
-
+    
     .col-lg-3 {
-
-      &:nth-child(2n+3) {
+      
+      &:nth-child(3n+4) {
         clear: left;
       }
     }
   }
 
   &__video {
+
+    @media (max-width: $tablet) {
+      margin-bottom: 25px;
+    }
 
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
       margin-bottom: 25px;
@@ -40,6 +60,10 @@
       max-width: 100%;
       height: auto;
       min-height: 315px;
+
+      @media (max-width: $tablet) {
+        min-height: auto;
+      }
     }
   }
 

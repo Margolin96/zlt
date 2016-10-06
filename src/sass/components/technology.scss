@@ -31,9 +31,15 @@
     background: $white;
   }
 
-  &--scope &__item {
+  &--other &__item {
     box-sizing: border-box;
     min-height: 370px;
+
+    @media (max-width: $tablet) {
+      min-height: 1px;
+      padding: 20px;
+      font-size: 0;
+    }
   }
 
   &__img {
@@ -46,6 +52,29 @@
       width: 100%;
       max-width: 100%;
       height: auto;
+    }
+  }
+
+  &--other &__img {
+
+    &--mobile {
+      display: none;
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
+
+      &--mobile {
+        display: inline-block;
+        vertical-align: top;
+        width: 42%;
+
+        img {
+          display: block;
+          height: auto;
+          max-width: 100%;
+        }
+      }
     }
   }
 
@@ -63,7 +92,30 @@
     }
   }
 
+  &--other &__text-wrap {
+
+    @media (max-width: $tablet) {
+      display: inline-block;
+      vertical-align: top;
+      width: 58%;
+      
+      padding: 0;
+      padding-top: 20px;
+      padding-left: 10px;
+
+      p {
+        display: none;
+      }
+    }
+  }
+
   &__name {
     @include gray-border-link;
+  }
+
+  &--other &__name {
+    @media (max-width: $tablet) {
+      line-height: 1.5;
+    }
   }
 }

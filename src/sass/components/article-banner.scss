@@ -24,6 +24,11 @@
     padding: 0;
     width: 48%;
 
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
     a {
       color: $white;
       font-size: 30px;
@@ -33,6 +38,10 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 18px;
       }
     }
 

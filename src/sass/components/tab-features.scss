@@ -1,4 +1,8 @@
 .tab-features {
+
+  @media (max-width: $tablet) {
+    padding: 20px;
+  }
   
   @media (min-width: $tablet + 1) and (max-width: $desktop) {
     padding: 35px 30px;

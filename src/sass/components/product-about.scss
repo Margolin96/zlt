@@ -11,6 +11,10 @@
     &:first-of-type {
       padding-top: 0;
     }
+
+    @media (max-width: $tablet) {
+      padding-top: 15px;
+    }
   }
 
   &__row-title {
@@ -46,6 +50,10 @@
     margin-top: 30px;
     padding: 25px 0 50px;
     border-top: 1px solid $border;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 45px;
+    }
   }
 
   &__price {
@@ -70,5 +78,11 @@
   .btn {
     min-width: 180px;
     margin-right: 13px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
   }
 }
