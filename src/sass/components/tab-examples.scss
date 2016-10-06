@@ -5,12 +5,49 @@
 
     &:nth-child(4n+5) {
       clear: left;
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        clear: none;
+      }
+    }
+  }
+
+  @media (min-width: $tablet + 1) and (max-width: $desktop) {
+    padding: 35px 30px;
+
+    .tabs__tab-title {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .col-lg-3 {
+
+      &:nth-child(2n+3) {
+        clear: left;
+      }
+    }
+  }
+
+  &__video {
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      margin-bottom: 25px;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      min-height: 315px;
     }
   }
 
   &__link {
+    display: block;
+    outline: none;
+    position: relative;
 
-    iframe,
     img {
       display: block;
       width: 100%;
@@ -18,8 +55,28 @@
       height: auto;
     }
 
-    iframe {
-      min-height: 310px;
+    &::after {
+      display: none;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $blue url('../img/loupe.png') center center no-repeat;
+      background-size: 19px 19px;
+      opacity: .8;
+      content: '';
+      transition: $time all ease;
     }
+
+    &:hover {
+      &::after {
+        display: block;
+      }
+    }
+
   }
 }

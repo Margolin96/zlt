@@ -1,4 +1,8 @@
 .tab-features {
+  
+  @media (min-width: $tablet + 1) and (max-width: $desktop) {
+    padding: 35px 30px;
+  }
 
   .row {
     margin: 0px -20px;
@@ -11,6 +15,9 @@
 
   &__item {
 
+    @media (max-width: $desktop) {
+      margin-bottom: 25px;
+    }
   }
 
   &__img {

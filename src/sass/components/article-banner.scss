@@ -23,10 +23,19 @@
     margin: 10px auto;
     padding: 0;
     width: 48%;
-    color: $white;
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: bold;
+
+    a {
+      color: $white;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
   }
 
 }

@@ -6,11 +6,20 @@
     .btn {
       float: right;
     }
+
+
   }
 
   &__head-text {
     width: 65%;
     float: left;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 60%;
+      color: #848484;
+      font-size: 18px;
+      padding-bottom: 0;
+    }
   }
 
   &__code {

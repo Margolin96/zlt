@@ -18,9 +18,22 @@
     }
   }
 
+  @media (min-width: $tablet + 1) and (max-width: $desktop) {
+    .col-lg-3 {
+      &:nth-child(2n+3) {
+        clear: left;
+      }
+    }
+  }
+
   &__item {
     margin-bottom: 15px;
     background: $white;
+  }
+
+  &--scope &__item {
+    box-sizing: border-box;
+    min-height: 370px;
   }
 
   &__img {
