@@ -10,7 +10,24 @@
     }
   }
 
+  .col-lg-3 {
+    &:nth-child(4n+5) {
+      clear: left;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      &:nth-child(4n+5) {
+        clear: none;
+      }
+
+      &:nth-child(2n+3) {
+        clear: left;
+      }
+    }
+  }
+
   &__item {
+    margin-bottom: 25px;
     padding: 20px;
     box-sizing: border-box;
     min-height: 400px;

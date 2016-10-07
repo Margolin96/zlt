@@ -1,0 +1,38 @@
+.souvenirs-promo {
+  padding-bottom: 50px;
+  border-bottom: 1px solid $border;
+
+  &__banner {
+    margin: 20px 0 50px;
+    height: 350px;
+    box-sizing: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  &__banner-text {
+    width: 55%;
+    margin: 0 auto;
+    padding: 125px 0 0;
+    color: $white;
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: #848484;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .col-lg-4 {
+    text-align: right;
+  }
+
+  .btn {
+    min-width: 240px;
+  }
+}
