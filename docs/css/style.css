@@ -3447,6 +3447,8 @@ img.mfp-img {
 
 .banners__text {
   display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 50px 80px 0;
   color: #ffffff;
   -webkit-transition: 0.1s all ease;
@@ -3461,11 +3463,13 @@ img.mfp-img {
 }
 
 .souvenirs-promo {
-  padding-bottom: 50px;
+  padding-bottom: 45px;
   border-bottom: 1px solid #d8d8d8;
 }
 
 .souvenirs-promo__banner {
+  position: relative;
+  z-index: 22;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 350px;
@@ -3478,6 +3482,12 @@ img.mfp-img {
 }
 
 .souvenirs-promo__banner-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 88;
   width: 55%;
   margin: 0 auto;
   padding: 125px 0 0;
@@ -3485,6 +3495,21 @@ img.mfp-img {
   text-transform: uppercase;
   font-size: 48px;
   font-weight: bold;
+}
+
+.souvenirs-promo__img-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.souvenirs-promo__img {
+  display: none;
 }
 
 .souvenirs-promo__text {
@@ -3517,6 +3542,8 @@ img.mfp-img {
 .icons-block__icon,
 .icons-block__link-wrap {
   display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   vertical-align: top;
 }
 
@@ -3545,18 +3572,48 @@ img.mfp-img {
 }
 
 .categories__item {
+  position: relative;
+  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 340px;
   margin-bottom: 20px;
   padding: 20px 20px 25px;
+  padding-right: 25px;
   background: #ffffff;
+  cursor: pointer;
+  -webkit-transition: 0.1s all ease;
+          transition: 0.1s all ease;
+}
+
+.categories__img {
+  -webkit-transition: 0.1s all ease;
+          transition: 0.1s all ease;
 }
 
 .categories__img img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.categories__item:hover .categories__img {
+  display: none;
+}
+
+.categories__list-wrap {
+  overflow: hidden;
+  max-height: 130px;
+  -webkit-transition: 0.1s all ease;
+          transition: 0.1s all ease;
+}
+
+.categories__item:hover .categories__list-wrap {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  width: 90%;
+  max-height: 340px;
 }
 
 .categories__cat-name {
@@ -3579,15 +3636,17 @@ img.mfp-img {
 }
 
 .categories__list li {
-  position: relative;
   display: inline;
-  padding-right: 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 10px;
 }
 
 .categories__list li::after {
-  position: absolute;
-  top: 7px;
-  left: 95%;
+  position: relative;
+  top: -2px;
+  right: -6px;
+  display: inline-block;
   width: 3px;
   height: 3px;
   -webkit-border-radius: 50%;
@@ -4223,6 +4282,40 @@ img.mfp-img {
 
   .tab-examples__video {
     margin-bottom: 25px;
+  }
+
+  .souvenirs-promo__banner-text {
+    width: 80%;
+    font-size: 30px;
+    line-height: 1.8;
+  }
+
+  .souvenirs-promo__img--tablet {
+    display: block;
+  }
+
+  .icons-block .col-lg-3:nth-child(4n+5) {
+    clear: none;
+  }
+
+  .icons-block .col-lg-3:nth-child(2n+3) {
+    clear: left;
+  }
+
+  .icons-block__item {
+    padding-right: 80px;
+  }
+
+  .icons-block__icon {
+    width: 25%;
+  }
+
+  .icons-block__link-wrap {
+    width: 75%;
+  }
+
+  .categories {
+    margin-top: 30px;
   }
 
   .warning {
@@ -4970,6 +5063,12 @@ img.mfp-img {
   }
 }
 
+@media (min-width: 1201px) {
+  .souvenirs-promo__img--desktop {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .r-tabs .r-tabs-panel.r-tabs-state-active {
     border-bottom: 1px solid #d8d8d8;
@@ -5516,6 +5615,50 @@ img.mfp-img {
     min-height: auto;
   }
 
+  .banners__text {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .souvenirs-promo {
+    padding-bottom: 40px;
+  }
+
+  .souvenirs-promo .h1 {
+    display: none;
+  }
+
+  .souvenirs-promo__banner {
+    height: 320px;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+
+  .souvenirs-promo__banner-text {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  .souvenirs-promo__img--mobile {
+    display: block;
+  }
+
+  .souvenirs-promo__text {
+    margin-bottom: 25px;
+  }
+
+  .souvenirs-promo .btn {
+    width: 100%;
+  }
+
+  .icons-block__item {
+    padding-right: 20px;
+  }
+
+  .categories__item {
+    padding-right: 40px;
+  }
+
   .article-banner__title {
     width: 100%;
     margin-top: 20px;
@@ -5660,6 +5803,10 @@ img.mfp-img {
 
   .margin-bottom {
     margin-bottom: 70px;
+  }
+
+  .souvenirs .breadcrumbs {
+    display: none;
   }
 }
 

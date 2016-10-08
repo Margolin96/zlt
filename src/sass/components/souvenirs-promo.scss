@@ -1,6 +1,16 @@
 .souvenirs-promo {
-  padding-bottom: 50px;
+  padding-bottom: 45px;
   border-bottom: 1px solid $border;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 40px;
+  }
+
+  .h1 {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
 
   &__banner {
     margin: 20px 0 50px;
@@ -10,22 +20,85 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    position: relative;
+    z-index: 22;
+
+    @media (max-width: $tablet) {
+      margin-top: 0;
+      margin-bottom: 35px;
+      height: 320px;
+    }
   }
 
   &__banner-text {
     width: 55%;
-    margin: 0 auto;
     padding: 125px 0 0;
     color: $white;
     font-size: 48px;
     font-weight: bold;
     text-transform: uppercase;
+    z-index: 88;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      font-size: 22px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      font-size: 30px;
+      line-height: 1.8;
+      width: 80%;
+    }
+  }
+
+  &__img-wrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+
+  &__img {
+    display: none;
+
+    &--mobile {
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+
+    &--tablet {
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        display: block;
+      }
+    }
+
+    &--desktop {
+      @media (min-width: $desktop + 1) {
+        display: block;
+      }
+    }
   }
 
   &__text {
     color: #848484;
     font-size: 16px;
     line-height: 1.4;
+    
+    @media (max-width: $tablet) {
+      margin-bottom: 25px;
+    }
   }
 
   .col-lg-4 {
@@ -34,5 +107,9 @@
 
   .btn {
     min-width: 240px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 }

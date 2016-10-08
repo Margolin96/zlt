@@ -6,26 +6,52 @@
     &:nth-child(4n+5) {
       clear: left;
     }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      &:nth-child(4n+5) {
+        clear: none;
+      }
+      &:nth-child(2n+3) {
+        clear: left;
+      }
+    }
   }
 
   &__item {
     margin-bottom: 40px;
     font-size: 0;
+
+    @media (max-width: $tablet) {
+      padding-right: 20px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      padding-right: 80px;
+    }
   }
 
   &__icon,
   &__link-wrap {
     display: inline-block;
     vertical-align: top;
+    box-sizing: border-box;
   }
 
   &__icon {
     width: 22%;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 25%;
+    }
   }
 
   &__link-wrap {
     width: 78%;
     padding-top: 10px;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 75%;
+    }
   }
 
   &__link {
