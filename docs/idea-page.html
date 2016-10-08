@@ -221,25 +221,28 @@
                   <!-- Размер и количество -->
                   <div class="product-about__row">
                     <p class="product-about__row-title">Размер и количество</p>
-                    <div class="form__row">
-                      <div class="form__col form__col--1">
-                        <select name="product-size">
+                    <div class="form__row__group" id="size">
+                      <div class="form__row form__row--template">
+                        <div class="form__col form__col--1">
+                          <select name="product-size">
                           <option>Размер</option>
                           <option value="product-xs">XS</option>
                           <option value="product-x">X</option>
                           <option value="product-m">M</option>
                           <option value="product-l">L</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--1">
-                        <select name="product-count">
+                          </select>
+                        </div>
+                        <div class="form__col form__col--1">
+                          <select name="product-count">
                           <option> Количество</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--2">
-                        <button type="button" class="btn btn--add">Добавить размер</button>
+                          </select>
+                        </div>
+                        <div class="form__col form__col--2">
+                          <button type="button" class="btn btn--remove">Удалить размер</button>
+                          <button type="button" class="btn btn--add">Добавить размер</button>
+                        </div>
                       </div>
                     </div>
                     <div class="form__group">
@@ -254,16 +257,19 @@
                   <!-- Материал -->
                   <div class="product-about__row">
                     <p class="product-about__row-title">Материал</p>
-                    <div class="form__row">
-                      <div class="form__col form__col--3 form__col--mob-2">
+                    <div class="form__row__group" id="material">
+                      <div class="form__row form__row--template">
+                        <div class="form__col form__col--3 form__col--mob-2">
                         <select name="product-type">
                           <option>Вид материал</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
                         </select>
-                      </div>
-                      <div class="form__col form__col--2 form__col--mob-2">
+                        </div>
+                        <div class="form__col form__col--2 form__col--mob-2">
+                           <button type="button" class="btn btn--remove">Удалить материал</button>
                          <button type="button" class="btn btn--add">Добавить материал</button>
+                        </div>
                       </div>
                     </div>
                   </div>
