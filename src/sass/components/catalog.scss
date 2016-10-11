@@ -1,0 +1,70 @@
+.catalog {
+  @include clearfix;
+
+  &__left {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+
+  &__right {
+    float: right;
+    width: 75%;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+
+  .col-lg-4 {
+
+    &:nth-child(3n+4) {
+      clear: left;
+    }
+  }
+
+  .item__name {
+    min-height: 70px;
+  }
+
+  &__head {
+    @include clearfix;
+
+    .h1 {
+      float: left;
+    }
+
+    .btn {
+      float: right;
+      display: none;
+    }
+  }
+
+  &__head-text {
+    color: #6c6c6c;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__items {
+    margin-top: 30px;
+  }
+
+  &__bottom {
+    margin-top: 25px;
+    @include clearfix;
+  }
+
+  &__bottom-left {
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+  }
+
+  &__bottom-right {
+    float: right;
+    width: 40%;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+}

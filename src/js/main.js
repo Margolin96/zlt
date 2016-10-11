@@ -42,6 +42,10 @@ $(function(){
     focusOnSelect: true
   });
 
+  $('.filter__price' ).click(function(){
+    $('.filter__price').toggleClass('filter__price--active');
+  });
+
   $('.seo').readmore({
     collapsedHeight: 160,
     moreLink: '<button class="btn btn--clear btn--more">Подробнее</button>',

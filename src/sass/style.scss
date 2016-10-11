@@ -48,6 +48,12 @@
 @import "components/tab-features";
 @import "components/tab-examples";
 
+@import "components/catalog";
+@import "components/pagination";
+@import "components/pages-count";
+@import "components/catalog-search";
+@import "components/filter";
+@import "components/item";
 @import "components/banners";
 @import "components/souvenirs-promo";
 @import "components/icons-block";
@@ -61,8 +67,6 @@
 @import "components/seo";
 @import "components/social-links";
 @import "components/footer";
-
-@import "components/js-tab";
 
 /*=== страницы ===*/
 @import "pages/layout";

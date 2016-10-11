@@ -1,0 +1,47 @@
+.pagination {
+  font-size: 0;
+  
+  &__page {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1px;
+
+    a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: $white;
+      text-align: center;
+      color: #6f6f6f;
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 50px;
+      outline: none;
+
+      &:hover {
+        background: $blue;
+        color: $white;
+      }
+    }
+    
+    &:first-child a,
+    &:last-child a {
+      font-size: 0;
+      background: $white url('../img/arrow-gray.svg') center center no-repeat;
+      background-size: 11px 17px;
+
+      &:hover {
+        background: $blue url('../img/arrow.svg') center center no-repeat;
+        background-size: 11px 17px;
+      }
+    }
+
+    &:last-child a {
+      transform: rotate(180deg);
+    }
+
+    &--active a {
+      color: $blue;
+    }
+  }
+}
