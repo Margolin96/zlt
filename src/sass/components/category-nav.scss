@@ -1,0 +1,66 @@
+.category-nav {
+  background: $white;
+
+  &__group {
+
+  }
+
+  &__group-name {
+    padding: 20px 25px;
+    background:transparent url('../img/select.svg') 91% center no-repeat;
+    background-size: 13px 13px;
+    border-top: 1px solid $light-gray;
+    color: #252525;
+    font-size: 14px;
+    font-weight: 500; 
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--open {
+      background:transparent url('../img/select-up.svg') 91% center no-repeat;
+      background-size: 13px 13px;
+    }
+  }
+
+  &__list {
+    display: none;
+    padding: 0 25px;
+    font-size: 0;
+  }
+
+  &__group-name--open + &__list {
+    display: block;
+  }
+
+  &__list-item {
+    padding-bottom: 15px;
+  }
+
+  &__item,
+  &__item-count {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__item {
+    width: 75%;
+    color: $black;
+    font-size: 15px;
+  }
+
+  &__item-count {
+    width: 25%;
+    text-align: right;
+    color: #a3a3a3;
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  &__list &__list-item a:hover &__item,
+  &__list &__list-item a:hover &__item-count,
+  &__list &__list-item--active a &__item,
+  &__list &__list-item--active a &__item-count {
+    color: $blue;
+  }
+
+}

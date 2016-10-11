@@ -46,6 +46,10 @@ $(function(){
     $('.filter__price').toggleClass('filter__price--active');
   });
 
+  $('.category-nav__group-name' ).click(function(){
+    $(this).toggleClass('category-nav__group-name--open');
+  });
+
   $('.seo').readmore({
     collapsedHeight: 160,
     moreLink: '<button class="btn btn--clear btn--more">Подробнее</button>',
