@@ -31,6 +31,10 @@
     float: right;
     width: 25%;
     box-sizing: border-box;
+    padding-top: 65px;
+  }
+
+  &__body--order &__right {
     padding-top: 115px;
   }
 

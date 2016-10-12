@@ -1,0 +1,62 @@
+.order-form {
+  padding-right: 80px;
+  font-size: 15px;
+
+  .h2 {
+    padding-bottom: 30px;
+  }
+
+  &__row {
+    margin: 0 -10px;
+    @include clearfix;
+  }
+
+  &__col-1,
+  &__col-2 {
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  &__col-1 {
+    width: 48%;
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px 13px;
+      box-sizing: border-box;
+      border: none;
+      line-height: 1.35;
+    }
+  }
+
+  &__col-2 {
+    width: 52%;
+
+    textarea {
+      width: 100%;
+      padding: 12px 13px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 40px;
+    @include clearfix;
+  }
+
+  &__bottom-left {
+    float: left;
+    width: 50%;
+  }
+
+  &__bottom-right {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+
+}
