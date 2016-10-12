@@ -111,4 +111,16 @@
     }
   }
 
+  &--order-add {
+    padding: 11px 30px;
+    border: none;
+    background: $light-gray;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover {
+      background: darken($light-gray, 5%);
+    }
+  }
+
 }

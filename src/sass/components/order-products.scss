@@ -1,0 +1,174 @@
+.order-products {
+  margin-right: 75px;
+
+  &__head {
+    padding: 25px 20px;
+    color: #a2a2a2;
+    font-size: 0;
+  }
+
+  &__col-1,
+  &__col-2,
+  &__col-3 {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  &__col-1 {
+    width: 51%;
+  }
+
+  &__col-2 {
+    width: 28%;
+  }
+
+  &__col-3 {
+    width: 21%;
+  }
+
+  &__items {
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    background: $white;
+  }
+
+  &__item-wrap {
+    font-size: 0;
+    padding: 20px;
+  }
+
+  &__item-wrap > &__col-1,
+  &__item-wrap > &__col-3 {
+    font-size: 0;
+  }
+
+  &__item-img {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+
+    img {
+      display: block;
+      max-width: 80px;
+      height: auto;
+    }
+  }
+
+  &__item-info {
+    display: inline-block;
+    width: 75%;
+    vertical-align: top;
+  }
+
+  &__item-name {
+    @include gray-border-link(18px);
+  }
+
+  &__code {
+    padding: 8px 0px 10px;
+    color: #b1b1b1;
+    font-family: $roboto;
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  &__feature {
+
+    input[type="checkbox"] + label {
+      &::before {
+        box-sizing: border-box;
+        border: 1px solid $border;
+      }
+    }
+
+  }
+
+  &__price,
+  &__del-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 35px;
+  }
+
+  &__price {
+    width: 70%;
+    font-family: $roboto;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__del-wrap {
+    width: 30%;
+    text-align: right;
+  }
+
+  &__del {
+    width: 23px;
+    height: 23px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      color: #c2c2c2;
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: '+';
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      &::before {
+        color: $black;
+        transition: $time all ease;
+    }
+    }
+  }
+
+
+  &__bottom {
+    margin-top: 20px;
+  }
+
+  &__bottom-left,
+  &__bottom-right {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  &__bottom-left {
+    float: left;
+  }
+
+  &__bottom-right {
+    float: right;
+    text-align: right;
+  }
+
+  &__amounts {
+    padding-right: 50px;
+    line-height: 50px;
+  }
+
+  &__amounts-text {
+    font-size: 15px;
+    font-weight: normal;
+    padding-right: 15px;
+  }
+
+  &__amounts-total {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+}

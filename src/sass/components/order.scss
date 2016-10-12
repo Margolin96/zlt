@@ -1,0 +1,37 @@
+.order {
+
+  &__head {
+    margin-bottom: 60px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid $border;
+
+    .col-lg-4 {
+      text-align: right;
+    }
+  }
+
+  &__head-text {
+    margin: 0;
+    padding: 0;
+    color: #959595;
+    font-size: 16px;
+  }
+
+  &__body {
+    @include clearfix;
+  }
+
+  &__left {
+    float: left;
+    width: 75%;
+    box-sizing: border-box;
+  }
+
+  &__right {
+    float: right;
+    width: 25%;
+    box-sizing: border-box;
+    padding-top: 115px;
+  }
+
+}
