@@ -1,0 +1,27 @@
+.banner {
+  display: block;
+  height: 400px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-size: 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+  }
+
+  &__text {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+    color: $white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
