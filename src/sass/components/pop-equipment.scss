@@ -1,0 +1,32 @@
+.pop-equipment {
+  margin-top: $step;
+
+  .h2 {
+    padding-bottom: 25px;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    padding: 20px;
+    background: $white;
+    font-size: 0;
+  }
+
+  &__item-img,
+  &__item-link {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__item-img {
+    width: 47%;
+  }
+
+  &__item-link {
+    width: 53%;
+    
+    a {
+      @include gray-border-link(18px);
+    }
+  }
+}
