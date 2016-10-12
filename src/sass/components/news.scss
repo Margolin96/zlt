@@ -9,6 +9,16 @@
     float: left;
     box-sizing: border-box;
     padding-right: 80px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 60%;
+      padding-right: 30px;
+    }
   }
 
   &__post {
@@ -16,6 +26,14 @@
     padding: 45px 50px;
     box-sizing: border-box;
     background: $white;
+
+    @media (max-width: $tablet) {
+      padding: 25px 20px;
+    }
+    
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      padding: 30px 25px;
+    }
   }
 
   &__post-date {
@@ -28,9 +46,18 @@
     font-size: 24px;
     line-height: 1.4;
 
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
+
     a {
       @include gray-border-link(24px);
+
+      @media (max-width: $tablet) {
+        font-size: 20px;
+      }
     }
+
   }
 
   &__post-img {
@@ -59,6 +86,15 @@
   &__banners {
     width: 27%;
     float: right;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 40%;
+    }
   }
 
 }
