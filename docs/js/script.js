@@ -43,25 +43,30 @@ $(function(){
     $('.menu-mobile').addClass('menu-mobile--open');
   });
 
+
   $('.menu-mobile__close' ).click(function(){
     $('.menu-mobile').removeClass('menu-mobile--open');
     $('.menu-mobile__sub-list').removeClass('menu-mobile__sub-list--open');
     $('.menu-mobile').removeClass('menu-mobile--submenu');
   });
 
+
   $('.menu-mobile__list-item--arrow a' ).click(function(){
     $('.menu-mobile__sub-list').addClass('menu-mobile__sub-list--open');
     $('.menu-mobile').addClass('menu-mobile--submenu');
   });
+
 
   $('.menu-mobile__sub-list li:first-child a' ).click(function(){
     $('.menu-mobile__sub-list').removeClass('menu-mobile__sub-list--open');
     $('.menu-mobile').removeClass('menu-mobile--submenu');
   });
 
+
   $('.main-slider').slick({
     infinite: true
   });
+
 
   $('.product-slider__for').slick({
     slidesToShow: 1,
@@ -71,6 +76,7 @@ $(function(){
     asNavFor: '.product-slider__nav'
   });
 
+
   $('.product-slider__nav').slick({
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -78,6 +84,22 @@ $(function(){
     dots: false,
     focusOnSelect: true
   });
+
+
+  $('.filter__price' ).click(function(){
+    $('.filter__price').toggleClass('filter__price--active');
+  });
+
+
+  $('.category-nav__group-name' ).click(function(){
+    $(this).toggleClass('category-nav__group-name--open');
+  });
+
+  $('#open-catalog' ).click(function(){
+    $('.catalog__left').addClass('catalog__left--open');
+    $('.catalog__right').addClass('catalog__right--close');
+  });
+
 
   $('.seo').readmore({
     collapsedHeight: 160,
@@ -262,120 +284,4 @@ $(function () {
     collapsible: 'accordion',
     setHash: true
   });
-});
-
-// jQuery repeater field plugin
-(function($) {
-	$.fn.repeater = function(atts_custom) {
-		var atts_default = {
-			container: '.form__row__group',
-			row: '.form__row',
-			add: '.btn--add',
-			remove: '.btn--remove',
-			template: '.form__row--template',
-			max: 0
-		}
-
-		var atts = $.extend({}, atts_default, atts_custom);
-
-		initialize(this);
-		row_add(this);
-
-		function initialize(parent) {
-			parent = parent === undefined ? atts.container : parent;
-
-			$(parent).each(function(index, element) {
-				var container = this;
-
-				$(container).children(atts.template).hide().find(':input').each(function() {
-					$(this).prop('disabled', true);
-				});
-
-				var row_count = $(container).children(atts.row).filter(function() {
-					return !$(this).hasClass(atts.template.replace('.', ''));
-				}).length;
-
-				$(container).attr('data-row-count', row_count);
-
-				$(container).on('click', atts.add, function(event) {
-					event.stopImmediatePropagation();
-
-					row_add(container);
-				});
-
-				$(container).on('click', atts.remove, function(event) {
-					event.stopImmediatePropagation();
-
-					row_remove(this, container);
-				});
-			});
-		}
-
-		function row_add(container) {
-			var row_template = $($(container).children(atts.template).clone().removeClass(atts.template.replace('.', ''))[0].outerHTML);
-			var row_count = $(container).attr('data-row-count');
-			var row_first = $(container).find(atts.row+':not('+atts.template+')')[0];
-
-			$(row_template).find(':input').each(function() {
-				$(this).prop('disabled', false);
-			});
-
-			if (atts.max > 0) {
-				if (row_count >= atts.max - 1) {
-					$(row_first).find(atts.add).hide()
-					$(row_first).find(atts.remove).show()
-				}
-				if (row_count >= atts.max) return false
-			}
-
-			var new_row = $(row_template).show().appendTo(container);
-
-			if (row_count > 0) { new_row.find(atts.add).hide() }
-			else { new_row.find(atts.remove).hide() }
-
-			$(container).attr('data-row-count', ++row_count);
-
-			after_add(container, new_row);
-
-			initialize(container);
-		}
-
-		function row_remove(element, container) {
-			var row = $(element).parents(atts.row).first();
-			var row_count = $(container).attr('data-row-count');
-
-			if (row_count <= 1) return false;
-
-			row.remove();
-			$(container).attr('data-row-count', --row_count);
-
-			var row_first = $(container).find(atts.row+':not('+atts.template+')')[0];
-			if (atts.max > 0) {
-				if (row_count <= atts.max) {
-					$(row_first).find(atts.add).show()
-					$(row_first).find(atts.remove).hide()
-				}
-			}
-		}
-
-		function after_add(container, new_row) {
-			var row_count = $(container).attr('data-row-count');
-
-			row_count++;
-
-			$('*', new_row).each(function() {
-				$.each(this.attributes, function(index, element) {
-					this.value = this.value.replace(atts.row_count_placeholder, row_count - 1);
-				});
-			});
-
-			$(container).attr('data-row-count', row_count);
-		}
-	}
-})(jQuery);
-
-// Repeater fields init
-$(function () {
-	$('#size').repeater({max: 4});
-	$('#material').repeater({max: 2});
 });
