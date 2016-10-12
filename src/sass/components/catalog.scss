@@ -1,11 +1,39 @@
 .catalog {
   @include clearfix;
 
+  @media (max-width: $tablet) {
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
   &__left {
     float: left;
     width: 25%;
     box-sizing: border-box;
     padding-right: 10px;
+
+    @media (max-width: $tablet) {
+      display: none;
+
+      &--open {
+        display: block;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      display: none;
+
+      &--open {
+        display: block;
+        width: 100%;
+        padding-right: 0;
+      }
+    }
   }
 
   &__right {
@@ -13,6 +41,21 @@
     width: 75%;
     box-sizing: border-box;
     padding-left: 10px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      float: left;
+      width: 100%;
+      padding-left: 0;
+
+      &--close {
+        display: none;
+      }
+    }
   }
 
   .col-lg-4 {
@@ -22,23 +65,55 @@
     }
   }
 
+  .item__img {
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      min-height: 225px;
+    }
+  }
+
   .item__name {
     min-height: 70px;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      min-height: 97px;
+    }
   }
 
   &__head {
     @include clearfix;
+
+    @media (max-width: $tablet) {
+      max-width: 280px;
+      margin: 0 auto;
+    }
 
     .h1 {
       margin-top: 0;
       padding-top: 0;
       line-height: 1;
       float: left;
+      width: 60%;
+
+      @media (max-width: $tablet) {
+        float: right;
+        width: 100%;
+        margin-top: 15px;
+      }
     }
 
     .btn {
       float: right;
       display: none;
+
+      @media (max-width: $tablet) {
+        display: block;
+        width: 100%;
+      }
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        display: block;
+      }
     }
   }
 
@@ -46,21 +121,40 @@
     color: #6c6c6c;
     font-size: 16px;
     line-height: 1.4;
+
+    @media (max-width: $tablet) {
+      max-width: 280px;
+      margin: 0 auto;
+    }
   }
 
   &__items {
     margin-top: 30px;
+
+    @media (max-width: $tablet) {
+      max-width: 280px;
+      margin: 15px auto 0;
+    }
   }
 
   &__bottom {
     margin-top: 25px;
     @include clearfix;
+
+    @media (max-width: $tablet) {
+      max-width: 280px;
+      margin: 25px auto 0;
+    }
   }
 
   &__bottom-left {
     float: left;
     width: 60%;
     box-sizing: border-box;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   &__bottom-right {
@@ -68,6 +162,10 @@
     width: 40%;
     box-sizing: border-box;
     text-align: right;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
 }

@@ -1,6 +1,11 @@
 .catalog-search {
   margin-top: 25px;
 
+  @media (max-width: $tablet) {
+    max-width: 280px;
+    margin: 25px auto 0;
+  }
+
   form {
     width: 100%;
     @include clearfix;
@@ -11,6 +16,9 @@
     float: left;
     box-sizing: border-box;
 
+    @media (max-width: $tablet) {
+      width: 85%;
+    }
   }
 
   input[type="search"] {
@@ -24,6 +32,10 @@
     color: #a2a2a2;
     font-size: 15px;
     line-height: 1.25;
+
+    @media (max-width: $tablet) {
+      background: $white;
+    }
   }
 
   &__btn-wrap {
@@ -32,8 +44,20 @@
     box-sizing: border-box;
     padding-left: 20px;
 
+    @media (max-width: $tablet) {
+      width: 15%;
+      padding-left: 0;
+    }
+
     .btn {
       width: 100%;
+
+      @media (max-width: $tablet) {
+        border-color: $white;
+        background: $white url('../img/loupe-search.png') center center no-repeat;
+        background-size: 20px 19px;
+        font-size: 0;
+      }
     }
   }
 }
