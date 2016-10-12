@@ -1,5 +1,10 @@
 .order-products {
+  margin-top: 30px;
   margin-right: 75px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 
   &__head {
     padding: 25px 20px;
@@ -28,7 +33,16 @@
     width: 21%;
   }
 
-  &__items {
+  &--idea &__col-1 {
+    width: 36%;
+  }
+
+  &--idea &__col-2 {
+    width: 21%;
+  }
+
+  &--idea &__col-3 {
+    width: 43%;
   }
 
   &__item {
@@ -58,11 +72,19 @@
     }
   }
 
+  &--idea &__item-img {
+    width: 35.5%;
+  }
+
   &__item-info {
     display: inline-block;
     width: 75%;
     vertical-align: top;
   }
+
+  &--idea &__item-info{
+    width: 64.5%;
+  } 
 
   &__item-name {
     @include gray-border-link(18px);
@@ -99,6 +121,11 @@
     font-family: $roboto;
     font-size: 18px;
     font-weight: 500;
+  }
+
+  &--idea &__price {
+    font-size: 15px;
+    font-weight: normal;
   }
 
   &__del-wrap {
@@ -138,6 +165,7 @@
 
   &__bottom {
     margin-top: 20px;
+    @include clearfix;
   }
 
   &__bottom-left,
