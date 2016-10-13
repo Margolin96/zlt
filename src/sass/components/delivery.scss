@@ -1,5 +1,10 @@
 .delivery {
-  padding: 30px;
-  padding-top: 45px;
-  background: $white;
+  margin-top: 65px;
+
+  &__wrap {
+    margin-top: 15px;
+    padding: 30px;
+    padding-top: 45px;
+    background: $white;
+  }
 }

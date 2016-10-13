@@ -7,6 +7,8 @@
   &__list-wrap {
     margin-bottom: 25px;
     font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 
     @media (max-width: $desktop) {
       padding: 0 30px;
@@ -43,6 +45,7 @@
   &__list-descr {
     margin: 0;
     padding: 0 0 10px;
+    color: #737373;
   }
 
   .warning {

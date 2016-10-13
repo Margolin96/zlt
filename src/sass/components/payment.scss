@@ -1,0 +1,44 @@
+.payment {
+  margin-top: 65px;
+
+  &__wrap {
+    margin-top: 15px;
+    padding: 30px;
+    padding-top: 40px;
+    background: $white;
+  }
+
+  &__items {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 40px;
+  }
+
+  &__item {
+    font-size: 0;
+  }
+
+  &__icon,
+  &__descr {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__icon {
+    width: 15%;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+
+  &__descr {
+    width: 85%;
+  }
+
+  &__item-title {
+    margin: 0;
+    padding: 0 0 15px;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+}
