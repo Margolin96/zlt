@@ -1,0 +1,96 @@
+.services {
+
+  &__steps {
+    margin-bottom: 40px;
+    padding: 35px 0;
+    background:transparent url('../img/blue-bg.jpg') center center no-repeat;
+    background-size: cover;
+    color: $white;
+
+    @media (max-width: $desktop) {
+      padding: 10px 0 25px;
+    }
+  }
+
+  &__steps-title {
+    margin: 0;
+    padding: 35px 0;
+    padding-left: 55px;
+    font-size: 24px;
+    font-weight: normal;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: $desktop) {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+  &__step {
+    text-align: center;
+    width: 60%;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      margin: 0 auto;
+    }
+
+    &::before {
+      width: 95px;
+      height: 7px;
+      background:transparent url('../img/arrow-step.png') 0 0 no-repeat;
+      background-size: 95px 7px;
+      content: '';
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      margin-top: -4px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        top: 30%;
+        right: -90px;
+      }
+    }
+
+    &--last {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__step-count {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  &__step-text {
+    font-size: 15px;
+  }
+
+  p {
+    color: #848484;
+  }
+
+}
