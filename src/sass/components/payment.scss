@@ -6,16 +6,31 @@
     padding: 30px;
     padding-top: 40px;
     background: $white;
+
+    @media (max-width: $tablet) {
+      margin-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 35px;
+    }
   }
 
   &__items {
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 40px;
+
+    @media (max-width: $tablet) {
+      padding: 0 10px;
+    }
   }
 
   &__item {
     font-size: 0;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 25px;
+    }
   }
 
   &__icon,
@@ -28,10 +43,26 @@
     width: 15%;
     padding-right: 30px;
     box-sizing: border-box;
+
+    @media (max-width: $tablet) {
+      width: 28%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 25%;
+    }
   }
 
   &__descr {
     width: 85%;
+
+    @media (max-width: $tablet) {
+      width: 62%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 75%;
+    }
   }
 
   &__item-title {
@@ -39,6 +70,11 @@
     padding: 0 0 15px;
     font-size: 24px;
     font-weight: normal;
+
+    @media (max-width: $tablet) {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
   }
 
 }

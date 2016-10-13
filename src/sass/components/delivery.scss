@@ -6,5 +6,12 @@
     padding: 30px;
     padding-top: 45px;
     background: $white;
+
+    @media (max-width: $tablet) {
+      margin-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 35px;
+    }
   }
 }

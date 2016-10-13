@@ -6,6 +6,13 @@
     padding: 30px;
     padding-top: 45px;
     background: $white;
+
+    @media (max-width: $tablet) {
+      margin-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 35px;
+    }
   }
 
   &__items {
@@ -16,6 +23,10 @@
 
   &__item {
     font-size: 0;
+    
+    @media (max-width: $tablet) {
+      margin-bottom: 25px;
+    }
   }
 
   &__icon,
@@ -26,6 +37,11 @@
 
   &__icon {
     width: 15%;
+    box-sizing: border-box;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 25%;
+    }
   }
 
   &__descr {
@@ -34,6 +50,14 @@
     padding: 0 0 15px;
     font-size: 24px;
     font-weight: normal;
+
+    @media (max-width: $tablet) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 75%;
+    }
   }
 
 }
