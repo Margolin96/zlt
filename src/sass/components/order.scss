@@ -1,5 +1,11 @@
 .order {
 
+  &--how {
+    .btn {
+      min-width: 240px;
+    }
+  }
+
   &__head {
     margin-bottom: 60px;
     padding-bottom: 25px;

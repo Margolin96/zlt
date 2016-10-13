@@ -13,6 +13,7 @@
     }
 
     ul {
+      color: #737373;
 
       li {
         margin-bottom: 5px;
@@ -23,7 +24,7 @@
         &::before {
           width: 4px;
           height: 4px;
-          background: $black;
+          background: #737373;
           border-radius: 50%;
           position: absolute;
           left: 0;
