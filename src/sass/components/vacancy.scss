@@ -1,0 +1,45 @@
+.vacancy {
+
+  &__items {
+    padding: 45px 50px 0;
+    background: $white;
+  }
+
+  &__item {
+    padding-bottom: 45px;
+  }
+
+  &__item-title {
+    margin: 0;
+    padding: 20px 0px 15px;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  &__descr {
+    color: #737373;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  &__list {
+    padding-left: 20px;
+    padding-bottom: 30px;
+
+    li {
+      position: relative;
+
+      &::before {
+        width: 3px;
+        height: 3px;
+        background: $blue;
+        border-radius: 50%;
+        position: absolute;
+        left: -8px;
+        top: 10px;
+        content: '';
+      }
+    }
+  }
+
+}
