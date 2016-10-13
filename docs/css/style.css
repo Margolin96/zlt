@@ -3311,6 +3311,7 @@ img.mfp-img {
 .tabs__tab-title {
   margin: 0;
   padding: 0 0 25px;
+  padding-left: 25px;
   font-size: 24px;
   font-weight: normal;
 }
@@ -3402,6 +3403,7 @@ img.mfp-img {
 }
 
 .tab-order__step-text {
+  color: #737373;
   font-size: 15px;
   font-weight: 300;
 }
@@ -3445,6 +3447,8 @@ img.mfp-img {
 
 .tab-delivery__list-wrap {
   margin-bottom: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
   font-size: 15px;
 }
 
@@ -3479,6 +3483,7 @@ img.mfp-img {
 .tab-delivery__list-descr {
   margin: 0;
   padding: 0 0 10px;
+  color: #737373;
 }
 
 .tab-delivery .warning {
@@ -5062,9 +5067,112 @@ img.mfp-img {
 }
 
 .delivery {
+  margin-top: 65px;
+}
+
+.delivery__wrap {
+  margin-top: 15px;
   padding: 30px;
   padding-top: 45px;
   background: #ffffff;
+}
+
+.delivery-time {
+  margin-top: 65px;
+}
+
+.delivery-time__wrap {
+  margin-top: 15px;
+  padding: 30px;
+  padding-top: 45px;
+  background: #ffffff;
+}
+
+.delivery-time__items {
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+
+.delivery-time__item {
+  font-size: 0;
+}
+
+.delivery-time__icon,
+.delivery-time__descr {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.delivery-time__icon {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 15%;
+}
+
+.delivery-time__descr {
+  width: 85%;
+  margin: 0;
+  padding: 0 0 15px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.payment {
+  margin-top: 65px;
+}
+
+.payment__wrap {
+  margin-top: 15px;
+  padding: 30px;
+  padding-top: 40px;
+  background: #ffffff;
+}
+
+.payment__items {
+  padding-right: 25px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+}
+
+.payment__item {
+  font-size: 0;
+}
+
+.payment__icon,
+.payment__descr {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.payment__icon {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 15%;
+  padding-right: 30px;
+}
+
+.payment__descr {
+  width: 85%;
+}
+
+.payment__item-title {
+  margin: 0;
+  padding: 0 0 15px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.order-steps__wrap {
+  margin-top: 15px;
+  padding: 30px;
+  padding-top: 65px;
+  background: #ffffff;
+}
+
+.order-steps__items {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .advantages {
@@ -5523,6 +5631,10 @@ img.mfp-img {
     margin-bottom: 25px;
   }
 
+  .order--how .btn {
+    min-width: 200px;
+  }
+
   .catalog__left {
     display: none;
   }
@@ -5637,6 +5749,22 @@ img.mfp-img {
     padding-top: 40px;
     padding-right: 35px;
     padding-left: 35px;
+  }
+
+  .delivery-time__icon {
+    width: 25%;
+  }
+
+  .delivery-time__descr {
+    width: 75%;
+  }
+
+  .payment__icon {
+    width: 25%;
+  }
+
+  .payment__descr {
+    width: 75%;
   }
 
   .advantages .col-md-6:nth-child(3n+4) {
@@ -6976,6 +7104,14 @@ img.mfp-img {
     min-height: auto;
   }
 
+  .order--how .btn {
+    width: 100%;
+  }
+
+  .order__head .col-sm-4 {
+    margin-top: 20px;
+  }
+
   .catalog .container {
     max-width: 100%;
     padding: 0;
@@ -7270,6 +7406,67 @@ img.mfp-img {
 
   .partners__item-name {
     font-size: 20px;
+  }
+
+  .delivery__wrap {
+    margin-top: 10px;
+    padding-top: 35px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .delivery-time__wrap {
+    margin-top: 10px;
+    padding-top: 35px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .delivery-time__item {
+    margin-bottom: 25px;
+  }
+
+  .delivery-time__descr {
+    font-size: 18px;
+  }
+
+  .payment__wrap {
+    margin-top: 10px;
+    padding-top: 35px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .payment__items {
+    padding: 0 10px;
+  }
+
+  .payment__item {
+    margin-bottom: 25px;
+  }
+
+  .payment__icon {
+    width: 28%;
+  }
+
+  .payment__descr {
+    width: 62%;
+  }
+
+  .payment__item-title {
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .order-steps__wrap {
+    margin-top: 10px;
+    padding-top: 35px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .order-steps__items {
+    padding: 0;
   }
 
   .advantages .h2 {
