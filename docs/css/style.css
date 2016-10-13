@@ -5163,6 +5163,53 @@ img.mfp-img {
   font-weight: normal;
 }
 
+.vacancy__items {
+  padding: 45px 50px 0;
+  background: #ffffff;
+}
+
+.vacancy__item {
+  padding-bottom: 45px;
+}
+
+.vacancy__item-title {
+  margin: 0;
+  padding: 20px 0 15px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.vacancy__descr {
+  color: #737373;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.vacancy__descr p {
+  padding-left: 5px;
+}
+
+.vacancy__list {
+  padding-bottom: 30px;
+  padding-left: 15px;
+}
+
+.vacancy__list li {
+  position: relative;
+}
+
+.vacancy__list li::before {
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 3px;
+  height: 3px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #30a4dc;
+  content: "";
+}
+
 .order-steps__wrap {
   margin-top: 15px;
   padding: 30px;
@@ -5765,6 +5812,20 @@ img.mfp-img {
 
   .payment__descr {
     width: 75%;
+  }
+
+  .vacancy__items {
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .vacancy__item {
+    padding-bottom: 35px;
+  }
+
+  .vacancy__list {
+    padding-bottom: 25px;
   }
 
   .advantages .col-md-6:nth-child(3n+4) {
@@ -7456,6 +7517,20 @@ img.mfp-img {
   .payment__item-title {
     padding-bottom: 10px;
     font-size: 18px;
+  }
+
+  .vacancy__items {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .vacancy__item {
+    padding-bottom: 20px;
+  }
+
+  .vacancy__list {
+    padding-bottom: 15px;
   }
 
   .order-steps__wrap {
