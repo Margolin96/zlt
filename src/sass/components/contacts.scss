@@ -1,0 +1,33 @@
+.contacts {
+  background: $white;
+  padding-bottom: 25px;
+
+  &__head {
+    padding: 45px 45px 25px;
+    border-bottom: 1px solid $border;
+  }
+
+  &__block {
+    padding: 35px 45px 0;
+  }
+
+  &__row {
+    padding-bottom: 15px;
+
+    a {
+      color: $black;
+    }
+  }
+
+  &__title {
+    color: #a3a3a3;
+    font-size: 14px;
+  }
+
+  &__info {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+}
