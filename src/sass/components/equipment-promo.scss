@@ -1,0 +1,24 @@
+.equipment-promo {
+  color: #848484;
+
+  .col-lg-9 {
+    p {
+      width: 95%;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+
+  .col-lg-3 {
+    text-align: right;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+    min-width: 240px;
+  }
+
+  .services__steps {
+    margin-top: 35px;
+  }
+}
