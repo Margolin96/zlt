@@ -1,0 +1,60 @@
+.team {
+  margin-top: $step;
+  box-sizing: border-box;
+
+  &__wrap {
+    padding: 50px 80px;
+    box-sizing: border-box;
+    background: $white;
+    position: relative;
+  }
+
+  &__member {
+    box-sizing: border-box;
+    padding: 0 35px;
+  }
+
+  &__member-photo {
+    margin-bottom: 15px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &__member-name {
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &__member-position {
+    margin-top: 5px;
+    color: #a3a3a3;
+  }
+
+  .slick-arrow {
+    background: url(../img/arrow-black.svg) 48% 50% no-repeat;
+    background-size: 13px 19px;
+    border-color: #dadada;
+    top: 50%;
+    margin: -25px 0;
+
+    &:hover {
+      background: url(../img/arrow-blue.svg) 48% 50% no-repeat;
+      background-size: 13px 19px;
+    }
+  }
+
+  .slick-prev {
+    left: 25px;
+  }
+
+  .slick-next {
+    right: 25px;
+  }
+
+}

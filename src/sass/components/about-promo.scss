@@ -1,0 +1,46 @@
+.about-promo {
+
+  &__banner {
+    padding: 50px;
+    box-sizing: border-box;
+    min-height: 345px;
+  }
+
+  &__banner-title {
+    margin: 0;
+    padding: 0 0 25px;
+    color: $white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  &__banner-text {
+    width: 75%;
+    min-height: 120px;
+    color: #bdc3c9;
+    line-height: 1.5;
+  }
+
+  &__points {
+    padding: 80px 0;
+    background: $white;
+  }
+
+  &__point {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__point-number {
+    color: $blue;
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  &__point-text {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+}

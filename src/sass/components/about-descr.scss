@@ -1,0 +1,139 @@
+.about-descr {
+  margin-top: $step;
+
+  &__text {
+    margin-bottom: 20px;
+    padding: 50px 50px 30px;
+    background: $white;
+
+    p {
+      padding-bottom: 20px;
+      color: #a9a9a9;
+    }
+  }
+
+  &__quote {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+
+  &__quote-photo,
+  &__quote-wrap {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__quote-photo {
+    width: 25.5%;
+    max-height: 230px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__quote-wrap {
+    width: 74.5%;
+    min-height: 230px;
+    padding: 35px 40px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background: $white url('../img/quote-gray.png') 20px 38px no-repeat;
+    background-size: 15px 14px;
+    color: #969696;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.45;
+    position: relative;
+
+    &::before {
+      border: 10px solid transparent;
+      border-right: 10px solid $white;
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      content: '';
+      margin-top: -10px;
+      z-index: 88;
+    }
+  }
+
+  &__quote-name {
+    color: $black;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &__quote-position {
+    color: #a3a3a3;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  &__steps {
+    min-height: 230px;
+    padding-top: 75px;
+    box-sizing: border-box;
+    background:transparent url('../img/blue-bg-small.jpg') 0 0 no-repeat;
+    background-size: cover;
+    font-size: 0;
+
+    li {
+      width: 33.333333%;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        width: 95px;
+        height: 7px;
+        background:transparent url('../img/arrow-step.png') 0 0 no-repeat;
+        background-size: 95px 7px;
+        content: '';
+        position: absolute;
+        right: -50px;
+        top: 30px;
+        margin-top: -4px;
+      }
+
+      &:last-child {
+
+        &::before {
+          display: none;
+        }
+        
+      }
+    }
+  }
+
+  &__steps-icon {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    line-height: 50px;
+
+    svg,
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__steps-text {
+    color: $white;
+    font-size: 15px;
+  }
+
+}

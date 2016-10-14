@@ -30,6 +30,13 @@ $(function(){
     infinite: true
   });
 
+  $('.team-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    centerPadding: '70px'
+  });
+
 
   $('.product-slider__for').slick({
     slidesToShow: 1,
