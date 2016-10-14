@@ -1,0 +1,159 @@
+.post-page {
+
+  &__head {
+
+    .h1 {
+      line-height: 1.2;
+    }
+
+  }
+
+  &__about {
+    padding-bottom: 35px;
+    font-size: 18px;
+    color: #848484;
+  }
+
+  &__content-head {
+    @include clearfix;
+  }
+
+  &__stat {
+    width: 50%;
+    float: left;
+    color: #adadad;
+    font-size: 13px;
+  }
+
+  &__stat-item {
+    display: inline-block;
+    padding-top: 18px;
+    padding-left: 25px;
+    padding-right: 20px;
+    
+    &--eye {
+      background: transparent url('../img/icon-eye.png') 0 20px no-repeat;
+      background-size: 18px 12px;
+    }
+
+    &--clock {
+      background: transparent url('../img/icon-clock.png') 0 18px no-repeat;
+      background-size: 16px;
+    }
+  }
+
+  &__repost {
+    width: 50%;
+    float: right;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 0;
+
+    li {
+      margin-left: 1px;
+      margin-bottom: 1px;
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, .5);
+        text-align: center;
+        line-height: 50px;
+      }
+
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 20px;
+    padding: 50px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background: $white;
+
+    img {
+      margin-bottom: 35px;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    p {
+      padding-bottom: 20px;
+      color: #8b8b8b;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+
+  blockquote {
+    margin: 0 0 25px;
+    padding: 35px 75px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    background: #f7f7f7 url('../img/quote-blue.png') 30px 35px no-repeat;
+    
+    p {
+      padding-bottom: 15px;
+      color: #707070;
+      font-size: 15px;
+      font-style: italic;
+      font-weight: lighter;
+    }
+
+    cite {
+      color: $black;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  &__next {
+    display: block;
+    padding: 25px;
+    padding-left: 130px;
+    background: $white url('../img/next-post.png') 35px 30px no-repeat;
+    background-size: 32px 27px;
+    position: relative;
+
+    &::before {
+      width: 1px;
+      height: 100%;
+      background: $light-gray;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      content: '';
+    }
+  }
+
+  &__next-text {
+    display: block;
+    margin-bottom: 5px;
+    color: #a3a3a3;
+    font-size: 13px;
+    font-weight: normal;
+    transition: $time all ease;
+  }
+
+  &__next-title {
+    display: block;
+    color: $black;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  &__next:hover &__next-title {
+    color: $blue;
+  }
+
+}
