@@ -4,6 +4,10 @@
 
     .h1 {
       line-height: 1.2;
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        font-size: 40px;
+      }
     }
 
   }
@@ -12,6 +16,11 @@
     padding-bottom: 35px;
     font-size: 18px;
     color: #848484;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      padding-bottom: 0;
+    }
   }
 
   &__content-head {
@@ -23,6 +32,15 @@
     float: left;
     color: #adadad;
     font-size: 13px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 60%;
+    }
   }
 
   &__stat-item {
@@ -40,6 +58,10 @@
       background: transparent url('../img/icon-clock.png') 0 18px no-repeat;
       background-size: 16px;
     }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   &__repost {
@@ -50,10 +72,23 @@
     text-align: right;
     font-size: 0;
 
+    @media (max-width: $tablet) {
+      width: 100%;
+      text-align: left;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 40%;
+    }
+
     li {
       margin-left: 1px;
       margin-bottom: 1px;
       display: inline-block;
+
+      &:first-child {
+        margin-left: 0;
+      }
 
       a {
         display: inline-block;
@@ -78,12 +113,20 @@
     padding-bottom: 30px;
     background: $white;
 
+    @media (max-width: $tablet) {
+      padding: 20px;
+    }
+
     img {
       margin-bottom: 35px;
       display: block;
       width: 100%;
       max-width: 100%;
       height: auto;
+
+      @media (max-width: $tablet) {
+        margin-bottom: 15px;
+      }
     }
 
     p {
@@ -100,6 +143,13 @@
     padding-right: 35px;
     padding-bottom: 20px;
     background: #f7f7f7 url('../img/quote-blue.png') 30px 35px no-repeat;
+
+    @media (max-width: $tablet) {
+      padding: 15px;
+      padding-left: 45px;
+      padding-right: 10px;
+      background-position: 10px 15px;
+    }
     
     p {
       padding-bottom: 15px;
@@ -125,6 +175,12 @@
     background-size: 32px 27px;
     position: relative;
 
+    @media (max-width: $tablet) {
+      padding: 15px;
+      padding-left: 80px;
+      background-position: 15px 15px;
+    }
+
     &::before {
       width: 1px;
       height: 100%;
@@ -133,6 +189,10 @@
       top: 0;
       left: 100px;
       content: '';
+
+      @media (max-width: $tablet) {
+        left: 65px;
+      }
     }
   }
 
@@ -150,6 +210,10 @@
     color: $black;
     font-size: 24px;
     font-weight: normal;
+
+    @media (max-width: $tablet) {
+      font-size: 18px;
+    }
   }
 
   &__next:hover &__next-title {
