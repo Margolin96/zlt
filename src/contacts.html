@@ -142,10 +142,10 @@
           <aside class="contacts-page__nav">
             <ul class="contacts-list">
               <li class="contacts-list__item contacts-list__item--active">
-                <a href="#">Центральный офис</a>
+                <a href="#" class="js-tab-control" data-target="address-1">Центральный офис</a>
               </li>
               <li class="contacts-list__item">
-                <a href="#">Офис «Обводный»</a>
+                <a href="#" class="js-tab-control" data-target="address-2">Офис «Обводный»</a>
               </li>
               <li class="contacts-list__item">
                 <a href="#">Сочи</a>
@@ -158,10 +158,138 @@
           </aside>
         </div>
         <div class="col-lg-9">
-          <div class="contacts">
-            <div class="contacts__item">
+          <div class="contacts js-tab-container">
+            <div class="contacts__item address-1 js-tab js-tab--active">
               <div class="contacts__head">
                 <h2 class="h2">Контакты</h2>
+                <div class="contacts__row">
+                  <div class="contacts__title">Адрес:</div>
+                  <div class="contacts__info">Санкт-Петербург, ул. Политехническая, д. 29</div>
+                </div>
+                <div class="contacts__row">
+                  <div class="contacts__title">Телефоны:</div>
+                  <div class="contacts__info"><a href="tel:+78123098999">+7 (812) 309-89-99</a>  доб. 301, 302 </div>
+                </div>
+                <div class="contacts__row">
+                  <div class="contacts__title">Время работы:</div>
+                  <div class="contacts__info">Понедельник - пятница, с 10.00 до 18.00, без обеда.</div>
+                </div>
+              </div>
+              <div class="contacts__all">
+                <div class="contacts__block">
+                  <h2 class="h2">Отдел услуг</h2>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Контактное лицо:</div>
+                        <div class="contacts__info">Курлыков Олег</div>
+                        <div class="contacts__info">Столярова Анна</div>
+                        <div class="contacts__info">Гузель Хамматова</div>
+                        <div class="contacts__info">Казачек Дмитрий Владимирович</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Телефоны:</div>
+                        <div class="contacts__info"><a href="tel:+78123098999">+7 (812) 309-89-99</a>, доб. 230</div>
+                        <div class="contacts__info"><a href="tel:+78129512660">+7 (812) 951-26-60</a></div>
+                        <div class="contacts__info"><a href="tel:+78129512661">+7 (812) 951-26-61</a></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Электронная потча:</div>
+                        <div class="contacts__info"><a href="mailto:zakaz@ltc.ru">zakaz@ltc.ru</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__block">
+                  <h2 class="h2">Оборудование</h2>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Телефоны:</div>
+                        <div class="contacts__info"><a href="tel:+78123098999">+7 (812) 309-89-99</a>, доб. 221</div>
+                        <div class="contacts__info"><a href="tel:+79217748422">+7 (921) 774-84-22</a></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Электронная почта:</div>
+                        <div class="contacts__info"><a href="mailto:sales@ltc.ru">sales@ltc.ru</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__block">
+                  <h2 class="h2">Услуги</h2>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Телефоны:</div>
+                        <div class="contacts__info"><a href="tel:+78125568212">+7 (812) 556-82-12</a></div>
+                        <div class="contacts__info"><a href="tel:+79013131512">+7 (901) 313-15-12</a></div>
+                        <div class="contacts__info"><a href="tel:+78129717822">+7 (812) 971-78-22 </a></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Электронная почта:</div>
+                        <div class="contacts__info"><a href="mailto:9717822@list.ru">9717822@list.ru</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__block">
+                  <h2 class="h2">Продажа материалов</h2>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Телефоны:</div>
+                        <div class="contacts__info"><a href="tel:+78123098999">+7 (812) 309-89-99</a></div>
+                        <div class="contacts__info"><a href="tel:+79219195169">+7 (921) 919-51-69</a></div>
+                        <div class="contacts__info"><a href="tel:+79992110130">+7 999 211-01-30</a></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Электронная почта:</div>
+                        <div class="contacts__info"><a href="mailto:9717822@list.ru">9717822@list.ru</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__block">
+                  <h2 class="h2">Комплектующие и сервис</h2>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Контактное лицо:</div>
+                        <div class="contacts__info">Быченков Владимир Федорович</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Телефоны:</div>
+                        <div class="contacts__info"><a href="tel:+78123098999">+7 (812) 309-89-99</a>, доб. 230</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                      <div class="contacts__row">
+                        <div class="contacts__title">Электронная почта:</div>
+                        <div class="contacts__info"><a href="mailto:9717822@list.ru">9717822@list.ru</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts-map">
+              </div>
+            </div>
+            <div class="contacts__item address-2 js-tab">
+              <div class="contacts__head">
+                <h2 class="h2">Контакты 2</h2>
                 <div class="contacts__row">
                   <div class="contacts__title">Адрес:</div>
                   <div class="contacts__info">Санкт-Петербург, ул. Политехническая, д. 29</div>

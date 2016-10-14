@@ -22,3 +22,11 @@
     margin-top: 70px;
   }
 }
+
+.js-tab {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
