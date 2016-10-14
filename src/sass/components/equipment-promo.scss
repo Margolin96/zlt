@@ -1,21 +1,46 @@
 .equipment-promo {
   color: #848484;
 
+  .h1 {
+    @media (max-width: $desktop) {
+      padding-bottom: 10px;
+    }
+  }
+
   .col-lg-9 {
     p {
       width: 95%;
       font-size: 18px;
       line-height: 1.5;
+
+      @media (max-width: $tablet) {
+        font-size: 15px;
+      }
     }
   }
 
   .col-lg-3 {
     text-align: right;
+
+    @media (max-width: $desktop) {
+      text-align: left;
+    }
   }
 
   .btn {
     margin-bottom: 10px;
     min-width: 240px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-top: 15px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      margin-right: 15px;
+    }
   }
 
   .services__steps {
