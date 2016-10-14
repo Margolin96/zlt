@@ -6,6 +6,10 @@
     padding: 50px 50px 30px;
     background: $white;
 
+    @media (max-width: $tablet) {
+      padding: 30px 30px 10px;
+    }
+
     p {
       padding-bottom: 20px;
       color: #a9a9a9;
@@ -16,6 +20,10 @@
     margin: 0;
     padding: 0;
     font-size: 0;
+
+    @media (max-width: $desktop) {
+      margin-bottom: 20px;
+    }
   }
 
   &__quote-photo,
@@ -28,6 +36,11 @@
     width: 25.5%;
     max-height: 230px;
     overflow: hidden;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      max-height: 300px;
+    }
 
     img {
       display: block;
@@ -60,6 +73,15 @@
       content: '';
       margin-top: -10px;
       z-index: 88;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      min-height: 1px;
     }
   }
 
@@ -86,6 +108,11 @@
     background-size: cover;
     font-size: 0;
 
+    @media (max-width: $tablet) {
+      min-height: 1px;
+      padding-top: 35px;
+    }
+
     li {
       width: 33.333333%;
       display: inline-block;
@@ -103,14 +130,21 @@
         right: -50px;
         top: 30px;
         margin-top: -4px;
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
       }
 
       &:last-child {
-
         &::before {
           display: none;
         }
-        
+      }
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        margin-bottom: 35px;
       }
     }
   }

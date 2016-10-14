@@ -34,7 +34,23 @@ $(function(){
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    centerPadding: '70px'
+    centerPadding: '70px',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
 
