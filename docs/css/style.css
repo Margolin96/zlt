@@ -5554,6 +5554,74 @@ img.mfp-img {
   content: "";
 }
 
+.contacts-page__nav .btn {
+  width: 100%;
+}
+
+.contacts {
+  padding-bottom: 25px;
+  background: #ffffff;
+}
+
+.contacts__head {
+  padding: 45px 45px 25px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.contacts__block {
+  padding: 35px 45px 0;
+}
+
+.contacts__row {
+  padding-bottom: 15px;
+}
+
+.contacts__row a {
+  color: #000000;
+}
+
+.contacts__title {
+  color: #a3a3a3;
+  font-size: 14px;
+}
+
+.contacts__info {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.contacts-list {
+  margin-bottom: 30px;
+  background: #ffffff;
+}
+
+.contacts-list__item {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.contacts-list__item:last-child {
+  border-bottom: none;
+}
+
+.contacts-list__item a {
+  display: inline-block;
+  padding: 20px 25px;
+  color: #252525;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.contacts-list__item a:hover {
+  color: #30a4dc;
+}
+
+.contacts-list__item--active a {
+  color: #30a4dc;
+}
+
 .popular {
   margin-top: 45px;
 }
