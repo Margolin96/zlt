@@ -6196,6 +6196,14 @@ img.mfp-img {
   margin-top: 70px;
 }
 
+.js-tab {
+  display: none;
+}
+
+.js-tab--active {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 @media (min-width: 320px) and (max-width: 1200px) {
@@ -7389,6 +7397,10 @@ img.mfp-img {
     text-align: left;
   }
 
+  .contacts-page__nav {
+    margin-bottom: 50px;
+  }
+
   .partners__item-img {
     width: 100%;
     margin-bottom: 25px;
@@ -8286,6 +8298,14 @@ img.mfp-img {
     margin-top: 15px;
     margin-right: 0;
     margin-bottom: 0;
+  }
+
+  .contacts__head {
+    padding: 20px 20px 10px;
+  }
+
+  .contacts__block {
+    padding: 20px 20px 10px;
   }
 
   .popular .h2 {
