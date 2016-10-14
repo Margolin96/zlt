@@ -2104,6 +2104,8 @@ img.mfp-img {
 .header__logo-link {
   float: left;
   width: 50%;
+  -webkit-transition: 0s;
+          transition: 0s;
 }
 
 .header__logo-img {
