@@ -4999,6 +4999,255 @@ img.mfp-img {
   color: #848484;
 }
 
+.about-promo__banner {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 345px;
+  padding: 50px;
+}
+
+.about-promo__banner-title {
+  margin: 0;
+  padding: 0 0 25px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.about-promo__banner-text {
+  width: 75%;
+  min-height: 120px;
+  color: #bdc3c9;
+  line-height: 1.5;
+}
+
+.about-promo__points {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.about-promo__point {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-promo__point-number {
+  color: #30a4dc;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.about-promo__point-text {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.about-descr {
+  margin-top: 45px;
+}
+
+.about-descr__text {
+  margin-bottom: 20px;
+  padding: 50px 50px 30px;
+  background: #ffffff;
+}
+
+.about-descr__text p {
+  padding-bottom: 20px;
+  color: #a9a9a9;
+}
+
+.about-descr__quote {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.about-descr__quote-photo,
+.about-descr__quote-wrap {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.about-descr__quote-photo {
+  overflow: hidden;
+  width: 25.5%;
+  max-height: 230px;
+}
+
+.about-descr__quote-photo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-descr__quote-wrap {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 74.5%;
+  min-height: 230px;
+  padding: 35px 40px;
+  padding-bottom: 20px;
+  background: #ffffff url("../img/quote-gray.png") 20px 38px no-repeat;
+  -webkit-background-size: 15px 14px;
+          background-size: 15px 14px;
+  color: #969696;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.about-descr__quote-wrap::before {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  z-index: 88;
+  margin-top: -10px;
+  border: 10px solid transparent;
+  border-right: 10px solid #ffffff;
+  content: "";
+}
+
+.about-descr__quote-name {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.about-descr__quote-position {
+  color: #a3a3a3;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.about-descr__steps {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 230px;
+  padding-top: 75px;
+  background: transparent url("../img/blue-bg-small.jpg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  font-size: 0;
+}
+
+.about-descr__steps li {
+  position: relative;
+  display: inline-block;
+  width: 33.333333%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.about-descr__steps li::before {
+  position: absolute;
+  top: 30px;
+  right: -50px;
+  width: 95px;
+  height: 7px;
+  margin-top: -4px;
+  background: transparent url("../img/arrow-step.png") 0 0 no-repeat;
+  -webkit-background-size: 95px 7px;
+          background-size: 95px 7px;
+  content: "";
+}
+
+.about-descr__steps li:last-child::before {
+  display: none;
+}
+
+.about-descr__steps-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  line-height: 50px;
+}
+
+.about-descr__steps-icon svg,
+.about-descr__steps-icon img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.about-descr__steps-text {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.team {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 45px;
+}
+
+.team__wrap {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 80px;
+  background: #ffffff;
+}
+
+.team__member {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 35px;
+}
+
+.team__member-photo {
+  margin-bottom: 15px;
+}
+
+.team__member-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.team__member-name {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.team__member-position {
+  margin-top: 5px;
+  color: #a3a3a3;
+}
+
+.team .slick-arrow {
+  top: 50%;
+  margin: -25px 0;
+  border-color: #dadada;
+  background: url(../img/arrow-black.svg) 48% 50% no-repeat;
+  -webkit-background-size: 13px 19px;
+          background-size: 13px 19px;
+}
+
+.team .slick-arrow:hover {
+  background: url(../img/arrow-blue.svg) 48% 50% no-repeat;
+  -webkit-background-size: 13px 19px;
+          background-size: 13px 19px;
+}
+
+.team .slick-prev {
+  left: 25px;
+}
+
+.team .slick-next {
+  right: 25px;
+}
+
 .popular {
   margin-top: 45px;
 }
