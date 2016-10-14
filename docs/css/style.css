@@ -5559,7 +5559,6 @@ img.mfp-img {
 }
 
 .contacts {
-  padding-bottom: 25px;
   background: #ffffff;
 }
 
@@ -5620,6 +5619,11 @@ img.mfp-img {
 
 .contacts-list__item--active a {
   color: #30a4dc;
+}
+
+.contacts-map {
+  height: 415px;
+  margin-top: 25px;
 }
 
 .popular {
