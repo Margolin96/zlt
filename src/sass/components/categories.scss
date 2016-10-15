@@ -33,21 +33,23 @@
   }
 
   &__item:hover &__img {
-    display: none;
+    opacity: 0;
   }
 
   &__list-wrap {
-    max-height: 130px;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px 0;
+    max-height: 131px;
     overflow: hidden;
     transition: $time all ease;
+    background-color: #FFF;
   }
 
   &__item:hover &__list-wrap {
     max-height: 340px;
-    width: 90%;
-    position: absolute;
-    left: 20px;
-    bottom: 25px;
   }
 
   &__cat-name {
