@@ -1,5 +1,13 @@
 .order-help {
 
+  @media (max-width: $tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet + 1) and (max-width: $desktop) {
+    margin: 0 -.577777%;
+  }
+
   &__item {
     display: block;
     margin-bottom: 10px;
@@ -10,6 +18,17 @@
 
     &:hover {
       border-color: $blue;
+    }
+
+    @media (max-width: $tablet) {
+      padding: 15px 25px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      margin: 0 .577777%;
+      margin-bottom: 10px;
+      width: 48.577777%;
+      display: inline-block;
     }
   }
 

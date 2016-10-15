@@ -1,6 +1,10 @@
 .order-success {
   padding-right: 120px;
 
+  @media (max-width: $desktop) {
+    padding-right: 0;
+  }
+
   .h2 {
     padding-bottom: 25px;
   }
@@ -12,5 +16,12 @@
 
   .btn {
     margin-top: 25px;
+
+    @media (max-width: $desktop) {
+      margin-top: 10px;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

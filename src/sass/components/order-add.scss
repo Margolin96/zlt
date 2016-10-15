@@ -5,6 +5,14 @@
 
   &__wrap {
     width: 63%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 70%;
+    }
   }
 
   &__title {
@@ -31,23 +39,39 @@
 
   &__col-1 {
     width: 30%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   &__col-2 {
     width: 38%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
 
   &__col-3 {
     width: 32%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   select {
     height: auto;
     padding: 8px 20px;
     border: 1px solid #e5e5e5;
-  }
 
+    @media (max-width: $tablet) {
+      margin-bottom: 10px;
+      background-position: 92% center;
+    }
+  }
 
   textarea {
     margin-bottom: 10px;

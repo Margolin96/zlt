@@ -20,6 +20,10 @@
     padding-bottom: 25px;
     border-bottom: 1px solid $border;
 
+    @media (max-width: $desktop) {
+      margin-bottom: 40px;
+    }
+
     .col-lg-4 {
       text-align: right;
     }
@@ -27,6 +31,13 @@
     .col-sm-4 {
       @media (max-width: $tablet) {
         margin-top: 20px;
+      }
+    }
+
+    .btn {
+      @media (max-width: $tablet) {
+        width: 100%;
+        margin-top: 15px;
       }
     }
   }
@@ -46,6 +57,10 @@
     float: left;
     width: 75%;
     box-sizing: border-box;
+
+    @media (max-width: $desktop) {
+      width: 100%;
+    }
   }
 
   &__right {
@@ -53,10 +68,19 @@
     width: 25%;
     box-sizing: border-box;
     padding-top: 65px;
+
+    @media (max-width: $desktop) {
+      padding-top: 50px;
+      width: 100%;
+    }
   }
 
   &__body--order &__right {
     padding-top: 115px;
+
+    @media (max-width: $desktop) {
+      padding-top: 50px;
+    }
   }
 
 }

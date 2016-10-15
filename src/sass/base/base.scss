@@ -9,6 +9,10 @@ body {
 
 main {
   padding-top: 240px;
+
+  @media (max-width: $tablet) {
+    padding-top: 55px;
+  } 
 }
 
 ul {

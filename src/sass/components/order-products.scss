@@ -2,6 +2,22 @@
   margin-top: 30px;
   margin-right: 75px;
 
+  @media (max-width: $tablet) {
+    .h2 {
+      padding-bottom: 40px;
+      font-size: 30px;
+      font-weight: normal;
+    }
+  }
+
+  @media (max-width: $desktop) {
+    margin-right: 0;
+
+    .h2 {
+      padding-bottom: 0;
+    }
+  }
+
   &:first-of-type {
     margin-top: 0;
   }
@@ -10,6 +26,10 @@
     padding: 25px 20px;
     color: #a2a2a2;
     font-size: 0;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__col-1,
@@ -23,14 +43,34 @@
 
   &__col-1 {
     width: 51%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   &__col-2 {
     width: 28%;
+
+    @media (max-width: $tablet) {
+      width: 60%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 26%; 
+    }
   }
 
   &__col-3 {
     width: 21%;
+
+    @media (max-width: $tablet) {
+      width: 40%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 23%;
+    }
   }
 
   &--idea &__col-1 {
@@ -53,6 +93,7 @@
   &__item-wrap {
     font-size: 0;
     padding: 20px;
+    position: relative;
   }
 
   &__item-wrap > &__col-1,
@@ -64,6 +105,14 @@
     display: inline-block;
     vertical-align: top;
     width: 25%;
+
+    @media (max-width: $tablet) {
+      width: 42%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 30%;
+    }
 
     img {
       display: block;
@@ -78,8 +127,18 @@
 
   &__item-info {
     display: inline-block;
+    box-sizing: border-box;
     width: 75%;
     vertical-align: top;
+
+    @media (max-width: $tablet) {
+      width: 58%;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 70%;
+    }
   }
 
   &--idea &__item-info{
@@ -121,6 +180,11 @@
     font-family: $roboto;
     font-size: 18px;
     font-weight: 500;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-top: 30px;
+    }
   }
 
   &--idea &__price {
@@ -131,6 +195,14 @@
   &__del-wrap {
     width: 30%;
     text-align: right;
+
+    @media (max-width: $tablet) {
+      width: auto;
+      padding-top: 0;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
   }
 
   &__del {
@@ -166,26 +238,51 @@
   &__bottom {
     margin-top: 20px;
     @include clearfix;
+
+    @media (max-width: $tablet) {
+      margin-top: 0;
+
+      .btn {
+        width: 100%;
+      }
+    }
   }
 
   &__bottom-left,
   &__bottom-right {
     width: 50%;
     box-sizing: border-box;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   &__bottom-left {
     float: left;
+
+    @media (max-width: $tablet) {
+      float: right;
+    }
   }
 
   &__bottom-right {
     float: right;
     text-align: right;
+
+    @media (max-width: $tablet) {
+      float: left;
+    }
   }
 
   &__amounts {
     padding-right: 50px;
     line-height: 50px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 15px;
+      padding-right: 0;
+    }
   }
 
   &__amounts-text {
