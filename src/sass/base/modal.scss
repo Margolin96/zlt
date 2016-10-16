@@ -17,7 +17,7 @@ body {
 
   &-content {
     position: fixed;
-    top: 30%;
+    top: 24%;
     left: 50%;
     width: 480px;
     margin-left: -240px;
@@ -41,7 +41,8 @@ body {
     display: block;
   }
 
-  .call-order {
+  .call-order,
+  .modal-question {
     padding: 35px 40px 40px;
     text-align: center;
 
@@ -50,6 +51,7 @@ body {
     }
 
     b {
+      display: block;
       padding-bottom: 10px;
       color: $dark;
       font-size: 24px;
@@ -71,7 +73,10 @@ body {
       }
     }
 
-    input[type="tel"] {
+    input[type="tel"],
+    input[type="text"],
+    input[type="email"],
+    textarea  {
       margin-bottom: 25px;
       display: block;
       width: 100%;
@@ -86,6 +91,31 @@ body {
 
       @media (max-width: $tablet) {
         margin-bottom: 15px;
+      }
+    }
+  }
+
+  .modal-question {
+
+    b {
+      padding-bottom: 35px;
+    }
+
+    input[type="tel"],
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      margin-bottom: 15px;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      margin-top: 30px;
+      
+      @media (max-width: $tablet) {
+        margin-top: 15px;
       }
     }
   }

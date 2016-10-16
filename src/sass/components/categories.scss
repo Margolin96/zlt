@@ -42,7 +42,8 @@
     left: 0;
     width: 100%;
     padding: 15px 20px 0;
-    max-height: 131px;
+    box-sizing: border-box;
+    max-height: 128px;
     overflow: hidden;
     transition: $time all ease;
     background-color: #FFF;
