@@ -81,16 +81,19 @@ $(function(){
     $(this).toggleClass('category-nav__group-name--open');
   });
 
+
   $('#open-catalog' ).click(function(){
     $('.catalog__left').addClass('catalog__left--open');
     $('.catalog__right').addClass('catalog__right--close');
   });
-
+  
 
   $('.seo').readmore({
     collapsedHeight: 160,
     moreLink: '<button class="btn btn--clear btn--more">Подробнее</button>',
     lessLink: '<button class="btn btn--clear btn--more">Скрыть</button>'
   });
+
+  $('select').dropdownSelect();
 
 });

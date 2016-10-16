@@ -1,0 +1,72 @@
+.ds {
+  position: relative;
+}
+.ds-top {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 35px 10px 20px;
+}
+.ds-value {
+  display: block;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.ds-arrow {
+  border: 5px solid transparent;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -2px;
+  border-top-color: #000;
+}
+.ds.open .ds-arrow {
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  margin-top: -7px;
+}
+.ds-list {
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  left: 50%;
+  top: 65px;
+  z-index: 333;
+  display: none;
+  box-sizing: border-box;
+  width: 250px;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 7px 0 32px rgba(0,0,0,.13);
+  text-align: left;
+  margin-left: -125px;
+}
+.ds-list-arrow {
+  display: none;
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  margin: -8px;
+  z-index: 334;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+.ds.open .ds-list,
+.ds.open .ds-list-arrow {
+  display: block;
+}
+.ds-option {
+  line-height: 20px;
+  display: block;
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.ds-option:hover {
+  background-color: #FAFAFA;
+}
+.ds-option.selected {
+  color: #30a4dc;
+}
