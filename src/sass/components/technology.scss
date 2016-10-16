@@ -64,6 +64,8 @@
       max-width: 100%;
       height: auto;
     }
+
+    @include dark-img-hover;
   }
 
   &--text &__img {
@@ -75,6 +77,12 @@
     @media (max-width: $tablet) {
       display: none;
 
+      &:hover{
+        &::after {
+          display: none;
+        }
+      }
+
       &--mobile {
         display: inline-block;
         vertical-align: top;
@@ -85,6 +93,8 @@
           height: auto;
           max-width: 100%;
         }
+
+
       }
     }
   }
