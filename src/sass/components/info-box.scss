@@ -68,6 +68,10 @@
     font-weight: 500;
     padding-bottom: 5px;
 
+    a {
+      color: $black;
+    }
+
     @media (max-width: $tablet) {
       display: none;
     }
@@ -113,15 +117,17 @@
 
   &__counter {
     display: none;
-    width: 17px;
-    height: 17px;
+    min-width: 17px;
+    height: 18px;
     box-sizing: border-box;
     background: $yellow;
     border: 2px solid $white;
-    border-radius: 50%;
+    border-radius: 9px;
     text-align: center;
+    color: $black;
     font-size: 8px;
-    line-height: 15px;
+    padding: 2px 4px;
+    line-height: 12px;
     font-weight: normal;
     position: absolute;
     top: -7px;

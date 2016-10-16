@@ -16,8 +16,8 @@ body {
   z-index: 99999999;
 
   &-content {
-    position: absolute;
-    top: 10%;
+    position: fixed;
+    top: 30%;
     left: 50%;
     width: 480px;
     margin-left: -240px;
@@ -28,7 +28,12 @@ body {
 
     @media (max-width: $tablet) {
       width: 250px;
-      margin: -135px;
+      top: 20%;
+      margin: 0 -135px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      
     }
   }
 

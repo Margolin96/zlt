@@ -108,19 +108,21 @@
       width: 435px;
       height: auto;
 
-      @media (max-width: $tablet) {
+      @media (max-width: $desktop) {
         display: none;
       }
     }
 
     &--short {
       display: none;
-      width: 107px;
       height: auto;
 
       @media (max-width: $tablet) {
-        display: block;
         max-width: 90px;
+      }
+
+      @media (max-width: $desktop) {
+        display: block;
       }
     }
   }
@@ -390,6 +392,7 @@
 
   &--fixed &__logo-img--short {
     display: block;
+    width: 110px;
   }
 
   &--fixed &__base-right {

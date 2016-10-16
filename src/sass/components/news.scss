@@ -22,6 +22,8 @@
   }
 
   &__item-img {
+    display: block;
+    position: relative;
 
     img {
       display: block;
@@ -30,6 +32,8 @@
       height: auto;
       outline: none;
     }
+
+    @include blue-img-hover;
   }
 
   &__item-wrap {
