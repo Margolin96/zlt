@@ -75,14 +75,38 @@
 
   &--idea &__col-1 {
     width: 36%;
+    
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 51%;
+    }
   }
 
   &--idea &__col-2 {
     width: 21%;
+
+    @media (max-width: $tablet) {
+      width: 60%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 22%;
+    }
   }
 
   &--idea &__col-3 {
     width: 43%;
+
+    @media (max-width: $tablet) {
+      width: 40%;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 27%;
+    }
   }
 
   &__item {
@@ -190,6 +214,15 @@
   &--idea &__price {
     font-size: 15px;
     font-weight: normal;
+
+    @media (max-width: $tablet) {
+      padding-top: 23px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      padding-top: 23px;
+      width: 65%;
+    }
   }
 
   &__del-wrap {
@@ -202,6 +235,13 @@
       position: absolute;
       top: 20px;
       right: 20px;
+    }
+  }
+
+  &--idea &__del {
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      padding-top: 23px;
+      width: 35%;
     }
   }
 
