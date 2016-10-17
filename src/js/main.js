@@ -128,6 +128,9 @@ $(function(){
   $('#size').on('row-add', function(e) {
     $(this).find('.form__row:not(.form__row--template) select').dropdownSelect();
   });
+  $('#type').on('row-add', function(e) {
+    $(this).find('.form__row:not(.form__row--template) select').dropdownSelect();
+  });
 
   $('#prod-type').on('row-add', function(e) {
     $(this).find('.form__row:not(.form__row--template) select').dropdownSelect();
