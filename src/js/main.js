@@ -113,8 +113,8 @@ $(function(){
   $('input[data-hide]').change(function(e) {
     e.preventDefault();
     var value = $(this).is(':checked');
-    if (value) { $($(this).attr('data-hide')).show(); }
-    else { $($(this).attr('data-hide')).hide(); }
+    if (value) { $($(this).attr('data-hide')).removeClass('disabled'); }
+    else { $($(this).attr('data-hide')).addClass('disabled'); }
   })
   $('input[data-hide]').trigger('change');
   
