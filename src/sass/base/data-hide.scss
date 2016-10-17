@@ -1,0 +1,18 @@
+.dh-disabled {
+  opacity: .5;
+  position: relative;
+  
+  &.order-add {
+    display: none;
+  }
+}
+.dh-disabled:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
