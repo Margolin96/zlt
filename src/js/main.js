@@ -188,5 +188,5 @@ $(function(){
   $('.catalog__right').css('min-height', $('.catalog__left').outerHeight())
   
   // Input tel phone mask
-  $("input[type=tel]").mask("+7 (999) 999-9999");
+  $('input[type=tel]').mask('+7 (999) 999-9999');
 });
