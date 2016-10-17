@@ -118,6 +118,7 @@ $(function(){
   
   // Repeater init
   $('#size').repeater({max: 4});
+  $('#type').repeater({max: 2});
   
   // Custom select init
   $('.product__body-wrap .form__row:not(.form__row--template) select').dropdownSelect();
