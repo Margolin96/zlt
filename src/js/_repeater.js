@@ -107,6 +107,7 @@ $(function($) {
       });
 
       $(container).attr('data-row-count', row_count);
+      $(container).trigger('row-add')
     }
   }
 });
