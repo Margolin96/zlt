@@ -120,12 +120,12 @@ $(function(){
   $('#size').repeater({max: 4});
   
   // Custom select init
-  $('.product__body-wrap select').dropdownSelect();
+  $('.product__body-wrap .form__row:not(.form__row--template) select').dropdownSelect();
   $('.filter__item select').dropdownSelect();
   $('.order-add select').dropdownSelect();
   
   $('#size').on('row-add', function(e) {
-    $(this).find('select').dropdownSelect();
+    $(this).find('.form__row:not(.form__row--template) select').dropdownSelect();
   })
   
   // "Add to cart" btn emulation
