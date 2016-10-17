@@ -185,4 +185,5 @@ $(function(){
   // Stick node in parent init
   $('.scroll-stick').scrollStick()
   $('.product__right').css('min-height', $('.product__left').outerHeight())
+  $('.catalog__right').css('min-height', $('.catalog__left').outerHeight())
 });
