@@ -1281,25 +1281,26 @@ select {
 
 .ds-arrow {
   position: absolute;
-  top: 50%;
-  right: 0;
-  display: block;
-  margin-top: -2px;
-  border: 5px solid transparent;
-  border-top-color: #000000;
+  top: 0;
+  right: 15px;
+  width: 9px;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  background: url(../img/select.svg) 88% center/9px 6px no-repeat #ffffff;
 }
 
 .ds.open .ds-arrow {
-  margin-top: -7px;
-  border-top-color: transparent;
-  border-bottom-color: #000000;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .ds-list {
   position: absolute;
   top: 65px;
   left: 50%;
-  z-index: 333;
+  z-index: 999;
   display: none;
   overflow-y: auto;
   -webkit-box-sizing: border-box;
@@ -1345,6 +1346,38 @@ select {
 
 .ds-option.selected {
   color: #30a4dc;
+}
+
+.product-about__row .ds-top {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100% !important;
+  background-color: #ffffff;
+}
+
+.product-about__row .ds-value {
+  padding: 15px;
+  text-align: left;
+  line-height: 20px;
+}
+
+.order-add__row .ds-top {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100% !important;
+  background-color: #ffffff;
+}
+
+.order-add__row .ds-value {
+  padding: 8px 20px;
+  text-align: left;
+  line-height: inherit;
+}
+
+.order-add__row .ds-arrow {
+  right: 20px;
 }
 
 html,
@@ -1458,6 +1491,26 @@ body {
   content: "";
   cursor: pointer;
   text-align: center;
+}
+
+.dh-disabled {
+  position: relative;
+  opacity: 0.5;
+}
+
+.dh-disabled.order-add {
+  display: none;
+}
+
+.dh-disabled:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 
 /* Slider */
