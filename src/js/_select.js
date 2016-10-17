@@ -3,44 +3,57 @@
 $(function($){
   $.fn.dropdownSelect = function() {
     var select = $(this.get());
-    var input = $('<input class="ds-field" type="hidden" name="' + select.attr('name') + '">')
-    var ds = $('<div class="ds">\
-      <div class="ds-top"><i class="ds-arrow"></i><div class="ds-value"></div></div>\
-      <div class="ds-list-arrow"></div><div class="ds-list"></div>\
-    </div>');
-    var items = [];
+    $.each(select, function(sk, sv) {
+      sv = $(sv)
 
-    $.each(select.find('option'), function(k, v) {
-      value = $(v).attr('value') === undefined ? "" : $(v).attr('value');
-      items.push($('<div class="ds-option" data-value="' + value + '">' + $(v).html() + '</div>'));
-    });
+      var input = $('<input class="ds-field" type="hidden" name="' + sv.attr('name') + '">')
+      var ds = $('<div class="ds" data-name="' + sv.attr('name') + '">\
+        <div class="ds-top"><i class="ds-arrow"></i><div class="ds-value"></div></div>\
+        <div class="ds-list-arrow"></div><div class="ds-list"></div>\
+      </div>');
+      var items = [];
 
-    ds.append(input);
-    ds.find('.ds-value').append(items[0].html());
-    ds.find('.ds-list').append(items);
-    select.replaceWith(ds);
+      $.each(sv.find('option'), function(ok, ov) {
+        var value = $(ov).attr('value') === undefined ? "" : $(ov).attr('value');
+        value = $('<div class="ds-option" data-value="' + value + '">' + $(ov).html() + '</div>')
+        items.push(value);
+      });
 
-    ds.on('click', '.ds-top', function(e) {
-      e.preventDefault();
+      ds.append(input);
+      ds.find('.ds-value').append(items[0].html());
+      ds.find('.ds-list').append(items);
+      sv.replaceWith(ds);
 
-      $(this).closest('.ds').toggleClass('open');
-    })
+      ds.on('click', '.ds-top', function(e) {
+        e.preventDefault();
 
-    ds.on('click', '.ds-option', function(e) {
-      e.preventDefault();
+        if ($(this).closest('.ds').hasClass('open')) {
+          $(this).closest('.ds').removeClass('open');
+          $(this).closest('.ds').trigger('selectClose')
+        } else {
+          $('.ds').removeClass('open')
+          $(this).closest('.ds').addClass('open');
+          $(this).closest('.ds').trigger('selectOpen')
+        }
+      })
 
-      var ds = $(this).closest('.ds');
-      var value = ds.find('.ds-value');
-      var input = ds.find('.ds-field');
+      ds.on('click', '.ds-option', function(e) {
+        e.preventDefault();
 
-      input.val($(this).attr('data-value'));
-      value.html($(this).html());
+        var ds = $(this).closest('.ds');
+        var value = ds.find('.ds-value');
+        var input = ds.find('.ds-field');
 
-      ds.find('.ds-option.selected').removeClass('selected');
-      $(this).addClass('selected');
+        input.val($(this).attr('data-value'));
+        value.html($(this).html());
 
-      ds.removeClass('open');
+        ds.find('.ds-option.selected').removeClass('selected');
+        $(this).addClass('selected');
+
+        ds.removeClass('open');
+
+        ds.trigger('selectChoose')
+      })
     })
   };
 });
-
