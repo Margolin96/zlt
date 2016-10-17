@@ -53,10 +53,24 @@
 
   &__body-wrap {
     border: 1px solid $border;
+    position: relative;
     @include clearfix;
 
     @media (max-width: $tablet) {
       border: none;
+    }
+    
+    @media (min-width: $desktop + 1) {
+      &:before {
+        content: "";
+        display: block;
+        width: 50%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        background-color: $white;
+      }
     }
   }
 
@@ -94,6 +108,21 @@
       border-right: none;
       border-bottom: 1px solid $border;
     }
+    
+    @media (min-width: $desktop + 1) {
+      border: 0;
+      z-index: 1;
+      position: absolute;
+      background-color: transparent;
+      
+      &.sticked-top {
+        position: fixed;
+        top: 81px;
+      }
+      &.sticked-bottom {
+        position: absolute;
+        bottom: 0;
+    }
   }
 
   &__body--idea &__left {
@@ -110,6 +139,11 @@
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 20px;
+    }
+    
+    @media (min-width: $desktop) {
+      border-left: 1px solid $border;
+      margin-left: 50%;
     }
   }
 
