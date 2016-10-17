@@ -4,10 +4,11 @@
 .ds-top {
   position: relative;
   cursor: pointer;
-  padding: 10px 35px 10px 20px;
+  padding: 0 20px 0 0;
 }
 .ds-value {
   display: block;
+  text-align: right;
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -16,7 +17,7 @@
   border: 5px solid transparent;
   display: block;
   position: absolute;
-  right: 15px;
+  right: 0;
   top: 50%;
   margin-top: -2px;
   border-top-color: #000;
@@ -45,7 +46,7 @@
 .ds-list-arrow {
   display: none;
   position: absolute;
-  bottom: -13px;
+  bottom: -7px;
   left: 50%;
   margin: -8px;
   z-index: 334;
