@@ -144,7 +144,7 @@
               <p class="order__head-text">Это ваш запрос. Отправьте его менеджеру для уточнения стоимости и сроков изготовления, нажав на кнопку “отправить” и возможностью нанесения  глубокой гравировки с высокой скоростью.</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <button class="btn btn--clear">Задать вопрос</button>
+              <button class="btn btn--clear js-get-modal" data-target=".modal-question">Задать вопрос</button>
             </div>
           </div>
         </div>
@@ -169,23 +169,59 @@
                           <a href="" class="order-products__item-name">Настольный календарь</a>
                           <div class="order-products__code">Артикул 32</div>
                           <div class="order-products__feature">
-                            <input type="checkbox" id="order-products-feature">
-                            <label for="order-products-feature">С нанесением</label>
+                            <input type="checkbox" id="order-products-feature-1" data-hide="drawing-1">
+                            <label for="order-products-feature-1">С нанесением</label>
                           </div>
                         </div>
                       </div>
                       <div class="order-products__col-2">
                         <div class="counter">
-                          <span class="counter__nav">-</span>
-                          <span class="counter__number">3</span>
-                          <span class="counter__nav">+</span>
+                          <input type="number" value="3">
                         </div>
                       </div>
                       <div class="order-products__col-3">
-                        <div class="order-products__price">145 руб.</div>
+                        <div class="order-products__price" data-price="145">
+                          <span class="amount">145</span>
+                          <span class="currency"> руб.</span>
+                        </div>
                         <div class="order-products__del-wrap">
                           <button class="order-products__del"></button>
                         </div>
+                      </div>
+                    </div>
+                    <div class="order-add" id="drawing-2">
+                      <div class="order-add__wrap">
+                        <div class="order-add__title">Нанесение</div>
+                        <div class="order-add__row">
+                          <div class="order-add__col-1">
+                            <select id="place">
+                              <option>Место</option>
+                              <option value="place-1">Место 1</option>
+                              <option value="place-2">Место 2</option>
+                            </select>
+                          </div>
+                          <div class="order-add__col-2">
+                            <select id="type">
+                              <option>Вид нанесения</option>
+                              <option value="type-1">Вид 1</option>
+                              <option value="type-2">Вид 2</option>
+                            </select>
+                          </div>
+                          <div class="order-add__col-3">
+                            <select id="area">
+                              <option>Площадь</option>
+                              <option value="area-1">Площадь 1</option>
+                              <option value="area-2">Площадь 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="4" placeholder="Ваш комментарий"></textarea>
+                        <div class="form__upload">
+                          <input type="file">
+                          <span class="form__upload-icon"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64"><path fill="#a1a1a1" d="M14.754 60.041c3.269 2.399 6.476 3.607 9.567 3.607.77 0 1.532-.075 2.287-.226 5.39-1.072 8.216-5.645 8.233-5.69l15.922-21.676a2.017 2.017 0 1 0-3.253-2.388L31.489 55.493c-.019.031-2.06 3.254-5.669 3.972-2.628.527-5.548-.378-8.678-2.677-9.174-6.737-4.389-13.862-3.811-14.656L39.678 6.233c.012-.016 1.131-1.557 3.168-1.91 1.865-.325 4.009.392 6.427 2.167.942.652 3.476 2.885 3.886 5.34.2 1.194-.116 2.337-.967 3.495L28.654 47.373c-.01.014-1.062 1.432-2.613 1.689-.98.158-1.99-.161-3.105-.979-3.312-2.434-1.593-5.382-1.255-5.89l13.118-17.861a2.018 2.018 0 1 0-3.254-2.388L18.396 39.847c-1.832 2.638-2.77 7.874 2.148 11.488 2.011 1.476 4.078 2.047 6.156 1.708 3.204-.53 5.061-3.072 5.233-3.321l23.511-32.008c1.512-2.059 2.082-4.271 1.689-6.573-.791-4.654-5.383-7.844-5.523-7.94C48.324.789 45.145-.169 42.153.346c-3.715.646-5.617 3.328-5.775 3.565l-26.29 35.821c-.131.175-3.201 4.368-2.381 9.863.586 3.927 2.957 7.442 7.047 10.446z"/></svg></span>
+                          <span class="form__upload-text">Прикрепить файл</span>
+                        </div>
+                        <button class="btn btn--order-add">Добавить</button>
                       </div>
                     </div>
                   </div>
@@ -199,26 +235,27 @@
                           <a href="" class="order-products__item-name">Набор магнитов из дерева</a>
                           <div class="order-products__code">Артикул 72</div>
                           <div class="order-products__feature">
-                            <input type="checkbox" id="order-products-feature" checked>
-                            <label for="order-products-feature">С нанесением</label>
+                            <input type="checkbox" id="order-products-feature-2" checked data-hide="drawing-2">
+                            <label for="order-products-feature-2">С нанесением</label>
                           </div>
                         </div>
                       </div>
                       <div class="order-products__col-2">
                         <div class="counter">
-                          <span class="counter__nav">-</span>
-                          <span class="counter__number">1</span>
-                          <span class="counter__nav">+</span>
+                          <input type="number" value="1">
                         </div>
                       </div>
                       <div class="order-products__col-3">
-                        <div class="order-products__price">1 327 руб.</div>
+                        <div class="order-products__price">
+                          <span class="amount">1 327</span>
+                          <span class="currency"> руб.</span>
+                        </div>
                         <div class="order-products__del-wrap">
                           <button class="order-products__del"></button>
                         </div>
                       </div>
                     </div>
-                    <div class="order-add">
+                    <div class="order-add" id="drawing-2">
                       <div class="order-add__wrap">
                         <div class="order-add__title">Нанесение</div>
                         <div class="order-add__row">
@@ -259,7 +296,10 @@
                   <div class="order-products__bottom-right">
                     <div class="order-products__amounts">
                       <span class="order-products__amounts-text">Сумма заказа:</span>
-                      <span class="order-products__amounts-total">1 414 руб.</span>
+                      <span class="order-products__amounts-total">
+                        <span class="amount">1 414</span>
+                        <span class="currency"> руб.</span>
+                      </span>
                     </div>
                   </div>
                   <div class="order-products__bottom-left">
@@ -400,6 +440,23 @@
           <p>Введите номер и мы перезвоним вам в течение часа</p>
           <input type="tel">
           <button type="submit" class="btn btn--submit">Перезвоните мне</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Модальное окно "Задать вопрос" -->
+  <div class="modal modal-question">
+    <div class="modal-content">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64"><path fill="#bfbfbf" d="M28.941 31.786L.613 60.114a2.014 2.014 0 1 0 2.848 2.849l28.541-28.541 28.541 28.541c.394.394.909.59 1.424.59a2.014 2.014 0 0 0 1.424-3.439L35.064 31.786 63.41 3.438A2.014 2.014 0 1 0 60.562.589L32.003 29.15 3.441.59A2.015 2.015 0 0 0 .593 3.439l28.348 28.347z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="modal-question">
+        <form action="/echo">
+          <b>Задать вопрос</b>
+          <input type="text" placeholder="Имя">
+          <input type="tel" placeholder="Телефон">
+          <input type="email" placeholder="Контактный E-mail">
+          <textarea rows="5" placeholder="Ваш вопрос"></textarea>
+          <button type="submit" class="btn btn--submit">Отправить</button>
         </form>
       </div>
     </div>

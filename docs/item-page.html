@@ -221,38 +221,41 @@
                   <!-- Размер и количество -->
                   <div class="product-about__row">
                     <p class="product-about__row-title">Размер и количество</p>
-                    <div class="form__row">
-                      <div class="form__col form__col--1">
-                        <select name="product-size">
-                          <option>Размер</option>
-                          <option value="product-xs">XS</option>
-                          <option value="product-x">X</option>
-                          <option value="product-m">M</option>
-                          <option value="product-l">L</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--1">
-                        <select name="product-count">
-                          <option> Количество</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                        </select>
-                      </div>
-                      <div class="form__col form__col--2">
-                        <button type="button" class="btn btn--add">Добавить размер</button>
+                    <div class="form__row__group" id="size">
+                      <div class="form__row form__row--template">
+                        <div class="form__col form__col--1">
+                          <select name="product-size">
+                            <option>Размер</option>
+                            <option value="product-xs">XS</option>
+                            <option value="product-x">X</option>
+                            <option value="product-m">M</option>
+                            <option value="product-l">L</option>
+                          </select>
+                        </div>
+                        <div class="form__col form__col--1">
+                          <select name="product-count">
+                            <option> Количество</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                        <div class="form__col form__col--2">
+                          <button type="button" class="btn btn--remove">Удалить размер</button>
+                          <button type="button" class="btn btn--add">Добавить размер</button>
+                        </div>
                       </div>
                     </div>
                     <div class="form__group">
                       <a href="#" class="link">Таблица размеров</a>
                     </div>
                     <div class="form__group form__group--no-margin">
-                      <input type="checkbox" id="with-drawing" checked>
+                      <input type="checkbox" id="with-drawing" checked data-hide="drawing-1">
                       <label for="with-drawing">С нанесением</label>
                     </div>
                   </div>
                   <!-- END Размер и количество -->
                   <!-- Вид нанесения -->
-                  <div class="product-about__row">
+                  <div class="product-about__row" id="drawing-1">
                     <p class="product-about__row-title">Вид нанесения</p>
                     <div class="form__row">
                       <div class="form__col form__col--1 form__col--mob-2">
