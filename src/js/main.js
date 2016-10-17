@@ -102,11 +102,6 @@ $(function(){
     moreLink: '<button class="btn btn--clear btn--more">Подробнее</button>',
     lessLink: '<button class="btn btn--clear btn--more">Скрыть</button>'
   });
-
-  // Custom select init
-  $('.product__body-wrap select').dropdownSelect();
-  $('.filter__item select').dropdownSelect();
-  $('.order-add select').dropdownSelect();
   
   // Custom number input init
   $('input[type=number]').inputNum();
@@ -122,6 +117,15 @@ $(function(){
   
   // Repeater init
   $('#size').repeater({max: 4});
+  
+  // Custom select init
+  $('.product__body-wrap select').dropdownSelect();
+  $('.filter__item select').dropdownSelect();
+  $('.order-add select').dropdownSelect();
+  
+  $('#size').on('row-add', function(e) {
+    $(this).find('select').dropdownSelect();
+  })
   
   // "Add to cart" btn emulation
   $('.product-about .btn--blue').click(function(e) {
