@@ -1,0 +1,34 @@
+.tooltip {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -40px;
+    left: -5px;
+    z-index: 999;
+    display: none;
+    padding: 7px 15px;
+    background: rgba(0,0,0,.8);
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    color: $white;
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  &::after {
+    position: absolute;
+    top: -9px;
+    left: 5px;
+    display: none;
+    border: 8px solid transparent;
+    border-top: 8px solid rgba(0,0,0,.8);
+    content: "";
+  }
+
+  &:hover::before,
+  &:hover::after {
+    display: block;
+  }
+
+}
