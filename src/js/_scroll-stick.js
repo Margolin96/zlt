@@ -13,10 +13,10 @@ $(function($){
 				var h = node.outerHeight()
 
 				var np = node.parent()
-				var pt = np.offset().top
+				var pt = np.offset().top - o
 				var ph = np.outerHeight()
 
-				var st = $(document).scrollTop() + o
+				var st = $(document).scrollTop()
 
 				if (st < pt) {
 					node.removeClass('sticked-top sticked-bottom')
