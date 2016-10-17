@@ -110,6 +110,7 @@
     }
     
     @media (min-width: $desktop + 1) {
+      width: 600px;
       border: 0;
       z-index: 1;
       position: absolute;
@@ -122,6 +123,7 @@
       &.sticked-bottom {
         position: absolute;
         bottom: 0;
+      }
     }
   }
 
