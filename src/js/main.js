@@ -165,4 +165,13 @@ $(function(){
     $('.catalog__items .item').shuffle();
   });
 
+  // Call order form emulation
+  $('.call-order .btn--submit').click(function(e) {
+    e.preventDefault()
+    e.stopPropagation()
+
+    var form = $(this).closest('form')
+    form.find('input').slideUp(100)
+    $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение часа</h3>')
+  })
 });
