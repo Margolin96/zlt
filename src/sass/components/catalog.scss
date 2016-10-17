@@ -13,6 +13,7 @@
     width: 25%;
     box-sizing: border-box;
     padding-right: 10px;
+    position: relative;
 
     @media (max-width: $tablet) {
       display: none;

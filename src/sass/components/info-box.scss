@@ -107,6 +107,7 @@
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
     @include blue-border-link();
 
     @media (max-width: $tablet) {
