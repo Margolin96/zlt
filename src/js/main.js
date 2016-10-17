@@ -113,8 +113,8 @@ $(function(){
   $('input[data-hide]').change(function(e) {
     e.preventDefault();
     var value = $(this).is(':checked');
-    if (value) { $($(this).attr('data-hide')).show(); }
-    else { $($(this).attr('data-hide')).hide(); }
+    if (value) { $($(this).attr('data-hide')).removeClass('dh-disabled'); }
+    else { $($(this).attr('data-hide')).addClass('dh-disabled'); }
   })
   $('input[data-hide]').trigger('change');
   
@@ -165,4 +165,13 @@ $(function(){
     $('.catalog__items .item').shuffle();
   });
 
+  // Call order form emulation
+  $('.call-order .btn--submit').click(function(e) {
+    e.preventDefault()
+    e.stopPropagation()
+
+    var form = $(this).closest('form')
+    form.find('input').slideUp(100)
+    $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение часа</h3>')
+  })
 });
