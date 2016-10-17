@@ -1,5 +1,6 @@
 .ds {
   position: relative;
+  font-weight: normal;
 }
 .ds-top {
   position: relative;
@@ -65,11 +66,9 @@
   cursor: pointer;
   padding: 10px 20px;
 }
-.ds-option:hover {
-  background-color: #FAFAFA;
-}
+.ds-option:hover,
 .ds-option.selected {
-  color: #30a4dc;
+  color: $blue;
 }
 
 
