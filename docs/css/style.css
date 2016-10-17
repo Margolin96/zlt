@@ -3079,7 +3079,6 @@ img.mfp-img {
   padding: 7px 15px;
   background: rgba(0, 0, 0, 0.8);
   color: #ffffff;
-  content: attr(data-tooltip);
   white-space: nowrap;
   font-size: 15px;
   line-height: 17px;
@@ -3095,9 +3094,21 @@ img.mfp-img {
   content: "";
 }
 
-.tooltip:hover::before,
-.tooltip:hover::after {
+.tooltip--empty::before {
+  content: attr(data-tooltip);
+}
+
+.tooltip--valid::before {
+  content: attr(data-valid);
+}
+
+.tooltip[data-valid]:not([data-valid=""])::after,
+.tooltip[data-valid]:not([data-valid=""])::before {
   display: block;
+}
+
+.tooltip[data-valid]:not([data-valid=""])::before {
+  content: attr(data-valid);
 }
 
 .main-slider {
