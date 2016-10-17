@@ -189,4 +189,11 @@ $(function(){
   
   // Input tel phone mask
   $('input[type=tel]').mask('+7 (999) 999-9999');
+  
+  // Open tab on scroll
+  $('#more-info-link').click(function(e) {
+    e.preventDefault()
+
+    $('#more-info #tab-all-info a').click()
+  })
 });
