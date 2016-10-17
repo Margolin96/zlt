@@ -31,4 +31,13 @@
     display: block;
   }
 
+  &[data-valid]:not([data-valid=""]) {
+    &::after,
+    &::before {
+      display: block;
+    }
+    &::before {
+      content: attr(data-valid);
+    }
+  }
 }
