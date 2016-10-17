@@ -295,6 +295,15 @@ $(function(){
     $('.menu-mobile').removeClass('menu-mobile--submenu');
   });
 
+  $('.menu-list__item--sublist' ).click(function(){
+    event.preventDefault();
+    $(this).toggleClass('menu-list__item--subopen');
+  });
+
+  $('.menu-list__item--tablet' ).click(function(){
+    event.preventDefault();
+    $(this).toggleClass('menu-list__item--subopen');
+  });
 
   $('.main-slider').slick({
     infinite: true
@@ -549,6 +558,16 @@ $(function(){
         return item.el.attr('title');
       }
     }
+  });
+
+  $('.popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
   });
 
 });

@@ -20,8 +20,6 @@
   &::before {
     width: 25px;
     height: 25px;
-    background:transparent url('../img/sprite.png') 0 0 no-repeat;
-    background-size: 50px 25px;
     position: absolute;
     left: 0;
     top: 0;
@@ -30,13 +28,19 @@
 
   &--phone {
     margin-left: 0;
+
+    &::before{
+      background:transparent url('../img/phone.svg') 0 0 no-repeat;
+      background-size: 20px;
+    }
   }
 
   &--doc {
     cursor: default;
 
     &::before {
-      background-position: -33px 0;
+      background:transparent url('../img/document.svg') 0 0 no-repeat;
+      background-size: 20px 20px;
       left: 5px;
     }
   }
