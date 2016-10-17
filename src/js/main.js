@@ -104,7 +104,9 @@ $(function(){
   });
 
   // Custom select init
+  $('.product__body-wrap select').dropdownSelect();
   $('.filter__item select').dropdownSelect();
+  $('.order-add select').dropdownSelect();
   
   // Custom number input init
   $('input[type=number]').inputNum();
