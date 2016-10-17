@@ -9,7 +9,6 @@
     display: none;
     padding: 7px 15px;
     background: rgba(0,0,0,.8);
-    content: attr(data-tooltip);
     white-space: nowrap;
     color: $white;
     font-size: 15px;
@@ -26,9 +25,16 @@
     content: "";
   }
 
-  &:hover::before,
-  &:hover::after {
-    display: block;
+  &--empty {
+    &::before {
+      content: attr(data-tooltip);
+    }
+  }
+
+  &--valid {
+    &::before {
+      content: attr(data-valid);
+    }
   }
 
 }
