@@ -3066,6 +3066,40 @@ img.mfp-img {
   font-size: 13px;
 }
 
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  position: absolute;
+  top: -40px;
+  left: -5px;
+  z-index: 999;
+  display: none;
+  padding: 7px 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  content: attr(data-tooltip);
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.tooltip::after {
+  position: absolute;
+  top: -9px;
+  left: 5px;
+  display: none;
+  border: 8px solid transparent;
+  border-top: 8px solid rgba(0, 0, 0, 0.8);
+  content: "";
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  display: block;
+}
+
 .main-slider {
   width: 100%;
   margin-top: 20px;
@@ -4613,7 +4647,6 @@ img.mfp-img {
 }
 
 .catalog__left {
-  position: relative;
   float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7770,6 +7803,27 @@ img.mfp-img {
 
   .product__left.sticked-bottom {
     position: absolute;
+    bottom: 0;
+  }
+
+  .catalog .container {
+    position: relative;
+  }
+
+  .catalog__left {
+    position: absolute;
+    top: 0;
+    width: 300px;
+  }
+
+  .catalog__left.sticked-top {
+    position: fixed;
+    top: 81px;
+  }
+
+  .catalog__left.sticked-bottom {
+    position: absolute;
+    top: auto;
     bottom: 0;
   }
 
