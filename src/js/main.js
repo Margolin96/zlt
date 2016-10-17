@@ -25,6 +25,15 @@ $(function(){
     $('.menu-mobile').removeClass('menu-mobile--submenu');
   });
 
+  $('.menu-list__item--sublist' ).click(function(){
+    event.preventDefault();
+    $(this).toggleClass('menu-list__item--subopen');
+  });
+
+  $('.menu-list__item--tablet' ).click(function(){
+    event.preventDefault();
+    $(this).toggleClass('menu-list__item--subopen');
+  });
 
   $('.main-slider').slick({
     infinite: true

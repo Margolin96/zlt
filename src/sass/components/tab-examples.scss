@@ -1,5 +1,9 @@
 .tab-examples {
 
+  .tabs__tab-title {
+    padding-left: 0;
+  }
+
   .col-lg-3 {
     margin-bottom: 20px;
 
@@ -45,6 +49,8 @@
   }
 
   &__video {
+    display: block;
+    position: relative;
 
     @media (max-width: $tablet) {
       margin-bottom: 25px;
@@ -52,6 +58,24 @@
 
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
       margin-bottom: 25px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &::after {
+      width: 100%;
+      height: 100%;
+      background:transparent url('../img/play.png') center center no-repeat;
+      background-size: 55px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     iframe {

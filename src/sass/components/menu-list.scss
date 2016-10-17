@@ -1,6 +1,6 @@
 .menu-list {
 
-  & > li {
+  &__item {
     display: inline-block;
     padding: 0px 33px;
     font-size: 14px;
@@ -10,15 +10,11 @@
 
     &:first-child {
       padding-left: 20px;
-
-      @media (min-width: $tablet + 1) and (max-width: $desktop) {
-        padding-left: 0;
-      }
     }
 
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
       
-      &:nth-child(n+5) {
+      &:nth-child(n+6) {
         display: none;
       }
     }
@@ -32,6 +28,26 @@
         color: $blue;
       }
     }
+
+    &--tablet {
+      display: none;
+
+      &:hover {
+        box-shadow: 0 3px 5px rgba(0,0,0,.15);
+      }
+
+      @media (min-width: $tablet + 1) and (max-width: $desktop) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__item--tablet > &__sublist {
+    min-width: 140px;
+  }
+
+  &__item--subopen > &__sublist {
+    display: block;
   }
 
   &__sublist {
