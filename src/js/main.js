@@ -87,6 +87,7 @@ $(function(){
 
 
   $('.category-nav__group-name' ).click(function(){
+    $('.category-nav__group-name').removeClass('category-nav__group-name--open');
     $(this).toggleClass('category-nav__group-name--open');
   });
 
