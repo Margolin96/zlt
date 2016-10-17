@@ -25,15 +25,14 @@
     content: "";
   }
 
-  &--empty {
-    &::before {
-      content: attr(data-tooltip);
-    }
+  &::before {
+    content: attr(data-tooltip);
   }
 
-  &--valid {
-    &::before {
-      content: attr(data-valid);
+  &:hover {
+    &::before,
+    &::after {
+      display: block;
     }
   }
 
