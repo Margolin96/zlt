@@ -12,6 +12,7 @@ $(function($){
         <div class="ds-list-arrow"></div><div class="ds-list"></div>\
       </div>');
       var items = [];
+      ds.find('.ds-top').width(sv.width())
 
       $.each(sv.find('option'), function(ok, ov) {
         var value = $(ov).attr('value') === undefined ? "" : $(ov).attr('value');
