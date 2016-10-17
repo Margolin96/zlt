@@ -6,64 +6,65 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 'use strict';
 
 $(function($){
-  $.fn.inputNum = function() {
-    var inputs = $(this.get());
-    
-    $.each(inputs, function(k, input) {
-      input = $(input);
-      
-      var val = input.val() === '' ? 0 : input.val();
-      var min = input.attr('min') === undefined ? 0 : input.attr('min');
-      var max = input.attr('max') === undefined ? 0 : input.attr('max');
+	$.fn.inputNum = function() {
+		function inputNumUpdate(nav, change) {
+			var counter = $(nav).closest('.counter')
+			var field = counter.find('.counter__field')
+			var number = counter.find('.counter__number')
+			var value = field.val() * 1
 
-      input.replaceWith('<div class="counter" data-min="'+min+'" data-max="'+max+'">\
-        <span class="counter__nav counter__nav--minus">-</span>\
-        <input class="counter__number counter__field" type="number" value="'+val+'">\
-        <span class="counter__nav counter__nav--plus">+</span>\
-      </div>');
+			value += change * 1
 
-      function inputNumUpdate(nav, change) {
-        var counter = $(nav).closest('.counter');
-        var field = counter.find('.counter__field');
-        var number = counter.find('.counter__number');
-        var value = field.val() * 1;
+			if (change > 0) {
+				if ((counter.attr('data-max') != 0) && (value > counter.attr('data-max'))) {
+					value = counter.attr('data-max')
+				}
+			} else {
+				if (value < counter.attr('data-min')) {
+					value = counter.attr('data-min')
+				}
+			}
 
-        value += change * 1;
+			field.val(value)
+			number.text(value)
+			field.trigger('input-num-change')
+		}
 
-        if (change > 0) {
-          if ((counter.attr('data-max') != 0) && (value > counter.attr('data-max'))) {
-            value = counter.attr('data-max');
-          }
-        } else {
-          if (value < counter.attr('data-min')) {
-            value = counter.attr('data-min');
-          }
-        }
+		var inputs = $(this.get())
 
-        field.val(value);
-        number.text(value);
-        field.trigger('input-num-change');
-      };
+		$.each(inputs, function(k, input) {
+			input = $(input)
 
-      $('.counter').on('click', '.counter__nav--minus', function(e) {
-        e.preventDefault();
+			var val = input.val() === '' ? 1 : input.val()
+			var min = input.attr('min') === undefined ? 1 : input.attr('min')
+			var max = input.attr('max') === undefined ? 0 : input.attr('max')
 
-        inputNumUpdate(this, -1);
-        $(this).find('.counter__field').trigger('input-num-minus');
-      });
+			var nInput = $('<div class="counter" data-min="'+min+'" data-max="'+max+'">\
+				<span class="counter__nav counter__nav--minus">-</span>\
+				<input class="counter__number counter__field" type="number" value="'+val+'">\
+				<span class="counter__nav counter__nav--plus">+</span>\
+			</div>')
+			input.replaceWith(nInput)
 
-      $('.counter').on('click', '.counter__nav--plus', function(e) {
-        e.preventDefault();
+			nInput.on('click', '.counter__nav--minus', function(e) {
+				e.preventDefault()
 
-        inputNumUpdate(this, 1);
-        $(this).find('.counter__field').trigger('input-num-plus');
-      });
+				inputNumUpdate(this, -1)
+				$(this).find('.counter__field').trigger('input-num-minus')
+			})
 
-      $('.counter').on('change', '.counter__field', function(e) {
-        $(this).trigger('input-num-change');
-      });
-    })
-  };
+			nInput.on('click', '.counter__nav--plus', function(e) {
+				e.preventDefault()
+
+				inputNumUpdate(this, 1)
+				$(this).find('.counter__field').trigger('input-num-plus')
+			})
+
+			nInput.on('change', '.counter__field', function(e) {
+				$(this).trigger('input-num-change')
+			})
+		})
+	}
 });
 
 'use strict';
@@ -175,8 +176,47 @@ $(function($) {
       });
 
       $(container).attr('data-row-count', row_count);
+      $(container).trigger('row-add')
     }
   }
+});
+
+'use strict';
+
+$(function($){
+	$.fn.scrollStick = function() {
+		var nodes = $(this.get())
+
+		$(document).scroll(function(e) {
+			$.each(nodes, function(k, node) {
+				node = $(node)
+
+				var o = node.attr('data-offset') === undefined ? 0 : node.attr('data-offset')
+				var t = node.offset().top
+				var h = node.outerHeight()
+
+				var np = node.parent()
+				var pt = np.offset().top - o
+				var ph = np.outerHeight()
+
+				var st = $(document).scrollTop()
+
+				if (st < pt) {
+					node.removeClass('sticked-top sticked-bottom')
+					return false
+				}
+
+				if ((st + h) > (pt + ph)) {
+					node.removeClass('sticked-top')
+					node.addClass('sticked-bottom')
+					return false
+				}
+
+				node.addClass('sticked-top')
+				node.removeClass('sticked-bottom')
+			});	
+		})
+	}
 });
 
 'use strict';
@@ -361,6 +401,7 @@ $(function(){
 
 
   $('.category-nav__group-name' ).click(function(){
+    $('.category-nav__group-name').removeClass('category-nav__group-name--open');
     $(this).toggleClass('category-nav__group-name--open');
   });
 
@@ -376,9 +417,6 @@ $(function(){
     moreLink: '<button class="btn btn--clear btn--more">Подробнее</button>',
     lessLink: '<button class="btn btn--clear btn--more">Скрыть</button>'
   });
-
-  // Custom select init
-  $('.filter__item select').dropdownSelect();
   
   // Custom number input init
   $('input[type=number]').inputNum();
@@ -394,6 +432,15 @@ $(function(){
   
   // Repeater init
   $('#size').repeater({max: 4});
+  
+  // Custom select init
+  $('.product__body-wrap .form__row:not(.form__row--template) select').dropdownSelect();
+  $('.filter__item select').dropdownSelect();
+  $('.order-add select').dropdownSelect();
+  
+  $('#size').on('row-add', function(e) {
+    $(this).find('.form__row:not(.form__row--template) select').dropdownSelect();
+  })
   
   // "Add to cart" btn emulation
   $('.product-about .btn--blue').click(function(e) {
@@ -448,15 +495,19 @@ $(function(){
     form.find('input').slideUp(100)
     $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение часа</h3>')
   })
+  
+  // Stick node in parent init
+  $('.scroll-stick').scrollStick()
+  $('.product__right').css('min-height', $('.product__left').outerHeight())
 });
 
 $(window).on('scroll', function (){
   
-  if ($(this).scrollTop() > 500){
+  if ($(this).scrollTop() > 300){
       $('.header').addClass('header--fixed');
     } else {
       $('.header').removeClass('header--fixed');
-    }
+    };
 });
 'use strict';
 
