@@ -94,6 +94,66 @@ $(function(){
     lessLink: '<button class="btn btn--clear btn--more">Скрыть</button>'
   });
 
-  $('select').dropdownSelect();
+  // Custom select init
+  $('.filter__item select').dropdownSelect();
+  
+  // Custom number input init
+  $('input[type=number]').inputNum();
+  
+  // Hide-by-checkbox init
+  $('input[data-hide]').change(function(e) {
+    e.preventDefault();
+    var value = $(this).is(':checked');
+    if (value) { $($(this).attr('data-hide')).show(); }
+    else { $($(this).attr('data-hide')).hide(); }
+  })
+  $('input[data-hide]').trigger('change');
+  
+  // Repeater init
+  $('#size').repeater({max: 4});
+  
+  // "Add to cart" btn emulation
+  $('.product-about .btn--blue').click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var count = $('.info-box__counter').text() * 1 + 1;
+    var btn = $(this);
+    setTimeout(function(e) { btn.text('Добавить в корзину'); }, 1000);
+    btn.text('Товар добавлен в корзину');
+    $('.info-box__link .count, .info-box__counter').text(count);
+  });
+  
+  // Cart updates emulation
+  $('.order-products__item-wrap').on('input-num-change', '.counter__field', function(e) {
+    var priceContainer = $(this).closest('.order-products__item-wrap').find('.order-products__price');
+    var price = priceContainer.attr('data-price') * $(this).val();
+    priceContainer.find('.amount').text(price.toLocaleString('ru-RU'));
+    var total = 0;
+    $.each($('.order-products__item-wrap .order-products__price .amount'), function(k, v) {
+      total += parseInt($(v).html().replace("&nbsp;", '').replace(/ /g, ''));
+    });
+    $('.order-products__amounts-total .amount').text(total.toLocaleString('ru-RU'));
+  });
+  
+  // Filter emulation
+  $.fn.shuffle = function() {
+    var allElems = this.get(),
+      getRandom = function(max) { return Math.floor(Math.random() * max); },
+      shuffled = $.map(allElems, function(){
+        var random = getRandom(allElems.length),
+          randEl = $(allElems[random]).clone(true)[0];
+        allElems.splice(random, 1);
+        return randEl;
+      });
+    this.each(function(i){ $(this).replaceWith($(shuffled[i])); });
+    return $(shuffled);
+  };
+  $('.ds').on('selectChoose', function() { $('.catalog__items .item').shuffle(); });
+  $('.category-nav__item').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.category-nav__list').find('.category-nav__list-item--active').removeClass('category-nav__list-item--active');
+    $(this).closest('li').addClass('category-nav__list-item--active');
+    $('.catalog__items .item').shuffle();
+  });
 
 });
