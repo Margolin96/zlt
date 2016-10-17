@@ -15,18 +15,17 @@
   text-overflow: ellipsis;
 }
 .ds-arrow {
-  border: 5px solid transparent;
-  display: block;
   position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -2px;
-  border-top-color: #000;
+  height: 100%;
+  top: 0;
+  margin: 0;
+  right: 15px;
+  width: 9px;
+  border: 0;
+  background: url(../img/select.svg) 88% center/9px 6px no-repeat #fff;
 }
 .ds.open .ds-arrow {
-  border-top-color: transparent;
-  border-bottom-color: #000;
-  margin-top: -7px;
+  transform: rotate(180deg);
 }
 .ds-list {
   max-height: 300px;
@@ -34,7 +33,7 @@
   position: absolute;
   left: 50%;
   top: 65px;
-  z-index: 333;
+  z-index: 999;
   display: none;
   box-sizing: border-box;
   width: 250px;
@@ -71,4 +70,35 @@
 }
 .ds-option.selected {
   color: #30a4dc;
+}
+
+
+.product-about__row {
+  .ds-top {
+    width: 100% !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #FFF;
+  }
+  .ds-value {
+    padding: 15px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+.order-add__row {
+  .ds-top {
+    width: 100% !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #FFF;
+  }
+  .ds-value {
+    padding: 8px 20px;
+    line-height: inherit;
+    text-align: left;
+  }
+  .ds-arrow {
+    right: 20px;
+  }
 }
