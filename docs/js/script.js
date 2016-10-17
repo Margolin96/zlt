@@ -7,59 +7,62 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 
 $(function($){
   $.fn.inputNum = function() {
+    var inputs = $(this.get());
+    
+    $.each(inputs, function(k, input) {
+      input = $(input);
+      
+      var val = input.val() === '' ? 0 : input.val();
+      var min = input.attr('min') === undefined ? 0 : input.attr('min');
+      var max = input.attr('max') === undefined ? 0 : input.attr('max');
 
-    var input = $(this.get());
+      input.replaceWith('<div class="counter" data-min="'+min+'" data-max="'+max+'">\
+        <span class="counter__nav counter__nav--minus">-</span>\
+        <input class="counter__number counter__field" type="number" value="'+val+'">\
+        <span class="counter__nav counter__nav--plus">+</span>\
+      </div>');
 
-    var val = input.val() === '' ? 0 : input.val();
-    var min = input.attr('min') === undefined ? 0 : input.attr('min');
-    var max = input.attr('max') === undefined ? 0 : input.attr('max');
+      function inputNumUpdate(nav, change) {
+        var counter = $(nav).closest('.counter');
+        var field = counter.find('.counter__field');
+        var number = counter.find('.counter__number');
+        var value = field.val() * 1;
 
-    input.replaceWith('<div class="counter" data-min="'+min+'" data-max="'+max+'">\
-      <span class="counter__nav counter__nav--minus">-</span>\
-      <input class="counter__number counter__field" type="number" value="'+val+'">\
-      <span class="counter__nav counter__nav--plus">+</span>\
-    </div>');
+        value += change * 1;
 
-    function inputNumUpdate(nav, change) {
-      var counter = $(nav).closest('.counter');
-      var field = counter.find('.counter__field');
-      var number = counter.find('.counter__number');
-      var value = field.val() * 1;
-
-      value += change * 1;
-
-      if (change > 0) {
-        if ((counter.attr('data-max') != 0) && (value > counter.attr('data-max'))) {
-          value = counter.attr('data-max');
+        if (change > 0) {
+          if ((counter.attr('data-max') != 0) && (value > counter.attr('data-max'))) {
+            value = counter.attr('data-max');
+          }
+        } else {
+          if (value < counter.attr('data-min')) {
+            value = counter.attr('data-min');
+          }
         }
-      } else {
-        if (value < counter.attr('data-min')) {
-          value = counter.attr('data-min');
-        }
-      }
 
-      field.val(value);
-      number.text(value);
-      field.trigger('input-num-change');
-    };
+        field.val(value);
+        number.text(value);
+        field.trigger('input-num-change');
+      };
 
-    $('.counter').on('click', '.counter__nav--minus', function(e) {
-      e.preventDefault();
+      $('.counter').on('click', '.counter__nav--minus', function(e) {
+        e.preventDefault();
 
-      inputNumUpdate(this, -1);
-      $(this).find('.counter__field').trigger('input-num-minus');
-    });
+        inputNumUpdate(this, -1);
+        $(this).find('.counter__field').trigger('input-num-minus');
+      });
 
-    $('.counter').on('click', '.counter__nav--plus', function(e) {
-      e.preventDefault();
+      $('.counter').on('click', '.counter__nav--plus', function(e) {
+        e.preventDefault();
 
-      inputNumUpdate(this, 1);
-      $(this).find('.counter__field').trigger('input-num-plus');
-    });
+        inputNumUpdate(this, 1);
+        $(this).find('.counter__field').trigger('input-num-plus');
+      });
 
-    $('.counter').on('change', '.counter__field', function(e) {
-      $(this).trigger('input-num-change');
-    });
+      $('.counter').on('change', '.counter__field', function(e) {
+        $(this).trigger('input-num-change');
+      });
+    })
   };
 });
 
@@ -190,6 +193,7 @@ $(function($){
         <div class="ds-list-arrow"></div><div class="ds-list"></div>\
       </div>');
       var items = [];
+      ds.find('.ds-top').width(sv.width())
 
       $.each(sv.find('option'), function(ok, ov) {
         var value = $(ov).attr('value') === undefined ? "" : $(ov).attr('value');

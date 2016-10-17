@@ -1268,6 +1268,7 @@ select {
   position: relative;
   padding: 0 20px 0 0;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .ds-value {
@@ -2512,8 +2513,37 @@ img.mfp-img {
   content: "";
 }
 
-.header--fixed .info-box__counter {
+.header--fixed .info-box--doc .info-box__wrap {
   display: block;
+}
+
+.header--fixed .info-box--doc .info-box__top {
+  display: none;
+}
+
+.header--fixed .info-box--doc .info-box__link {
+  font-size: 0;
+}
+
+.header--fixed .info-box__counter {
+  position: absolute;
+  top: -7px;
+  right: -1px;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 17px;
+  height: 18px;
+  padding: 2px 4px;
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 9px;
+          border-radius: 9px;
+  background: #ffcc00;
+  color: #000000;
+  text-align: center;
+  font-size: 8px;
+  font-weight: normal;
+  line-height: 12px;
 }
 
 .header--fixed .header__menu {
@@ -2889,6 +2919,7 @@ img.mfp-img {
 }
 
 .info-box__link {
+  display: inline;
   padding: 0;
   outline: none;
   border: none;
@@ -2901,27 +2932,6 @@ img.mfp-img {
 
 .info-box__link:hover {
   border-color: transparent;
-}
-
-.info-box__counter {
-  position: absolute;
-  top: -7px;
-  right: -1px;
-  display: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  min-width: 17px;
-  height: 18px;
-  padding: 2px 4px;
-  border: 2px solid #ffffff;
-  -webkit-border-radius: 9px;
-          border-radius: 9px;
-  background: #ffcc00;
-  color: #000000;
-  text-align: center;
-  font-size: 8px;
-  font-weight: normal;
-  line-height: 12px;
 }
 
 .main-slider {
@@ -8137,7 +8147,24 @@ img.mfp-img {
   }
 
   .info-box__counter {
+    position: absolute;
+    top: -7px;
+    right: -1px;
     display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-width: 17px;
+    height: 18px;
+    padding: 2px 4px;
+    border: 2px solid #ffffff;
+    -webkit-border-radius: 9px;
+            border-radius: 9px;
+    background: #ffcc00;
+    color: #000000;
+    text-align: center;
+    font-size: 8px;
+    font-weight: normal;
+    line-height: 12px;
   }
 
   .main-slider .slick-arrow {

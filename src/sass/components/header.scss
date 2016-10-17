@@ -482,10 +482,38 @@
       }
     }
   }
+  
+  &--fixed .info-box--doc {
+    .info-box__wrap {
+      display: block;
+    }
 
+    .info-box__top {
+      display: none;
+    }
+
+    .info-box__link {
+      font-size: 0;
+    }
+  }
 
   &--fixed .info-box__counter {
     display: block;
+    min-width: 17px;
+    height: 18px;
+    box-sizing: border-box;
+    background: $yellow;
+    border: 2px solid $white;
+    border-radius: 9px;
+    text-align: center;
+    color: $black;
+    font-size: 8px;
+    padding: 2px 4px;
+    line-height: 12px;
+    font-weight: normal;
+    position: absolute;
+    top: -7px;
+    right: -1px;
   }
 
   &--fixed &__menu {
