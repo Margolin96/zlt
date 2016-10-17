@@ -14,11 +14,16 @@ function validatePhone(phone) {
   else return true;
 }
 
+function tooltipError(tooltip, msg) {
+    setTimeout(function() { tooltip.attr('data-valid', ''); }, 2000);
+    tooltip.attr('data-valid', msg);
+}
+
 $('form.validate').submit(function(e) {
   e.preventDefault()
   $.each($(this).find('input:not(.not-valid)'), function(k, v) {
     if ($(v).is(':required') && ($(v).val().length == 0)) {
-      $(this).closest('.tooltip').attr('data-valid', 'Обязательное поле')
+      tooltipError($(this).closest('.tooltip'), 'Обязательное поле')
     } else {
       var valid = false;
       switch($(v).attr('type')) {
@@ -34,10 +39,10 @@ $('form.validate').submit(function(e) {
       }
 
       if (!valid) {
-        $(this).closest('.tooltip').attr('data-valid', 'Неверный формат');
+        tooltipError($(this).closest('.tooltip'), 'Неверный формат');
         e.stopPropagation()
       } else {
-        $(this).closest('.tooltip').attr('data-valid', '');
+        tooltipError($(this).closest('.tooltip'), '');
       }
     }
   })
