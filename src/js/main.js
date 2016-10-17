@@ -181,4 +181,8 @@ $(function(){
     form.find('input').slideUp(100)
     $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение часа</h3>')
   })
+  
+  // Stick node in parent init
+  $('.scroll-stick').scrollStick()
+  $('.product__right').css('min-height', $('.product__left').outerHeight())
 });
