@@ -3094,12 +3094,13 @@ img.mfp-img {
   content: "";
 }
 
-.tooltip--empty::before {
+.tooltip::before {
   content: attr(data-tooltip);
 }
 
-.tooltip--valid::before {
-  content: attr(data-valid);
+.tooltip:hover::before,
+.tooltip:hover::after {
+  display: block;
 }
 
 .tooltip[data-valid]:not([data-valid=""])::after,

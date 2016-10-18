@@ -490,6 +490,7 @@ $(function(){
   
   // Repeater init
   $('#size').repeater({max: 4});
+  $('#type').repeater({max: 2});
   
   // Custom select init
   $('.product__body-wrap .form__row:not(.form__row--template) select').dropdownSelect();
@@ -497,6 +498,9 @@ $(function(){
   $('.order-add select').dropdownSelect();
   
   $('#size').on('row-add', function(e) {
+    $(this).find('.form__row:not(.form__row--template) select').dropdownSelect();
+  });
+  $('#type').on('row-add', function(e) {
     $(this).find('.form__row:not(.form__row--template) select').dropdownSelect();
   });
 
