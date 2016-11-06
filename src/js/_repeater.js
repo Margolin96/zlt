@@ -51,7 +51,7 @@ $(function($) {
     function row_add(container) {
       var row_template = $($(container).children(atts.template).clone().removeClass(atts.template.replace('.', ''))[0].outerHTML);
       var row_count = $(container).attr('data-row-count');
-      var row_first = $(container).find(atts.row+':not('+atts.template+')')[0];
+      var row_last = $(container).find(atts.row+':not('+atts.template+'):nth-last-child(1)')[0];
 
       $(row_template).find(':input').each(function() {
         $(this).prop('disabled', false);
@@ -59,8 +59,8 @@ $(function($) {
 
       if (atts.max > 0) {
         if (row_count >= atts.max - 1) {
-          $(row_first).find(atts.add).hide();
-          $(row_first).find(atts.remove).show();
+          $(row_last).find(atts.add).hide();
+          $(row_last).find(atts.remove).show();
         }
         if (row_count >= atts.max) return false;
       }
@@ -86,11 +86,11 @@ $(function($) {
       row.remove();
       $(container).attr('data-row-count', --row_count);
 
-      var row_first = $(container).find(atts.row+':not('+atts.template+')')[0];
+      var row_last = $(container).find(atts.row+':not('+atts.template+'):nth-last-child(1)')[0];
       if (atts.max > 0) {
         if (row_count <= atts.max) {
-          $(row_first).find(atts.add).show();
-          $(row_first).find(atts.remove).hide();
+          $(row_last).find(atts.add).show();
+          $(row_last).find(atts.remove).hide();
         }
       }
     }
