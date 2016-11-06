@@ -44,7 +44,7 @@
   transition: $time all ease;
 
   &::after {
-    display: none;
+    opacity: 0;
     box-sizing: border-box;
     position: absolute;
     top: 0;
@@ -60,7 +60,7 @@
 
   &:hover {
     &::after {
-      display: block;
+      opacity: 1;
     }
   }
 }

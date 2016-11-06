@@ -182,26 +182,28 @@ $(function(){
 
   // Call order form emulation
   $('.call-order .btn--submit').click(function(e) {
-    e.preventDefault()
-    e.stopPropagation()
+    e.preventDefault();
+    e.stopPropagation();
 
-    var form = $(this).closest('form')
-    form.find('input').slideUp(100)
-    $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение часа</h3>')
+    var form = $(this).closest('form');
+    form.find('input').slideUp(100);
+    $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение часа</h3>');
   })
   
   // Stick node in parent init
-  $('.scroll-stick').scrollStick()
-  $('.product__right').css('min-height', $('.product__left').outerHeight())
-  $('.catalog__right').css('min-height', $('.catalog__left').outerHeight())
+  $('.scroll-stick').scrollStick();
+  $('.product__right').css('min-height', $('.product__left').outerHeight());
+  $('.catalog__right').css('min-height', $('.catalog__left').outerHeight());
+  
   
   // Input tel phone mask
   $('input[type=tel]').mask('+7 (999) 999-9999');
   
   // Open tab on scroll
   $('#more-info-link').click(function(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    $('#more-info #tab-all-info a').click()
+    $('#more-info #tab-all-info a').click();
   })
+
 });

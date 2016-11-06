@@ -10,4 +10,22 @@
       margin-bottom: 50px;
     }
   }
+
+  &__left {
+    @media (min-width: $desktop + 1) {
+      position: absolute;
+      top: 0;
+      width: 303px;
+
+      &.sticked-top {
+        position: fixed;
+        top: 81px;
+      }
+      &.sticked-bottom {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
 }

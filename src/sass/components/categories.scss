@@ -33,7 +33,7 @@
   }
 
   &__item:hover &__img {
-    opacity: 0;
+    opacity: .65;
   }
 
   &__list-wrap {
@@ -46,7 +46,6 @@
     max-height: 128px;
     overflow: hidden;
     transition: $time all ease;
-    background-color: #FFF;
   }
 
   &__item:hover &__list-wrap {

@@ -47,6 +47,22 @@
     }
   }
 
+  &--orange {
+    padding: 0 20px;
+    background: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    font-size: 14px;
+    line-height: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover {
+      background: darken($orange, 3%);
+      border-color: darken($orange, 3%);
+    }
+  }
+
   &--slider {
     padding: 15px 30px;
     border: 1px solid $white;

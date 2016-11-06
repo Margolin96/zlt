@@ -145,7 +145,6 @@ textarea {
   resize: vertical;
 }
 
-
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -165,4 +164,10 @@ select {
   font-size: 15px;
   font-weight: 300;
   cursor: pointer;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
