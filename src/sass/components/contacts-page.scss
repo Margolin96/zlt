@@ -1,7 +1,5 @@
 .contacts-page {
-
   &__nav {
-
     .btn {
       width: 100%;
     }
@@ -24,6 +22,32 @@
       &.sticked-bottom {
         position: absolute;
         top: auto;
+        bottom: 0;
+      }
+    }
+  }
+  
+  @media (min-width: $desktop + 1) {
+    .row {
+      position: relative;
+    }
+    &__left {
+      position: absolute;
+      width: 305px;
+      height: 100%;
+    }
+    &__right {
+      margin-left: 25%;
+    }
+    &__nav {
+      width: 285px;
+
+      &.sticked-top {
+        position: fixed;
+        top: 81px;
+      }
+      &.sticked-bottom {
+        position: absolute;
         bottom: 0;
       }
     }
