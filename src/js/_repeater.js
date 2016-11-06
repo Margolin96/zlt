@@ -51,26 +51,29 @@ $(function($) {
     function row_add(container) {
       var row_template = $($(container).children(atts.template).clone().removeClass(atts.template.replace('.', ''))[0].outerHTML);
       var row_count = $(container).attr('data-row-count');
-      var row_last = $(container).find(atts.row+':not('+atts.template+'):nth-last-child(1)')[0];
 
       $(row_template).find(':input').each(function() {
         $(this).prop('disabled', false);
       });
 
       if (atts.max > 0) {
-        if (row_count >= atts.max - 1) {
-          $(row_last).find(atts.add).hide();
-          $(row_last).find(atts.remove).show();
-        }
         if (row_count >= atts.max) return false;
       }
 
       var new_row = $(row_template).show().appendTo(container);
+      $(container).find(atts.remove).show()
+      $(container).find(atts.add).hide()
+      row_count++;
+      
+      if ((atts.max == 0) || (row_count < atts.max)) {
+        new_row.find(atts.add).show()
+        new_row.find(atts.remove).hide()
+      } else {
+        new_row.find(atts.add).hide()
+        new_row.find(atts.remove).show()
+      }
 
-      if (row_count > 0) { new_row.find(atts.add).hide() }
-      else { new_row.find(atts.remove).hide() }
-
-      $(container).attr('data-row-count', ++row_count);
+      $(container).attr('data-row-count', row_count);
 
       after_add(container, new_row);
 
@@ -87,11 +90,9 @@ $(function($) {
       $(container).attr('data-row-count', --row_count);
 
       var row_last = $(container).find(atts.row+':not('+atts.template+'):nth-last-child(1)')[0];
-      if (atts.max > 0) {
-        if (row_count <= atts.max) {
-          $(row_last).find(atts.add).show();
-          $(row_last).find(atts.remove).hide();
-        }
+      if ((atts.max == 0) || (row_count < atts.max)) {
+        $(row_last).find(atts.add).show();
+        $(row_last).find(atts.remove).hide();
       }
     }
 
