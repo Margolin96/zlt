@@ -27,6 +27,7 @@ $(function($){
 
       ds.on('click', '.ds-top', function(e) {
         e.preventDefault();
+        e.stopPropagation();
 
         if ($(this).closest('.ds').hasClass('open')) {
           $(this).closest('.ds').removeClass('open');
@@ -40,6 +41,7 @@ $(function($){
 
       ds.on('click', '.ds-option', function(e) {
         e.preventDefault();
+        e.stopPropagation();
 
         var ds = $(this).closest('.ds');
         var value = ds.find('.ds-value');
@@ -54,6 +56,10 @@ $(function($){
         ds.removeClass('open');
 
         ds.trigger('selectChoose')
+      })
+      
+      $(document).on('click', function(e) {
+        ds.removeClass('open');
       })
     })
   };
