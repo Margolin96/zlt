@@ -9215,6 +9215,8 @@ img.mfp-img {
   .about-descr__steps {
     min-height: 1px;
     padding-top: 35px;
+    -webkit-background-size: cover;
+            background-size: cover;
   }
 
   .about-descr__steps li::before {
