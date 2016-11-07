@@ -54,6 +54,7 @@
   &__body-wrap {
     border: 1px solid $border;
     position: relative;
+
     @include clearfix;
 
     @media (max-width: $tablet) {
@@ -95,6 +96,7 @@
     background: $white;
     border-right: 1px solid $border;
     font-size: 0;
+    overflow: hidden;
     
     @media (max-width: $tablet) {
       padding-left: 0;

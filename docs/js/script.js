@@ -178,26 +178,29 @@ $(function($) {
     function row_add(container) {
       var row_template = $($(container).children(atts.template).clone().removeClass(atts.template.replace('.', ''))[0].outerHTML);
       var row_count = $(container).attr('data-row-count');
-      var row_last = $(container).find(atts.row+':not('+atts.template+'):nth-last-child(1)')[0];
 
       $(row_template).find(':input').each(function() {
         $(this).prop('disabled', false);
       });
 
       if (atts.max > 0) {
-        if (row_count >= atts.max - 1) {
-          $(row_last).find(atts.add).hide();
-          $(row_last).find(atts.remove).show();
-        }
         if (row_count >= atts.max) return false;
       }
 
       var new_row = $(row_template).show().appendTo(container);
+      $(container).find(atts.remove).show()
+      $(container).find(atts.add).hide()
+      row_count++;
+      
+      if ((atts.max == 0) || (row_count < atts.max)) {
+        new_row.find(atts.add).show()
+        new_row.find(atts.remove).hide()
+      } else {
+        new_row.find(atts.add).hide()
+        new_row.find(atts.remove).show()
+      }
 
-      if (row_count > 0) { new_row.find(atts.add).hide() }
-      else { new_row.find(atts.remove).hide() }
-
-      $(container).attr('data-row-count', ++row_count);
+      $(container).attr('data-row-count', row_count);
 
       after_add(container, new_row);
 
@@ -214,11 +217,9 @@ $(function($) {
       $(container).attr('data-row-count', --row_count);
 
       var row_last = $(container).find(atts.row+':not('+atts.template+'):nth-last-child(1)')[0];
-      if (atts.max > 0) {
-        if (row_count <= atts.max) {
-          $(row_last).find(atts.add).show();
-          $(row_last).find(atts.remove).hide();
-        }
+      if ((atts.max == 0) || (row_count < atts.max)) {
+        $(row_last).find(atts.add).show();
+        $(row_last).find(atts.remove).hide();
       }
     }
 
@@ -370,6 +371,40 @@ $(window).on('scroll', function (){
     $('.header').removeClass('header--fixed');
   };
 });
+/*
+	By Osvaldas Valutis, www.osvaldas.info
+	Available for use under the MIT License
+*/
+
+'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
 /*! Magnific Popup - v1.1.0 - 2016-02-20
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2016 Dmitry Semenov; */
@@ -591,6 +626,7 @@ $(function(){
 
     $('#more-info #tab-all-info a').click();
   })
+
 
 });
 

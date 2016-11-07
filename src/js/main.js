@@ -206,4 +206,5 @@ $(function(){
     $('#more-info #tab-all-info a').click();
   })
 
+
 });

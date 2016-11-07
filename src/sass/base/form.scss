@@ -67,17 +67,6 @@
   &__upload {
     margin-top: 8px;
     position: relative;
-
-    input[type="file"] {
-      width: 150px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      z-index: 999;
-      cursor: pointer;
-    }
   }
 
   &__upload-icon {
@@ -96,6 +85,7 @@
     line-height: 20px;
     @include gray-border-link(15px);
   }
+
 }
 
 input {
@@ -170,4 +160,45 @@ input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.inputfile + label {
+  cursor: pointer;
+  overflow: hidden;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: 20px;
+    cursor: pointer;
+    @include gray-border-link(15px);
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+    cursor: pointer;
+  }
+}
+
+.no-js .inputfile + label {
+  display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: none;
 }
