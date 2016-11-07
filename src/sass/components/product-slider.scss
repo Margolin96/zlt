@@ -12,6 +12,11 @@
 
   &__for-slide {
 
+    &:not(:first-child) { 
+      opacity: 0; 
+      position: absolute; 
+    }
+
     img {
       display: block;
       margin: 0 auto;

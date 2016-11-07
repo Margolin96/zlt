@@ -3,8 +3,8 @@
   &__steps {
     margin-bottom: 40px;
     padding: 35px 0;
-    background:transparent url('../img/blue-bg.jpg') center center no-repeat;
-    background-size: cover;
+    background:transparent url('../img/pattern.jpg') top left no-repeat;
+    background-size: 1200px 675px;
     color: $white;
 
     @media (max-width: $desktop) {

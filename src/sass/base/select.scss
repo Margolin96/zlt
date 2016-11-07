@@ -32,7 +32,7 @@
   max-height: 300px;
   overflow-y: auto;
   position: absolute;
-  left: 50%;
+  left: 80%;
   top: 65px;
   z-index: 998;
   display: none;
@@ -43,6 +43,12 @@
   box-shadow: 7px 0 32px rgba(0,0,0,.13);
   text-align: left;
   margin-left: -125px;
+
+  @media (max-width: $tablet) {
+    left: 50%;
+    width: 100%;
+    max-width: 250px;
+  }
 }
 .ds-list-arrow {
   display: none;
