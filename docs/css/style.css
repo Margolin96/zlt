@@ -8507,6 +8507,7 @@ img.mfp-img {
   .modal .modal-question input[type="email"],
   .modal .modal-question textarea {
     margin-bottom: 15px;
+    font-size: 18px;
   }
 
   .modal .modal-question .btn {
