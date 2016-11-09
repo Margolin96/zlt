@@ -29,7 +29,7 @@
       <div class="container">
         <!-- menu on mobile version -->
         <button class="menu-toggle"><span>Меню</span></button>
-        <div class="menu-mobile">
+        <div class="menu-mobile menu-mobile--close">
           <button class="menu-mobile__close">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64"><path fill="#bfbfbf" d="M28.941 31.786L.613 60.114a2.014 2.014 0 1 0 2.848 2.849l28.541-28.541 28.541 28.541c.394.394.909.59 1.424.59a2.014 2.014 0 0 0 1.424-3.439L35.064 31.786 63.41 3.438A2.014 2.014 0 1 0 60.562.589L32.003 29.15 3.441.59A2.015 2.015 0 0 0 .593 3.439l28.348 28.347z"/></svg>
             <span>Меню</span>
@@ -38,12 +38,14 @@
             <li class="menu-mobile__list-item menu-mobile__list-item--arrow">
               <a href="#">О компании</a>
               <ul class="menu-mobile__sub-list">
-                <li><a href="#">Back</a></li>
+                <li><a href="#">Назад</a></li>
                 <li><a href="#">Клиенты</a></li>
                 <li><a href="#">Вакансии</a></li>
               </ul>
             </li>
-            <li class="menu-mobile__list-item"><a href="#">Оборудование</a></li>
+            <li class="menu-mobile__list-item">
+              <a href="#">Оборудование</a>
+            </li>
             <li class="menu-mobile__list-item"><a href="#">Наука</a></li>
             <li class="menu-mobile__list-item"><a href="#">Услуги</a></li>
             <li class="menu-mobile__list-item"><a href="#">Материалы</a></li>
@@ -70,7 +72,42 @@
               <li><a href="#">Статьи</a></li>
             </ul>
           </li>
-          <li class="menu-list__item"><a href="#">Оборудование</a></li>
+          <li class="menu-list__item">
+            <a href="#">Оборудование</a>
+            <div class="menu-list__subbox subbox" style="left: -302px;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <p class="subbox__title">Оборудование</p>
+                    <ul class="subbox__list">
+                      <li><a href="#">FMARK NS - лазерный гравер</a></li>
+                      <li><a href="#">FMARK NS-SF - наивысший класс безопасности</a></li>
+                      <li><a href="#">FMARK NS-FB - расширенное поле обработки</a></li>
+                      <li><a href="#">FMARK NS-M - портативный лазерный комплекс</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <p class="subbox__title">Оборудование</p>
+                    <a href="#" class="subbox__article">
+                      <div class="subbox__img"><img src="img/subbox-article-1.jpg" alt=""></div>
+                      <div class="subbox__text-wrap">
+                        <span class="subbox__article-title">Электроника и электротехника</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-lg-3">
+                    <p class="subbox__title">Лазерное оборудование в отраслях</p>
+                    <a href="#" class="subbox__article">
+                      <div class="subbox__img"><img src="img/subbox-article-2.jpg" alt=""></div>
+                      <div class="subbox__text-wrap">
+                        <span class="subbox__article-title">Электроника и электротехника</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
           <li class="menu-list__item"><a href="#">Наука</a></li>
           <li class="menu-list__item"><a href="#">Услуги</a></li>
           <li class="menu-list__item menu-list__item--tablet">
@@ -112,7 +149,42 @@
                 <li><a href="#">Статьи</a></li>
               </ul>
             </li>
-            <li class="menu-list__item"><a href="#">Оборудование</a></li>
+            <li class="menu-list__item" >
+              <a href="#">Оборудование</a>
+              <div class="menu-list__subbox subbox" style="left: -149px;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p class="subbox__title">Оборудование</p>
+                      <ul class="subbox__list">
+                        <li><a href="#">FMARK NS - лазерный гравер</a></li>
+                        <li><a href="#">FMARK NS-SF - наивысший класс безопасности</a></li>
+                        <li><a href="#">FMARK NS-FB - расширенное поле обработки</a></li>
+                        <li><a href="#">FMARK NS-M - портативный лазерный комплекс</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-3">
+                      <p class="subbox__title">Оборудование</p>
+                      <a href="#" class="subbox__article">
+                        <div class="subbox__img"><img src="img/subbox-article-1.jpg" alt=""></div>
+                        <div class="subbox__text-wrap">
+                          <span class="subbox__article-title">Электроника и электротехника</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-3">
+                      <p class="subbox__title">Лазерное оборудование в отраслях</p>
+                      <a href="#" class="subbox__article">
+                        <div class="subbox__img"><img src="img/subbox-article-2.jpg" alt=""></div>
+                        <div class="subbox__text-wrap">
+                          <span class="subbox__article-title">Электроника и электротехника</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li class="menu-list__item"><a href="#">Наука</a></li>
             <li class="menu-list__item"><a href="#">Услуги</a></li>
             <li class="menu-list__item menu-list__item--tablet">

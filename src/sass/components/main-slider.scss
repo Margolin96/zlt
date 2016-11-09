@@ -86,6 +86,7 @@
     left: 50px;
     content: '';
     z-index: 99;
+    min-width: 220px;
 
     @media (max-width: $tablet) {
       width: 100%;

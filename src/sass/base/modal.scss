@@ -143,4 +143,8 @@ body {
   outline: none;
   text-align: center;
   cursor: pointer;
+
+  @media (max-width: $tablet) {
+    right: -25px;
+  }
 }

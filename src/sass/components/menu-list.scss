@@ -42,6 +42,14 @@
     }
   }
 
+  &__item:hover > &__subbox {
+    display: block;
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
   &__item--tablet > &__sublist {
     min-width: 140px;
   }
@@ -89,7 +97,8 @@
     display: block;
   }
 
-  &__item--sublist:hover{
+  &__item--sublist:hover {
     box-shadow: 0 3px 5px rgba(0,0,0,.15);
   }
+
 }
