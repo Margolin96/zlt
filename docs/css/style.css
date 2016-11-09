@@ -1464,7 +1464,6 @@ body {
   left: 0;
   z-index: 99999999;
   display: none;
-  overflow-y: scroll;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -2770,6 +2769,8 @@ img.mfp-img {
 }
 
 .menu-mobile__list {
+  overflow-y: auto;
+  max-height: 80vh;
   padding-top: 13px;
   padding-right: 20px;
   padding-bottom: 25px;
@@ -3334,6 +3335,10 @@ img.mfp-img {
   background-position: 0 0;
   -webkit-background-size: cover;
           background-size: cover;
+}
+
+.main-slider:not(.slick-initialized) .main-slider__slide:not(:first-child) {
+  display: none;
 }
 
 .main-slider__content {
