@@ -6,7 +6,7 @@ $(window).on('scroll', function (){
     } else {
       $('.header').removeClass('header--fixed');
     };
-  } else if(($(window).width()<768) && ($('.menu-mobile').hasClass('menu-mobile--close'))) {
+  } else if($(window).width()<768) {
     if ($(this).scrollTop() > 70){
       $('.header').addClass('header--fixed');
     } else {

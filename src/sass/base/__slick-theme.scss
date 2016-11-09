@@ -67,7 +67,7 @@ $slick-opacity-not-active: 0.25 !default;
   box-sizing: border-box;
   background: transparent url('../img/arrow.svg') 48% 50% no-repeat;
   background-size: 13px 19px;
-  border: 1px solid #838383;
+  border: 1px solid  rgba(255,255,255, .75);
   border-radius: 50%;
   outline: none;
   transition: $time all;

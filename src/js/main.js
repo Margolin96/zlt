@@ -5,7 +5,6 @@ $(function(){
   $('.menu-toggle' ).click(function(){
     $('.menu-mobile').removeClass('menu-mobile--close');
     $('.menu-mobile').addClass('menu-mobile--open');
-    $('.header').removeClass('header--fixed');
   });
 
 
@@ -13,7 +12,6 @@ $(function(){
     $('.menu-mobile').removeClass('menu-mobile--open');
     $('.menu-mobile__sub-list').removeClass('menu-mobile__sub-list--open');
     $('.menu-mobile').removeClass('menu-mobile--submenu');
-    $('.header').addClass('header--fixed');
     $('.menu-mobile').addClass('menu-mobile--close');
   });
 
