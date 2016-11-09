@@ -22,6 +22,10 @@
     }
 
   }
+  
+  &:not(.slick-initialized) .main-slider__slide:not(:first-child) {
+    display: none;
+  }
 
   &__content {
     padding: 50px;
