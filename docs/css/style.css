@@ -491,6 +491,13 @@ textarea {
   src: url("../font/roboto-regular.woff2") format("woff2"), url("../font/roboto-regular.woff") format("woff"), url("../font/roboto-regular.ttf") format("truetype");
 }
 
+html {
+  -webkit-overflow-scrolling: touch;
+
+     -moz-overflow-scrolling: touch;
+          overflow-scrolling: touch;
+}
+
 body {
   background: #f0f0f0;
   color: #000000;
@@ -498,6 +505,10 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.3;
+}
+
+body.mobile--open {
+  overflow: hidden;
 }
 
 main {
@@ -2732,12 +2743,14 @@ img.mfp-img {
 }
 
 .menu-mobile {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999999;
   display: none;
+  overflow-y: auto;
   width: 100%;
+  max-height: 100%;
   background: #333333;
 }
 
@@ -2769,8 +2782,7 @@ img.mfp-img {
 }
 
 .menu-mobile__list {
-  overflow-y: auto;
-  max-height: 80vh;
+  overflow: hidden;
   padding-top: 13px;
   padding-right: 20px;
   padding-bottom: 25px;

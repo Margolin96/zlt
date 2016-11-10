@@ -434,6 +434,9 @@ $(function(){
   $('.menu-toggle' ).click(function(){
     $('.menu-mobile').removeClass('menu-mobile--close');
     $('.menu-mobile').addClass('menu-mobile--open');
+    
+    $('body').removeClass('menu-mobile--close');
+    $('body').addClass('menu-mobile--open');
   });
 
 
@@ -442,6 +445,9 @@ $(function(){
     $('.menu-mobile__sub-list').removeClass('menu-mobile__sub-list--open');
     $('.menu-mobile').removeClass('menu-mobile--submenu');
     $('.menu-mobile').addClass('menu-mobile--close');
+    
+    $('body').addClass('menu-mobile--close');
+    $('body').removeClass('menu-mobile--open');
   });
 
 
