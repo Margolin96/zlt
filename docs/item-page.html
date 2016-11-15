@@ -335,8 +335,8 @@
                     <div class="form__group">
                       <a href="#" class="link">Таблица размеров</a>
                     </div>
-                    <div class="form__group form__group--no-margin">
-                      <input type="checkbox" id="with-drawing" checked data-hide="#drawing-1">
+                    <div class="form__group form__group--no-margin form__group--drawing">
+                      <input type="checkbox" id="with-drawing" data-hide="#drawing-1" data-hide-text="#drawing-text">
                       <label for="with-drawing">С нанесением</label>
                     </div>
                   </div>
@@ -371,8 +371,11 @@
                     </div>
                   </div>
                   <!-- END Вид нанесения -->
-                  <div class="product-about__price">228, 00 руб.</div>
-                  <button class="btn btn--orange">Добавить в заказ</button>
+                  <div class="product-about__price-wrap">
+                    <div class="product-about__price">228, 00 руб.</div>
+                    <div class="product-about__drawing-text product-about__drawing-text--hidden" id="drawing-text">Цена указана без нанесения</div>
+                    <button class="btn btn--orange">Добавить в заказ</button>
+                  </div>
                 </form>
               </div>
             </div>
