@@ -27,7 +27,7 @@
 
       &.sticked-top {
         position: fixed;
-        top: 81px;
+        top: 90px;
       }
       &.sticked-bottom {
         position: absolute;
@@ -95,7 +95,8 @@
   }
 
   .item__name {
-    min-height: 70px;
+    box-sizing: border-box;
+    min-height: 75px;
 
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
       min-height: 97px;

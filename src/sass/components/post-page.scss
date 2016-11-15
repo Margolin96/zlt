@@ -112,6 +112,7 @@
     padding-top: 40px;
     padding-bottom: 30px;
     background: $white;
+    color: #3f3b39;
 
     @media (max-width: $tablet) {
       padding: 20px;
@@ -131,7 +132,6 @@
 
     p {
       padding-bottom: 20px;
-      color: #8b8b8b;
       font-size: 15px;
       line-height: 1.5;
     }

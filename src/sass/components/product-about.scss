@@ -58,7 +58,6 @@
 
   &__price {
     padding-top: 40px;
-    padding-bottom: 30px;
     font-size: 24px;
     font-weight: bold;
 
@@ -68,11 +67,32 @@
     }
   }
 
-  &__text-price {
-    padding-bottom: 35px;
+  &__text-price,
+  &__drawing-text {
     color: #a5a5a5;
     font-size: 15px;
     font-weight: 300;
+  }
+
+  &__drawing-text {
+    padding: 15px 0 0;
+    
+
+    &--hidden {
+      display: none;
+      transition: 100ms;
+    }
+  }
+
+  &__text-price {
+    padding-top: 15px;
+    padding-bottom: 35px;
+  }
+
+  &__price-wrap {
+    .btn {
+      margin-top: 30px;
+    }
   }
 
   .btn {

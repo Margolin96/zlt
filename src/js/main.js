@@ -129,6 +129,14 @@ $(function(){
   })
   $('input[data-hide]').trigger('change');
   
+  $('input[data-hide-text]').change(function(e) {
+    e.preventDefault();
+    var value = $(this).is(':checked');
+    if (value) { $($(this).attr('data-hide-text')).removeClass('product-about__drawing-text--hidden'); }
+    else { $($(this).attr('data-hide-text')).addClass('product-about__drawing-text--hidden'); }
+  })
+  $('input[data-hide-text]').trigger('change');
+
   // Repeater init
   $('#size').repeater({max: 20});
   $('#type').repeater({max: 20});
@@ -218,7 +226,5 @@ $(function(){
 
     $('#more-info #tab-all-info a').click();
   })
-
-  
 
 });

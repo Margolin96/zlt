@@ -1,0 +1,24 @@
+.files {
+  margin-top: 45px;
+
+  .col-md-4 {
+    padding-right: 20px;
+
+    @media (max-width: $tablet) {
+      padding-right: 0;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      &:nth-child(3n+4) {
+        clear: left;
+      }
+    }
+  }
+  
+  .doc-file {
+    @media (max-width: $desktop) {
+      margin-bottom: 30px;
+    }
+  }
+
+}
