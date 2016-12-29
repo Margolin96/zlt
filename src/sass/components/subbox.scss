@@ -47,13 +47,15 @@
   }
 
   &__img {
+    height: 235px;
+    font-size: 0;
+    overflow: hidden;
 
     img {
       margin: 0 auto;
       display: block;
-      width: 100%;
       max-width: 100%;
-      height: auto;
+      max-height: 235px;
     }
 
     @include dark-img-hover;
@@ -67,6 +69,8 @@
 
   &__text-wrap {
     padding: 15px 20px;
+    min-height: 76px;
+    box-sizing: border-box;
   }
 
   &__article-title {

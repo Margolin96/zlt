@@ -50,6 +50,8 @@
 
   &__video {
     display: block;
+    margin-bottom: 20px;
+    outline: none;
     position: relative;
 
     @media (max-width: $tablet) {
@@ -94,6 +96,8 @@
   &__link {
     display: block;
     outline: none;
+    height: 176px;
+    overflow: hidden;
     position: relative;
 
     img {

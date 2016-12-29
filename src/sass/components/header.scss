@@ -534,6 +534,8 @@
   }
 
   &--fixed .menu-list__sublist {
+    padding: 18px 12px;
+
     @media (min-width: $tablet + 1) and (max-width: $desktop) {
       padding: 15px 12px;
     }

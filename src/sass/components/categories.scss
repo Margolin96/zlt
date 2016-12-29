@@ -23,12 +23,15 @@
   }
 
   &__img {
+    height: 170px;
+    overflow: hidden;
     transition: $time all ease;
 
     img {
       display: block;
+      margin: 0 auto;
       max-width: 100%;
-      height: auto;
+      height: 170px;
     }
   }
 

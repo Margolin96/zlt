@@ -25,6 +25,7 @@
       display: inline-block;
       padding: 20px 0;
       color: $black;
+      outline: none;
 
       &:hover {
         color: $blue;
@@ -71,7 +72,7 @@
 
   &__sublist {
     display: none;
-    width: 100%;
+    min-width: 100%;
     box-sizing: border-box;
     padding: 18px 33px 25px;
     background: $white;

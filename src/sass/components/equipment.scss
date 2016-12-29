@@ -9,12 +9,12 @@
   &__item {
     display: block;
     margin-bottom: 20px;
-    min-height: 410px;
+    height: 445px;
     position: relative;
   }
 
   &__item-wrap {
-    min-height: 410px;
+    height: 445px;
     padding: 20px;
     box-sizing: border-box;
     background: $white;
@@ -63,17 +63,19 @@
   }
 
   .banner {
-    min-height: 405px;
+    height: 445px;
   }
 
   &__item-img {
+    height: 220px;
+    overflow: hidden;
     margin-bottom: 20px;
 
     img {
       margin: 0 auto;
       display: block;
       max-width: 100%;
-      height: auto;
+      max-height: 220px;
     }
   }
 
@@ -84,6 +86,7 @@
   &__item-list {
     padding-top: 15px;
     padding-left: 15px;
+    min-height: 100px;
 
     li {
       color: #737373;
