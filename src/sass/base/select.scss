@@ -14,6 +14,10 @@
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
+
+  @media (max-width: $tablet) {
+    text-align: left;
+  }
 }
 .ds-arrow {
   position: absolute;
@@ -23,7 +27,7 @@
   right: 0;
   width: 9px;
   border: 0;
-  background: url(../img/select.svg) 88% center/9px 6px no-repeat #fff;
+  background: transparent url('../img/select.svg') 88% center/9px 6px no-repeat;
 }
 .ds.open .ds-arrow {
   transform: rotate(180deg);

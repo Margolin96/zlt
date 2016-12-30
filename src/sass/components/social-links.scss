@@ -1,25 +1,36 @@
 .social-links {
 
-  li {
+  &__item {
     margin-right: 17px;
     display: inline-block;
     font-size: 0;
 
     a {
       display: inline-block;
+      width: 26px;
+      height: 26px;
       vertical-align: middle;
       line-height: 22px;
-
-      path {
-        fill: #474747;
-      }
+      opacity: .75;
 
       &:hover {
-
-        path {
-          fill: #858585;
-        }
+        opacity: 1;
       }
+    }
+
+    &--insta > a {
+      background: transparent url('../img/svg/instagram.svg') center center no-repeat;
+      background-size: 22px;
+    }
+
+    &--vk > a {
+      background: transparent url('../img/svg/vk-footer.svg') center center no-repeat;
+      background-size: 26px 15px;
+    }
+
+    &--utube > a {
+      background: transparent url('../img/svg/youtube.svg') center center no-repeat;
+      background-size: 25px 17px;
     }
   }
 }

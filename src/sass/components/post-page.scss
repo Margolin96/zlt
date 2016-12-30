@@ -9,7 +9,6 @@
         font-size: 40px;
       }
     }
-
   }
 
   &__about {
@@ -64,7 +63,78 @@
     }
   }
 
+  .pluso {
+    width: 50%;
+    float: right;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 0;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      text-align: left;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 40%;
+    }
+
+    .pluso-wrap {
+      padding: 0;
+      background-color: transparent!important;
+
+      a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-left: 1px;
+        margin-bottom: 1px;
+        background: rgba(255, 255, 255, .5);
+        text-align: center;
+        line-height: 50px;
+
+        @media (max-width: $tablet) {
+          margin-left: 0;
+          margin-right: 1px;
+        }
+
+        &:hover {
+          opacity: .85;
+        }
+
+        &:active {
+          opacity: .65;
+        }
+
+        &.pluso-vkontakte {
+          background: rgba(255, 255, 255, .5) url('../img/svg/vk.svg') center center no-repeat;
+          background-size: 25px 20px;
+        }
+
+        &.pluso-facebook {
+          background: rgba(255, 255, 255, .5) url('../img/svg/facebook.svg') center center no-repeat;
+          background-size: 20px 20px;
+        }
+
+        &.pluso-twitter {
+          background: rgba(255, 255, 255, .5) url('../img/svg/twitter.svg') center center no-repeat;
+          background-size: 20px 20px;
+        }
+
+        &.pluso-more {
+          display: none;
+        }
+      }
+    }
+
+    .pluso-counter {
+      display: none;
+    }
+  }
+
   &__repost {
+    display: none;
     width: 50%;
     float: right;
     margin: 0;

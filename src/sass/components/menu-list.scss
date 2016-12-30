@@ -105,6 +105,10 @@
     }
   }
 
+  &__item:first-child &__sublist {
+    padding-left: 20px;
+  }
+
   & > li:hover &__sublist {
     display: block;
   }
