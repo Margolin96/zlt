@@ -462,17 +462,17 @@ $(function(){
     $('.menu-mobile').removeClass('menu-mobile--submenu');
   });
 
-  $('.menu-list__item--sublist' ).click(function(){
+  $('.menu-list__item--sublist > a' ).click(function(){
     event.preventDefault();
     $(this).toggleClass('menu-list__item--subopen');
   });
 
-  $('.menu-list__item--subbox' ).click(function(){
+  $('.menu-list__item--subbox > a' ).click(function(){
     event.preventDefault();
     $(this).toggleClass('menu-list__item--subopen');
   });
 
-  $('.menu-list__item--tablet' ).click(function(){
+  $('.menu-list__item--tablet > a' ).click(function(){
     event.preventDefault();
     $(this).toggleClass('menu-list__item--subopen');
   });
@@ -623,12 +623,12 @@ $(function(){
     return $(shuffled);
   };
   $('.ds').on('selectChoose', function() { $('.catalog__items .item').shuffle(); });
-  $('.category-nav__item').click(function(e) {
-    e.preventDefault();
-    $(this).closest('.category-nav__list').find('.category-nav__list-item--active').removeClass('category-nav__list-item--active');
-    $(this).closest('li').addClass('category-nav__list-item--active');
-    $('.catalog__items .item').shuffle();
-  });
+  // $('.category-nav__item').click(function(e) {
+  //   e.preventDefault();
+  //   $(this).closest('.category-nav__list').find('.category-nav__list-item--active').removeClass('category-nav__list-item--active');
+  //   $(this).closest('li').addClass('category-nav__list-item--active');
+  //   $('.catalog__items .item').shuffle();
+  // });
 
   // Call order form emulation
   $('.call-order .btn--submit').click(function(e) {
@@ -656,6 +656,44 @@ $(function(){
     $('#more-info #tab-all-info a').click();
   })
 
+  // Product form "add-to-cart" interaction
+  var form = $('.product-about form.form')
+  if (form.length > 0) {
+    var formSubmitBtn = form.find('.product-about__price-wrap .btn--orange')
+    var formCounter = $('.header .info-box.info-box--cart .info-box__counter')
+    var formTrigger = false
+
+    // Debug
+    var formCounter = $('.header .info-box .info-box__counter')
+    formCounter.html(1)
+
+    form.submit(function(e) {
+      // Prevent multiple clicking
+      if (formTrigger) return false
+      else formTrigger = true
+
+      // Prevent form processing
+      e.preventDefault()
+      e.stopPropagation()
+
+      // Change btn to "loading" state
+      setTimeout(function() {
+        setTimeout(function() { formSubmitBtn.text('Добавить в заказ') }, 100)
+        setTimeout(function() { formSubmitBtn.css({color: '#FFF'}) }, 200)
+        formSubmitBtn.css({color: '#ffa800', background: '#ffa800'})
+
+        formTrigger = false
+      }, 1000)
+
+      // Update header formCounter
+      formCounter.html(Number(formCounter.html()) + 1)
+
+      // Change btn to "ready" state
+      setTimeout(function() { formSubmitBtn.text('Добавлено') }, 100)
+      setTimeout(function() { formSubmitBtn.css({color: '#FFF'}) }, 200)
+      formSubmitBtn.css({color: '#f09e00', background: '#f09e00'})
+    })
+  }
 });
 
 'use strict';
