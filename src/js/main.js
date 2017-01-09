@@ -227,4 +227,42 @@ $(function(){
     $('#more-info #tab-all-info a').click();
   })
 
+  // Product form "add-to-cart" interaction
+  var form = $('.product-about form.form')
+  if (form.length > 0) {
+    var formSubmitBtn = form.find('.product-about__price-wrap .btn--orange')
+    var formCounter = $('.header .info-box.info-box--cart .info-box__counter')
+    var formTrigger = false
+
+    // Debug
+    var formCounter = $('.header .info-box .info-box__counter')
+    formCounter.html(1)
+
+    form.submit(function(e) {
+      // Prevent multiple clicking
+      if (formTrigger) return false
+      else formTrigger = true
+
+      // Prevent form processing
+      e.preventDefault()
+      e.stopPropagation()
+
+      // Change btn to "loading" state
+      setTimeout(function() {
+        setTimeout(function() { formSubmitBtn.text('Добавить в заказ') }, 100)
+        setTimeout(function() { formSubmitBtn.css({color: '#FFF'}) }, 200)
+        formSubmitBtn.css({color: '#ffa800', background: '#ffa800'})
+
+        formTrigger = false
+      }, 1000)
+
+      // Update header formCounter
+      formCounter.html(Number(formCounter.html()) + 1)
+
+      // Change btn to "ready" state
+      setTimeout(function() { formSubmitBtn.text('Добавлено') }, 100)
+      setTimeout(function() { formSubmitBtn.css({color: '#FFF'}) }, 200)
+      formSubmitBtn.css({color: '#f09e00', background: '#f09e00'})
+    })
+  }
 });
