@@ -16,7 +16,8 @@ $(function($){
 
       $.each(sv.find('option'), function(ok, ov) {
         var value = $(ov).attr('value') === undefined ? "" : $(ov).attr('value');
-        value = $('<div class="ds-option" data-value="' + value + '">' + $(ov).html() + '</div>')
+        var selected = $(ov).is(':selected') ? "selected" : "";
+        value = $('<div class="ds-option '+ selected +'" data-value="' + value + '">' + $(ov).html() + '</div>')
         items.push(value);
       });
 
