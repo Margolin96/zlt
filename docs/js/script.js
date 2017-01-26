@@ -312,7 +312,7 @@ $(function($){
       if (selected >= 0) {
         var si = ds.find('.ds-option')[selected];
         if (si) {
-          ds.find('.ds-value').html(si.html());
+          ds.find('.ds-value').html($(si).html());
           ds.find('.ds-field').val(si.attr('data-value'));
           si.addClass('selected');
         }
@@ -330,7 +330,7 @@ $(function($){
           $(this).closest('.ds').addClass('open');
           $(this).closest('.ds').trigger('selectOpen');
         }
-      })
+      });
 
       ds.on('click', '.ds-option', function(e) {
         e.preventDefault();
@@ -349,11 +349,11 @@ $(function($){
         ds.removeClass('open');
 
         ds.trigger('selectChoose');
-      })
+      });
       
       $(document).on('click', function(e) {
         ds.removeClass('open');
-      })
+      });
     })
   };
 });

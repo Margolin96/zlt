@@ -5242,6 +5242,8 @@ img.mfp-img {
 
 .category-nav__group-name--open + .category-nav__list {
   display: block;
+  overflow-y: scroll;
+  max-height: 300px;
 }
 
 .category-nav__list-item {

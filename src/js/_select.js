@@ -50,7 +50,7 @@ $(function($){
           $(this).closest('.ds').addClass('open');
           $(this).closest('.ds').trigger('selectOpen');
         }
-      })
+      });
 
       ds.on('click', '.ds-option', function(e) {
         e.preventDefault();
@@ -69,11 +69,11 @@ $(function($){
         ds.removeClass('open');
 
         ds.trigger('selectChoose');
-      })
+      });
       
       $(document).on('click', function(e) {
         ds.removeClass('open');
-      })
+      });
     })
   };
 });
