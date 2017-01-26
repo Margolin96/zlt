@@ -7,10 +7,7 @@ $(function($){
       sv = $(sv);
 
       var input = $('<input class="ds-field" type="hidden" name="' + sv.attr('name') + '">');
-      var ds = $(`<div class="ds" data-name="` + sv.attr('name') + `">
-        <div class="ds-top"><i class="ds-arrow"></i><div class="ds-value"></div></div>
-        <div class="ds-list-arrow"></div><div class="ds-list"></div>
-      </div>`);
+      var ds = $('<div class="ds" data-name="' + sv.attr('name') + '"><div class="ds-top"><i class="ds-arrow"></i><div class="ds-value"></div></div><div class="ds-list-arrow"></div><div class="ds-list"></div></div>');
       var items = [];
       ds.find('.ds-top').width(sv.width());
 
@@ -45,7 +42,7 @@ $(function($){
           $(this).closest('.ds').removeClass('open');
           $(this).closest('.ds').trigger('selectClose');
         } else {
-          $('.ds').removeClass('open')
+          $('.ds').removeClass('open');
           $(this).closest('.ds').addClass('open');
           $(this).closest('.ds').trigger('selectOpen');
         }
@@ -67,7 +64,7 @@ $(function($){
 
         ds.removeClass('open');
 
-        ds.trigger('selectChoose')
+        ds.trigger('selectChoose');
       })
       
       $(document).on('click', function(e) {
