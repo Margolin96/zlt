@@ -57,6 +57,8 @@
 
   &__group-name--open + &__list {
     display: block;
+    max-height: 300px;
+    overflow-y: scroll;
 
     @media (max-width: $tablet) {
       border-bottom: 1px solid $light-gray;
