@@ -57,7 +57,7 @@
 
   &__img {
     outline: none;
-    
+
     img {
       display: block;
       width: 100%;
@@ -75,6 +75,8 @@
   }
 
   &--text &__img {
+    height: 153px;
+    overflow: hidden;
 
     &--mobile {
       display: none;
@@ -124,6 +126,14 @@
   }
 
   &--text &__text-wrap {
+    height: 206px;
+    overflow: hidden;
+
+    p {
+      max-height: 128px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
 
     @media (max-width: $tablet) {
       display: inline-block;

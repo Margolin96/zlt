@@ -491,6 +491,13 @@ textarea {
   src: url("../font/roboto-regular.woff2") format("woff2"), url("../font/roboto-regular.woff") format("woff"), url("../font/roboto-regular.ttf") format("truetype");
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   -webkit-overflow-scrolling: touch;
 
@@ -512,7 +519,11 @@ body.mobile--open {
 }
 
 main {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100%;
   padding-top: 240px;
+  padding-bottom: 443px;
 }
 
 ul {
@@ -2636,6 +2647,8 @@ img.mfp-img {
           box-sizing: border-box;
   min-width: 200px;
   padding: 22px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
   line-height: 1.1;
 }
@@ -3092,6 +3105,11 @@ img.mfp-img {
   border-color: transparent;
 }
 
+.subbox__list > li > a:hover {
+  border-color: transparent;
+  color: #30a4dc;
+}
+
 .subbox__title {
   color: #b8b8b8;
   text-transform: uppercase;
@@ -3482,7 +3500,7 @@ img.mfp-img {
 }
 
 .divisions__item--main {
-  min-height: 360px;
+  min-height: 395px;
 }
 
 .divisions__item-title {
@@ -3502,6 +3520,7 @@ img.mfp-img {
 .divisions__links {
   z-index: 10;
   max-width: 175px;
+  height: 63px;
   margin-bottom: 35px;
 }
 
@@ -3816,6 +3835,7 @@ img.mfp-img {
   display: block;
   max-width: 100%;
   height: auto;
+  max-height: 600px;
   margin: 0 auto;
 }
 
@@ -6556,6 +6576,11 @@ img.mfp-img {
   opacity: 1;
 }
 
+.technology--text .technology__img {
+  overflow: hidden;
+  height: 153px;
+}
+
 .technology--text .technology__img--mobile {
   display: none;
 }
@@ -6577,6 +6602,18 @@ img.mfp-img {
 
 .technology--other .technology__text-wrap {
   min-height: auto;
+}
+
+.technology--text .technology__text-wrap {
+  overflow: hidden;
+  height: 206px;
+}
+
+.technology--text .technology__text-wrap p {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 128px;
 }
 
 .technology__name {
@@ -6993,6 +7030,7 @@ img.mfp-img {
 }
 
 .footer {
+  margin-top: -443px;
   padding-top: 60px;
   background: #191919;
 }

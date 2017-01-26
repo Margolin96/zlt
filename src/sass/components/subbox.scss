@@ -28,6 +28,10 @@
         font-weight: normal;
         text-transform: none;
         
+        &:hover {
+          color: $blue;
+          border-color: transparent;
+        }
       }
     }
   }
