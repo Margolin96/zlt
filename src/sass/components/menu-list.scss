@@ -55,7 +55,8 @@
   }
 
   &__item:hover > &__subbox {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 
     @media (max-width: $desktop) {
       display: none;
