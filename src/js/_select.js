@@ -32,7 +32,7 @@ $(function($){
       if (selected >= 0) {
         var si = ds.find('.ds-option')[selected];
         if (si) {
-          ds.find('.ds-value').html(si.html());
+          ds.find('.ds-value').html($(si).html());
           ds.find('.ds-field').val(si.attr('data-value'));
           si.addClass('selected');
         }
