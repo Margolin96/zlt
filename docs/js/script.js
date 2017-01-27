@@ -311,7 +311,7 @@ $(function($){
       
       if (selected >= 0) {
         var si = ds.find('.ds-option')[selected];
-        if (si) {
+        if (si.length > 0) {
           ds.find('.ds-value').html($(si).html());
           ds.find('.ds-field').val(si.attr('data-value'));
           si.addClass('selected');
@@ -899,7 +899,7 @@ $(function () {
 
     tabControls.forEach(function(tabControl) {
       tabControl.addEventListener('click', function(event) {
-        event.preventDefault();
+        // event.preventDefault();
 
         var target = tabControl.dataset.target;
         var tabParent = tabControl.parentNode.classList[0];
@@ -932,4 +932,23 @@ $(function () {
       });
     });
   }
+
+  // var x = location.hash;
+  // if(x) {
+  //   for (i = 0; i < tabControls.length; i++) {
+      
+  //     // $(tabControls[i]).parent().removeClass('contacts-list__item--active');
+  //     // $('.contacts__item').removeClass('js-tab--active');
+  //     var t = tabControls[i];
+  //     if (t.matches("a[href$='" + x + "']")) {
+  //       alert( "Ссылка на архив: " + x );
+  //       tabControls[i].parent().addClass('contacts-list__item--active');
+  //       var t = tabControls[i].dataset.target;
+  //       $('.' + t).addClass('js-tab--active');
+  //     } break;
+  //   }
+  // } else {
+  //   console.log('HEr');
+  // }
+
 })();
