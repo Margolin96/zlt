@@ -1,0 +1,104 @@
+.materials {
+
+  &__head {
+    margin: 60px 0 0;
+    padding: 0;
+    color: #3f3b39;
+    font-size: 16px;
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  &__descr {}
+
+  &__items {}
+
+  &__items-head {
+    padding: 25px 20px;
+    color: #a2a2a2;
+    font-size: 0;
+  }
+
+  &__col-1,
+  &__col-2,
+  &__col-3,
+  &__col-4,
+  &__col-5,
+  &__col-6,
+  &__col-7 {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  &__col-1 {
+    width: 16%;
+  }
+
+  &__col-2 {
+    width: 10.5%;
+  }
+
+  &__col-3 {
+    width: 10%;
+  }
+
+  &__col-4 {
+    width: 12.5%;
+  }
+
+  &__col-5 {
+    width: 15.5%;
+  }
+
+  &__col-6 {
+    width: 13.5%;
+  }
+
+  &__col-7 {
+    width: 12%;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    background: $white;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 0;
+    font-family: $roboto;
+    font-weight: normal;
+  }
+
+  &__name {
+    @include gray-border-link(18px);
+  }
+
+  &__code {
+    padding: 8px 0px 10px;
+    color: #b1b1b1;
+    font-family: $roboto;
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  &__price {
+    font-family: $roboto;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .counter {
+    margin-top: 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+}

@@ -15,6 +15,12 @@
     }
   }
 
+  &--materials {
+    .filter__item {
+      margin-left: 30px;
+    }
+  }
+
   &__head {
     margin-bottom: 60px;
     padding-bottom: 25px;
