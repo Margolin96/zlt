@@ -1,10 +1,27 @@
 .materials {
+  padding-bottom: 5px;
 
   &__head {
     margin: 60px 0 0;
     padding: 0;
     color: #3f3b39;
     font-size: 16px;
+    line-height: 1.5;
+
+    p {
+      padding: 0 0 10px;
+    }
+
+    @media (max-width: $desktop) {
+      margin-top: 45px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: 40px;
+      margin-bottom: 35px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $border;
+    }
   }
 
   &__title {
@@ -14,14 +31,23 @@
     font-weight: normal;
   }
 
-  &__descr {}
+  &__items {
 
-  &__items {}
+    img {
+      display: block;
+      max-width: 80px;
+      height: auto;
+    }
+  }
 
   &__items-head {
-    padding: 25px 20px;
+    padding: 25px 20px 20px;
     color: #a2a2a2;
     font-size: 0;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__col-1,
@@ -39,30 +65,89 @@
 
   &__col-1 {
     width: 16%;
+
+    @media (max-width: $desktop) {
+      width: 24%;
+    }
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      width: 140px;
+      top: 15px;
+      right: 20px;
+    }
   }
 
   &__col-2 {
     width: 10.5%;
+
+    @media (max-width: $desktop) {
+      width: 16%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-left: 20px;
+    }
   }
 
   &__col-3 {
     width: 10%;
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
   }
 
   &__col-4 {
     width: 12.5%;
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
   }
 
   &__col-5 {
     width: 15.5%;
+
+    @media (max-width: $desktop) {
+      width: 22%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 50%;
+      padding-left: 20px;
+      padding-top: 30px;
+    }
   }
 
   &__col-6 {
     width: 13.5%;
+
+    @media (max-width: $desktop) {
+      width: 18%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 50%;
+      text-align: right;
+      padding-top: 30px;
+      padding-right: 20px;
+    }
   }
 
   &__col-7 {
     width: 12%;
+
+    @media (max-width: $desktop) {
+      width: 20%;
+    }
+
+    @media (max-width: $tablet) {
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+    }
   }
 
   &__item {
@@ -73,18 +158,42 @@
     font-size: 0;
     font-family: $roboto;
     font-weight: normal;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      padding: 0;
+      padding-top: 20px;
+    }
   }
 
   &__name {
     @include gray-border-link(18px);
+    font-family: $proxima;
   }
 
   &__code {
-    padding: 8px 0px 10px;
+    padding: 8px 0px;
     color: #b1b1b1;
     font-family: $roboto;
     font-weight: normal;
     font-size: 13px;
+  }
+
+  &__details {
+    display: none;
+    font-size: 13px;
+    line-height: 1.6;
+
+    @media (max-width: $desktop) {
+      display: block;
+    }
+  }
+
+  &__detail {
+
+    span {
+      color: #c8c8c8;
+    }
   }
 
   &__price {
@@ -95,6 +204,13 @@
 
   .counter {
     margin-top: 0;
+  }
+
+  .counter__number {
+    @media (max-width: $tablet) {
+      width: 45px;
+      text-align: center;
+    }
   }
 
   .btn {
