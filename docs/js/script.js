@@ -94,23 +94,26 @@ $(function($){
         <input class="counter__number counter__field" type="number" value="'+val+'">\
         <span class="counter__nav counter__nav--plus">+</span>\
       </div>')
+
+      var container = input.attr('data-container') === undefined ? nInput : input.closest(input.attr('data-container'))
+
       input.replaceWith(nInput)
 
-      nInput.on('click', '.counter__nav--minus', function(e) {
+      container.on('click', '.counter__nav--minus', function(e) {
         e.preventDefault()
 
         inputNumUpdate(this, -1)
         $(this).find('.counter__field').trigger('input-num-minus')
       })
 
-      nInput.on('click', '.counter__nav--plus', function(e) {
+      container.on('click', '.counter__nav--plus', function(e) {
         e.preventDefault()
 
         inputNumUpdate(this, 1)
         $(this).find('.counter__field').trigger('input-num-plus')
       })
 
-      nInput.on('change', '.counter__field', function(e) {
+      container.on('change', '.counter__field', function(e) {
         $(this).trigger('input-num-change')
       })
     })
