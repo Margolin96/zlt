@@ -54,7 +54,7 @@
     }
   }
 
-  &__item > a:hover + &__subbox {
+  &__item:hover &__subbox {
     opacity: 1;
     visibility: visible;
 
