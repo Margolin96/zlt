@@ -155,4 +155,46 @@
     background: $light-gray;
     border-left: 1px solid $border;
   }
+
+  .counter {
+    margin-top: 0;
+  }
+
+  .counter__nav {
+    width: 37px;
+    height: 50px;
+    line-height: 50px;
+    background: $white;
+
+    &--minus {
+      margin-right: 4px;
+    }
+
+    &--plus {
+      margin-left: 4px;
+    }
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 45px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 35px;
+    }
+  }
+
+  .counter__number {
+    width: 56px;
+    height: 50px;
+    border: none;
+    text-align: center;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      width: 72px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 57px;
+    }
+  }
 }

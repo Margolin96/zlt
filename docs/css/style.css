@@ -2868,13 +2868,14 @@ img.mfp-img {
   position: relative;
 }
 
-.menu-mobile__list-item--arrow::after {
+.menu-mobile__list-item--arrow a > span {
   position: absolute;
   top: 10px;
   right: 0;
-  width: 20px;
-  height: 20px;
-  background: transparent url("../img/arrow-gray.svg") 0 0 no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: transparent url("../img/arrow-gray.svg") 0 13px no-repeat;
   -webkit-background-size: 15px 15px;
           background-size: 15px 15px;
   content: "";
@@ -2995,7 +2996,7 @@ img.mfp-img {
   position: static;
 }
 
-.menu-list__item:hover > .menu-list__subbox {
+.menu-list__item > a:hover + .menu-list__subbox {
   visibility: visible;
   opacity: 1;
 }
@@ -3746,6 +3747,32 @@ img.mfp-img {
   background: #f0f0f0;
 }
 
+.product .counter {
+  margin-top: 0;
+}
+
+.product .counter__nav {
+  width: 37px;
+  height: 50px;
+  background: #ffffff;
+  line-height: 50px;
+}
+
+.product .counter__nav--minus {
+  margin-right: 4px;
+}
+
+.product .counter__nav--plus {
+  margin-left: 4px;
+}
+
+.product .counter__number {
+  width: 56px;
+  height: 50px;
+  border: none;
+  text-align: center;
+}
+
 .product-about__row {
   padding-top: 30px;
 }
@@ -3781,18 +3808,6 @@ img.mfp-img {
 .product-about__color-item input[type="radio"]:checked + label {
   -webkit-box-shadow: 0 0 0 2px #30a4dc;
           box-shadow: 0 0 0 2px #30a4dc;
-}
-
-.product-about__counter input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  padding: 15px;
-  border: none;
-  background: #ffffff;
-  text-align: center;
-  font-size: 15px;
 }
 
 .product-about__doc-file {
@@ -7481,6 +7496,14 @@ img.mfp-img {
     border-bottom: 1px solid #d8d8d8;
   }
 
+  .product .counter__nav {
+    width: 45px;
+  }
+
+  .product .counter__number {
+    width: 72px;
+  }
+
   .news-page__post {
     padding: 30px 25px;
   }
@@ -8617,7 +8640,7 @@ img.mfp-img {
     display: block;
   }
 
-  .menu-list__item:hover > .menu-list__subbox {
+  .menu-list__item > a:hover + .menu-list__subbox {
     display: none;
   }
 
@@ -9283,6 +9306,14 @@ img.mfp-img {
     padding-right: 0;
     padding-bottom: 20px;
     padding-left: 0;
+  }
+
+  .product .counter__nav {
+    width: 35px;
+  }
+
+  .product .counter__number {
+    width: 57px;
   }
 
   .product-about {

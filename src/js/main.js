@@ -22,7 +22,7 @@ $(function(){
   });
 
 
-  $('.menu-mobile__list-item--arrow a' ).click(function(){
+  $('.menu-mobile__list-item--arrow a > span' ).click(function(){
     $('.menu-mobile__sub-list').addClass('menu-mobile__sub-list--open');
     $('.menu-mobile').addClass('menu-mobile--submenu');
   });

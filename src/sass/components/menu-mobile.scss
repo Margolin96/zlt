@@ -55,10 +55,11 @@
     &--arrow {
       position: relative;
 
-      &::after {
-        width: 20px;
-        height: 20px;
-        background: transparent url('../img/arrow-gray.svg') 0 0 no-repeat;
+      & a > span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: transparent url('../img/arrow-gray.svg') 0 13px no-repeat;
         background-size: 15px 15px;
         transform: rotate(180deg);
         position: absolute;
