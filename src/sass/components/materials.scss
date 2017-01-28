@@ -167,8 +167,14 @@
   }
 
   &__name {
-    @include gray-border-link(18px);
+    display: inline-block;
     font-family: $proxima;
+    border-bottom: 1px solid #d9d9d9;
+    color: $black;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1.4;
   }
 
   &__code {

@@ -42,22 +42,19 @@
     });
   }
 
-  // var x = location.hash;
-  // if(x) {
-  //   for (i = 0; i < tabControls.length; i++) {
-      
-  //     // $(tabControls[i]).parent().removeClass('contacts-list__item--active');
-  //     // $('.contacts__item').removeClass('js-tab--active');
-  //     var t = tabControls[i];
-  //     if (t.matches("a[href$='" + x + "']")) {
-  //       alert( "Ссылка на архив: " + x );
-  //       tabControls[i].parent().addClass('contacts-list__item--active');
-  //       var t = tabControls[i].dataset.target;
-  //       $('.' + t).addClass('js-tab--active');
-  //     } break;
-  //   }
-  // } else {
-  //   console.log('HEr');
-  // }
-
+  var x = location.hash;
+  if(x) {
+    for (i = 0; i < tabControls.length; i++) {
+      console.log(i);
+      console.log(tabControls[i]);
+      var t = tabControls[i];
+      if (tabControls[i].matches("a[href$='" + x + "']")) {
+        $('.contacts-list__item').removeClass('contacts-list__item--active');
+        $('.contacts__item').removeClass('js-tab--active');
+        $(tabControls[i]).parent().addClass('contacts-list__item--active');
+        var t = tabControls[i].dataset.target;
+        $('.' + t).addClass('js-tab--active');
+      }
+    }
+  }
 })();

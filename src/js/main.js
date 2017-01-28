@@ -118,7 +118,7 @@ $(function(){
   });
   
   // Custom number input init
-  $('input[type=number]').inputNum();
+  $('.counter input[type=number]').inputNum();
   
   // Hide-by-checkbox init
   $('input[data-hide]').change(function(e) {
