@@ -30,7 +30,7 @@ $(function($){
       sv.replaceWith(ds);
       
       if (selected >= 0) {
-        var si = ds.find('.ds-option')[selected];
+        var si = $(ds.find('.ds-option')[selected]);
         if (si.length > 0) {
           ds.find('.ds-value').html(si.html());
           ds.find('.ds-field').val(si.attr('data-value'));
