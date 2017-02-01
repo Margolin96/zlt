@@ -26,4 +26,13 @@
     }
   }
 
+  .item__name {
+    box-sizing: border-box;
+    min-height: 75px;
+
+    @media (min-width: $tablet + 1) and (max-width: $desktop) {
+      min-height: 97px;
+    }
+  }
+
 }

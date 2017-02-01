@@ -208,7 +208,7 @@ $(function(){
 
     var form = $(this).closest('form');
     form.find('input').slideUp(100);
-    $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение часа</h3>');
+    $(this).replaceWith('<h3 style="margin-top: 10px">Спасибо! Перезвоним Вам в течение 15 минут</h3>');
   })
   
   // Stick node in parent init
