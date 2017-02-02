@@ -28,21 +28,22 @@ $(function($){
     var inputs = $(this.get())
 
     $.each(inputs, function(k, input) {
-      input = $(input)
+      inp = $(input)
+      input.className += ' counter__number counter__field'
 
-      var val = input.val() === '' ? 1 : input.val()
-      var min = input.attr('min') === undefined ? 1 : input.attr('min')
-      var max = input.attr('max') === undefined ? 0 : input.attr('max')
+      var val = inp.val() === '' ? 1 : inp.val()
+      var min = inp.attr('min') === undefined ? 1 : inp.attr('min')
+      var max = inp.attr('max') === undefined ? 0 : inp.attr('max')
 
       var nInput = $('<div class="counter" data-min="'+min+'" data-max="'+max+'">\
         <span class="counter__nav counter__nav--minus">-</span>\
-        <input class="counter__number counter__field" type="number" value="'+val+'">\
+        ' + input.outerHTML + '\
         <span class="counter__nav counter__nav--plus">+</span>\
       </div>')
 
-      var container = input.attr('data-container') === undefined ? nInput : input.closest(input.attr('data-container'))
+      var container = inp.attr('data-container') === undefined ? nInput : inp.closest(inp.attr('data-container'))
 
-      input.replaceWith(nInput)
+      inp.replaceWith(nInput)
 
       container.on('click', '.counter__nav--minus', function(e) {
         e.preventDefault()
